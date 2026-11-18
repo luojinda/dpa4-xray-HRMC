@@ -1,0 +1,21 @@
+# The supplied structure may have redistribution restrictions.
+PDF/*.cif
+!PDF/README.md
+
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+.idea/
+.vscode/
+
+# Conda/virtual environments and local run scratch.
+.conda/
+.venv/
+tmp/
+
+# Large model artifacts are outside Phase 1.
+*.pt
+*.pt2
+*.pth

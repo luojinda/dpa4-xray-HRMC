@@ -1,0 +1,20 @@
+sample: LNOC
+structure: PDF/LNOC_opt.cif
+radiation_type: xray
+qmin_Ainv: 1.0
+qmax_Ainv: 24.0
+qstep_Ainv: 0.05
+output_rmin_A: 0.0
+output_rmax_A: 10.0
+output_rstep_A: 0.01
+biso_A2: 0.3
+lorch_mod: false
+compute_device: cpu
+rdf_dr_A: 0.01
+rdf_rcut_A: 40.0
+convergence_rcuts_A: [20.0, 30.0, 40.0]
+convergence_rdf_dr_A: 0.02
+plot_ranges_A:
+  - [1.5, 4.5]
+  - [1.5, 10.0]
+output_directory: results/LNOC
