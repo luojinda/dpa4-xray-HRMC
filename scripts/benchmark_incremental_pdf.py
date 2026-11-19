@@ -12,6 +12,7 @@ import numpy as np
 
 from dpa4_xray_hrmc.rmc.config import load_phase2_config
 from dpa4_xray_hrmc.rmc.incremental_pdf import IncrementalXrayPDF
+from dpa4_xray_hrmc.rmc.objectives import ScaleMode, ScaleObjective
 from dpa4_xray_hrmc.rmc.runner import inclusive_grid
 from dpa4_xray_hrmc.xray_pdf.experimental import read_pdfgetx_gr
 from dpa4_xray_hrmc.xray_pdf.structure import load_structure
@@ -32,6 +33,7 @@ def main() -> None:
     parser.add_argument("--output", default="results/PZS_phase2/benchmarks/incremental_benchmark.json")
     parser.add_argument("--incremental-moves", type=int, default=1000)
     parser.add_argument("--full-moves", type=int, default=100)
+    parser.add_argument("--score-evaluations", type=int, default=10000)
     args = parser.parse_args()
     config_path = Path(args.config).resolve()
     root = config_path.parent.parent
@@ -64,6 +66,27 @@ def main() -> None:
         _, full = engine.full_recompute(trial)
         full_times.append(time.perf_counter() - tick)
         max_errors.append(float(np.max(np.abs(engine.g_r_A2 + proposal.delta_g_A2 - full.g_r_A2))))
+    objective = ScaleObjective.from_initial(engine.g_r_A2, experiment.g_r_A2[fit])
+    score_benchmark: dict[str, dict[str, float | int]] = {}
+    for mode in ScaleMode:
+        current = objective.score(mode, engine.g_r_A2)
+        tick = time.perf_counter()
+        checksum = 0.0
+        for index in range(args.score_evaluations):
+            score = objective.trial_score(
+                mode,
+                engine.g_r_A2,
+                current,
+                proposals[index % len(proposals)].delta_g_A2,
+            )
+            checksum += score.loss
+        elapsed = time.perf_counter() - tick
+        score_benchmark[mode.value] = {
+            "evaluations": args.score_evaluations,
+            "total_s": elapsed,
+            "microseconds_per_evaluation": 1.0e6 * elapsed / args.score_evaluations,
+            "checksum": checksum,
+        }
     result = {
         "initialize_seconds": initialize_seconds,
         "kernel_memory_bytes": engine.kernel.memory_bytes,
@@ -74,6 +97,7 @@ def main() -> None:
         "full": distribution(full_times),
         "speedup_pdf_only_median": float(np.median(full_times) / np.median(incremental_times)),
         "max_abs_incremental_vs_full_A-2": max(max_errors, default=0.0),
+        "cached_delta_score_benchmark": score_benchmark,
     }
     output = Path(args.output).resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
