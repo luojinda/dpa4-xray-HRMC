@@ -22,7 +22,7 @@ from ase.io import read
 from dpa4_xray_hrmc.rmc.config import load_phase2_config
 from dpa4_xray_hrmc.rmc.diagnostics import coordination_cutoffs_from_initial, structure_diagnostics
 from dpa4_xray_hrmc.rmc.hard_sphere import HardSphereModel
-from dpa4_xray_hrmc.rmc.objectives import ScaleMode
+from dpa4_xray_hrmc.rmc.objectives import ScaleMode, ScaleObjective
 from dpa4_xray_hrmc.rmc.runner import inclusive_grid
 from dpa4_xray_hrmc.xray_pdf.experimental import read_pdfgetx_gr
 from dpa4_xray_hrmc.xray_pdf.form_factors import q_dependent_weights
@@ -133,7 +133,38 @@ def main() -> None:
     initial_curve = forward_transform(
         initial_rdf, initial_weights, fit_r, config.biso_A2, config.lorch_mod
     ).g_r_A2
-    s0 = float(np.dot(initial_curve, fit_target) / np.dot(initial_curve, initial_curve))
+    initial_objective = ScaleObjective.from_initial(initial_curve, fit_target)
+    s0 = initial_objective.s0
+    initial_A, initial_B = initial_objective.coefficients(initial_curve)
+    initial_table = np.column_stack(
+        (
+            fit_r,
+            initial_curve,
+            s0 * initial_curve,
+            s0 * initial_curve,
+            s0 * initial_curve,
+            fit_target,
+            s0 * initial_curve - fit_target,
+        )
+    )
+    initial_table_path = output / "initial_calc_Gr.dat"
+    np.savetxt(
+        initial_table_path,
+        initial_table,
+        fmt="%.10g",
+        header=(
+            "r_A Gcalc_unscaled_A-2 Gcalc_mode_scaled_A-2 Gcalc_s0_scaled_A-2 "
+            "Gcalc_positive_opt_A-2 Gexp_A-2 residual_mode_A-2"
+        ),
+    )
+    initial_metrics = initial_objective.common_scores(initial_A, initial_B)
+    initial_metrics.update(_curve_metrics(initial_table_path))
+    initial_metrics["s0"] = s0
+    initial_metrics["scale_lower_bound"] = initial_objective.lower_scale
+    initial_metrics["scale_upper_bound"] = initial_objective.upper_scale
+    (output / "initial_baseline.json").write_text(
+        json.dumps(initial_metrics, indent=2), encoding="utf-8"
+    )
     hard = HardSphereModel.from_atoms(initial_atoms, config.hard_sphere_scale)
     cutoffs = coordination_cutoffs_from_initial(initial_atoms)
 
