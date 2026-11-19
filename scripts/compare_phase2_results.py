@@ -75,7 +75,7 @@ def _ensure_partial_rdfs(chain_dir: Path, initial_atoms) -> None:
     }
     output: dict[str, np.ndarray] = {}
     for state_name, atoms in states.items():
-        rdf = compute_partial_rdfs(atoms, rmax_A=6.0, dr_A=0.02)
+        rdf = compute_partial_rdfs(atoms, rcut_A=6.0, dr_A=0.02)
         output.setdefault("r_A", rdf.r_A)
         for central, neighbour in DIAGNOSTIC_PAIRS:
             output[f"{state_name}_{central}_{neighbour}"] = rdf.g[_pair_key(central, neighbour)]
@@ -316,14 +316,14 @@ def main() -> None:
         fig.savefig(output / name, dpi=300)
         plt.close(fig)
 
-    initial_diag_rdf = compute_partial_rdfs(initial_atoms, rmax_A=6.0, dr_A=0.02)
+    initial_diag_rdf = compute_partial_rdfs(initial_atoms, rcut_A=6.0, dr_A=0.02)
     fig, axes = plt.subplots(3, 2, figsize=(10.0, 10.0), constrained_layout=True, sharex=True)
     for axis, (central, neighbour) in zip(axes.flat, DIAGNOSTIC_PAIRS, strict=True):
         pair = _pair_key(central, neighbour)
         axis.plot(initial_diag_rdf.r_A, initial_diag_rdf.g[pair], color="black", linestyle="--", linewidth=1.0, label="Initial MQ")
         for mode, (_, seed, directory) in selected_curves.items():
             atoms = read(directory / "best_structure.extxyz")
-            rdf = compute_partial_rdfs(atoms, rmax_A=6.0, dr_A=0.02)
+            rdf = compute_partial_rdfs(atoms, rcut_A=6.0, dr_A=0.02)
             axis.plot(rdf.r_A, rdf.g[pair], color=colors[mode], linewidth=0.9, label=f"{mode}, {seed}")
         axis.set_title(f"{central}-{neighbour}")
         axis.set_xlim(0.8, 6.0)
