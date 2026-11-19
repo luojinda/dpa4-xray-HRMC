@@ -151,7 +151,7 @@ def _write_validation(
     negative_s_count = int(np.count_nonzero(primary.s_q < 0.0))
     s_min_index = int(np.argmin(primary.s_q))
     lines = [
-        "# LNOC Phase 1 validation report",
+        f"# {config.sample} Phase 1 validation report",
         "",
         "## Structure",
         "",
@@ -198,7 +198,7 @@ def _write_validation(
             f"- Wall time: {elapsed:.3f} s; sampled peak process RSS: {peak_rss_mb:.1f} MiB; platform: `{platform.platform()}`.",
             "- This is a finite-real-space-cutoff approximation to an ideal periodic crystal, not a claim of an exact infinite-crystal PDF.",
             "- The ideal optimized CIF lacks nanocrystal size effects, static/local disorder, and experimental qdamp/qbroad. It should not be expected to reproduce every experimental peak width or medium-range amplitude.",
-            "- No experimental curve was available, so no Rwp/R² or agreement claim is reported.",
+            "- Experimental agreement metrics are outside this forward-calculation report; use the dedicated comparison output when experimental data are supplied.",
             "",
         ]
     )

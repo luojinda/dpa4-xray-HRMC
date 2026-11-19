@@ -1,0 +1,58 @@
+{
+  "sample": "PZS",
+  "structure": "PDF/PZS_quench_222.cif",
+  "radiation_type": "xray",
+  "qmin_Ainv": 0.9,
+  "qmax_Ainv": 16.0,
+  "qstep_Ainv": 0.05,
+  "output_rmin_A": 0.0,
+  "output_rmax_A": 10.0,
+  "output_rstep_A": 0.01,
+  "biso_A2": 0.3,
+  "lorch_mod": false,
+  "compute_device": "cpu",
+  "rdf_dr_A": 0.01,
+  "rdf_rcut_A": 40.0,
+  "convergence_rcuts_A": [
+    20.0,
+    30.0,
+    40.0
+  ],
+  "convergence_rdf_dr_A": 0.02,
+  "plot_ranges_A": [
+    [
+      1.0,
+      5.0
+    ],
+    [
+      1.0,
+      10.0
+    ]
+  ],
+  "output_directory": "results/PZS",
+  "resolved_structure": "E:\\1_CODEX\\dpa4-xray-HRMC\\PDF\\PZS_quench_222.cif",
+  "q_points": 303,
+  "output_r_points": 1001,
+  "uiso_A2": 0.0037995443865876666,
+  "thermal_pair_factor": "exp[-Q^2*(U_alpha+U_beta)/2]",
+  "form_factor_argument": "Q_Ainv/(4*pi)",
+  "extra_instrument_resolution": null,
+  "rdf_translation_bounds": [
+    3,
+    3,
+    3
+  ],
+  "rdf_candidate_translations": 343,
+  "wall_time_seconds": 2.4927801000003456,
+  "sampled_peak_rss_mb": 175.72265625,
+  "software_versions": {
+    "python": "3.11.18",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "ase": "3.29.0",
+    "matplotlib": "3.11.2",
+    "PyYAML": "6.0.3",
+    "xraydb": "4.5.8",
+    "psutil": "7.2.2"
+  }
+}

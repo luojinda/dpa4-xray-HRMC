@@ -1,0 +1,60 @@
+{
+  "alignment": {
+    "fit_range_A": [
+      1.0,
+      10.0
+    ],
+    "scale": 0.55302000266364,
+    "offset_A-2": 0.001236728291088944,
+    "meaning": "diagnostic least-squares alignment only; not applied to the raw calculation"
+  },
+  "ranges": {
+    "1-5_A": {
+      "points": 401,
+      "experimental_min_A-2": -0.640451,
+      "experimental_max_A-2": 1.59449,
+      "experimental_rms_A-2": 0.44496644293022575,
+      "calculated_raw_min_A-2": -1.0473649051,
+      "calculated_raw_max_A-2": 1.7301167231,
+      "calculated_raw_rms_A-2": 0.7062444658119926,
+      "raw_rms_ratio_calc_over_exp": 1.5871859036406872,
+      "raw_rmse_A-2": 0.37038938211326294,
+      "aligned_rmse_A-2": 0.2026869450529716,
+      "pearson_r": 0.8902501597850629
+    },
+    "1-10_A": {
+      "points": 901,
+      "experimental_min_A-2": -0.640451,
+      "experimental_max_A-2": 1.59449,
+      "experimental_rms_A-2": 0.3105175768948043,
+      "calculated_raw_min_A-2": -1.0473649051,
+      "calculated_raw_max_A-2": 1.7301167231,
+      "calculated_raw_rms_A-2": 0.49131004209805546,
+      "raw_rms_ratio_calc_over_exp": 1.5822294087542077,
+      "raw_rmse_A-2": 0.26617810615034715,
+      "aligned_rmse_A-2": 0.15036913998090845,
+      "pearson_r": 0.8748983596610408
+    }
+  },
+  "files": {
+    "experimental": "C:\\Users\\Windows11\\Desktop\\PZS\\PDF_ZXS_3_100keV_350mm_10s_eiger16m_slice_0_.gr",
+    "calculated": "E:\\1_CODEX\\dpa4-xray-HRMC\\results\\PZS\\PZS_xray_Gr.dat"
+  },
+  "experimental_metadata": {
+    "wavelength": "0.1243",
+    "dataformat": "twotheta",
+    "inputfile": "PDF_ZXS_3_100keV_350mm_10s_eiger16m_slice_0_.chi",
+    "backgroundfile": "PDF_ZXS_BGNEW_100keV_350mm_10s_eiger16m_slic.chi",
+    "mode": "xray",
+    "bgscale": "0.4780970639",
+    "composition": "Li3PO4Zr2Si2Cl16",
+    "outputtype": "gr",
+    "qmaxinst": "26.0",
+    "qmin": "0.9",
+    "qmax": "16.0056",
+    "rmax": "60.0",
+    "rmin": "0.0",
+    "rstep": "0.01",
+    "rpoly": "0.9189"
+  }
+}
