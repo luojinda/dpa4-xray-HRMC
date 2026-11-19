@@ -1,5 +1,8 @@
 # The supplied structure may have redistribution restrictions.
 PDF/*.cif
+PDF/*.gr
+PDF/*.sq
+PDF/*.chi
 !PDF/README.md
 
 __pycache__/
