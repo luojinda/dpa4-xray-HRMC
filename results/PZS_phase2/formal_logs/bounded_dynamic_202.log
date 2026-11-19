@@ -1,0 +1,6 @@
+nohup: ignoring input
+Output: /root/autodl-tmp/PZS_phase2_formal/bounded_dynamic/seed_202
+Mode=bounded_dynamic; seed=202; attempted=1000000; accepted=387170; HS rejected=254551
+Final loss=1.291601013, scale=0.76293238; best loss=1.116479072 at step 663980
+Wall time: 3765.740 s
+

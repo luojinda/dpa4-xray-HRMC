@@ -1,0 +1,39 @@
+{
+  "initialize_seconds": 0.6384297460317612,
+  "kernel_memory_bytes": 171568408,
+  "minimum_image_safe": true,
+  "incremental_moves": 1000,
+  "incremental": {
+    "mean_ms": 1.9563883766531946,
+    "median_ms": 1.9446946680545807,
+    "p95_ms": 2.035058289766311
+  },
+  "full_moves": 100,
+  "full": {
+    "mean_ms": 241.64265044033527,
+    "median_ms": 234.56424847245216,
+    "p95_ms": 277.2340640425682
+  },
+  "speedup_pdf_only_median": 120.61752023370528,
+  "max_abs_incremental_vs_full_A-2": 1.0436096431476471e-14,
+  "cached_delta_score_benchmark": {
+    "no_scale": {
+      "evaluations": 10000,
+      "total_s": 0.08558978140354156,
+      "microseconds_per_evaluation": 8.558978140354156,
+      "checksum": 582663.556641854
+    },
+    "fixed_initial": {
+      "evaluations": 10000,
+      "total_s": 0.08538516610860825,
+      "microseconds_per_evaluation": 8.538516610860825,
+      "checksum": 307667.81891125726
+    },
+    "bounded_dynamic": {
+      "evaluations": 10000,
+      "total_s": 0.133578322827816,
+      "microseconds_per_evaluation": 13.357832282781601,
+      "checksum": 307667.6700482761
+    }
+  }
+}

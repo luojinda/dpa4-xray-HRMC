@@ -1,0 +1,19 @@
+{
+  "initialize_seconds": 0.9309579581022263,
+  "kernel_memory_bytes": 171568408,
+  "minimum_image_safe": true,
+  "incremental_moves": 1000,
+  "incremental": {
+    "mean_ms": 2.8926374167203903,
+    "median_ms": 2.84002348780632,
+    "p95_ms": 3.401925042271614
+  },
+  "full_moves": 100,
+  "full": {
+    "mean_ms": 333.6739245802164,
+    "median_ms": 317.57859140634537,
+    "p95_ms": 405.20700961351395
+  },
+  "speedup_pdf_only_median": 111.82252286640353,
+  "max_abs_incremental_vs_full_A-2": 1.0436096431476471e-14
+}

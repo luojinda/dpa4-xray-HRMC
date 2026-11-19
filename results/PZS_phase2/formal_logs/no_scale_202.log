@@ -1,0 +1,6 @@
+nohup: ignoring input
+Output: /root/autodl-tmp/PZS_phase2_formal/no_scale/seed_202
+Mode=no_scale; seed=202; attempted=1000000; accepted=335208; HS rejected=295404
+Final loss=1.694928191, scale=1; best loss=1.642372521 at step 958321
+Wall time: 3056.977 s
+

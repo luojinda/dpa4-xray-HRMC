@@ -1,0 +1,13 @@
+{
+  "structure": {
+    "path": "/root/dpa4-xray-HRMC/PDF/PZS_quench_222.cif",
+    "sha256": "9d003a062e8e5f2c8579c095fcd020a093f0faf0604664383e997bc30d92736a"
+  },
+  "experiment": {
+    "path": "/root/dpa4-xray-HRMC/PDF/PDF_ZXS_1_100keV_350mm_10s_eiger16m_slice_0_.gr",
+    "sha256": "4a05e8cae01f1eece89e1fa99a7a6e9b76f35cfe050ac010438a07ebc3c02183"
+  },
+  "git_commit": "ea654a2037e3acd46a6bbcf15b274b5049011113",
+  "python": "3.11.18 (main, Oct 26 2026, 18:19:35) [GCC 14.3.0]",
+  "platform": "Linux-5.15.0-87-generic-x86_64-with-glibc2.35"
+}

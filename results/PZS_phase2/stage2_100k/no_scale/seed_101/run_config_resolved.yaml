@@ -1,0 +1,33 @@
+sample: PZS
+structure: PDF/PZS_quench_222.cif
+experimental_gr: PDF/PDF_ZXS_1_100keV_350mm_10s_eiger16m_slice_0_.gr
+qmin_Ainv: 0.9
+qmax_Ainv: 16.0
+qstep_Ainv: 0.05
+fit_rmin_A: 1.5
+fit_rmax_A: 10.0
+biso_A2: 0.3
+lorch_mod: false
+rdf_dr_A: 0.01
+rdf_rcut_A: 12.0
+hard_sphere_scale: 0.95
+move_max_A: 0.1
+sigma_rmc_A2: 0.03
+trace_interval: 1000
+checkpoint_interval: 50000
+validation_interval: 50000
+snapshot_interval: 50000
+seeds:
+- 101
+- 202
+- 303
+output_root: results/PZS_phase2
+mode: no_scale
+seed: 101
+target_attempts: 100000
+s0: 0.6357769831752517
+scale_bounds:
+- 0.5086215865402014
+- 0.7629323798103019
+minimum_image_safe: true
+kernel_memory_bytes: 171568408

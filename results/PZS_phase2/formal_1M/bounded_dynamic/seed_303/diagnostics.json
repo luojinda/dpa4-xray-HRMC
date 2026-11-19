@@ -1,0 +1,448 @@
+{
+  "coordination_cutoffs_from_initial": {
+    "P-O": {
+      "peak_A": 1.55,
+      "cutoff_A": 1.71,
+      "method": "first entry into the near-minimum RDF plateau after the first peak"
+    },
+    "Si-O": {
+      "peak_A": 1.6500000000000001,
+      "cutoff_A": 1.81,
+      "method": "first entry into the near-minimum RDF plateau after the first peak"
+    },
+    "Zr-O": {
+      "peak_A": 2.0700000000000003,
+      "cutoff_A": 2.29,
+      "method": "first entry into the near-minimum RDF plateau after the first peak"
+    },
+    "Zr-Cl": {
+      "peak_A": 2.4299999999999997,
+      "cutoff_A": 2.8899999999999997,
+      "method": "first entry into the near-minimum RDF plateau after the first peak"
+    },
+    "Li-O": {
+      "peak_A": 1.85,
+      "cutoff_A": 2.3499999999999996,
+      "method": "first entry into the near-minimum RDF plateau after the first peak"
+    },
+    "Li-Cl": {
+      "peak_A": 2.45,
+      "cutoff_A": 2.9299999999999997,
+      "method": "first entry into the near-minimum RDF plateau after the first peak"
+    }
+  },
+  "final": {
+    "n_atoms": 896,
+    "formula": "Cl512Li96O128P32Si64Zr64",
+    "volume_A3": 20353.759009863963,
+    "density_A-3": 0.04402135249640005,
+    "cell_A": [
+      [
+        29.379999,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        24.742001,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        28.0
+      ]
+    ],
+    "positions_all_finite": true,
+    "pair_minimum_A": {
+      "Cl-Cl": 2.8746477651201903,
+      "Cl-Li": 2.0882655039204203,
+      "Cl-O": 2.704155319492439,
+      "Cl-P": 3.191402741902842,
+      "Cl-Si": 1.8750938960576755,
+      "Cl-Zr": 2.1731161800646057,
+      "Li-Li": 2.6682090076927256,
+      "Li-O": 1.7365119467913985,
+      "Li-P": 2.8227442251027086,
+      "Li-Si": 3.482547728339786,
+      "Li-Zr": 2.837901459840943,
+      "O-O": 2.26776179459504,
+      "O-P": 1.4127047095992094,
+      "O-Si": 1.5259793250319929,
+      "O-Zr": 1.845040169663491,
+      "P-P": 3.50534689335625,
+      "P-Si": 2.715871647114783,
+      "P-Zr": 3.2087962536749677,
+      "Si-Si": 4.101856399984759,
+      "Si-Zr": 3.63013783428706,
+      "Zr-Zr": 3.944277809380068
+    },
+    "hard_sphere_violations_by_pair": {
+      "Cl-Cl": 0,
+      "Cl-Li": 0,
+      "Cl-O": 0,
+      "Cl-P": 0,
+      "Cl-Si": 0,
+      "Cl-Zr": 0,
+      "Li-Li": 0,
+      "Li-O": 0,
+      "Li-P": 0,
+      "Li-Si": 0,
+      "Li-Zr": 0,
+      "O-O": 0,
+      "O-P": 0,
+      "O-Si": 0,
+      "O-Zr": 0,
+      "P-P": 0,
+      "P-Si": 0,
+      "P-Zr": 0,
+      "Si-Si": 0,
+      "Si-Zr": 0,
+      "Zr-Zr": 0
+    },
+    "hard_sphere_violation_total": 0,
+    "displacement_from_initial": {
+      "mean_A": 0.715972040264143,
+      "rms_A": 0.8447470477516252,
+      "max_A": 3.4061763668809135,
+      "by_species": {
+        "Cl": {
+          "mean_A": 0.6698845466019547,
+          "rms_A": 0.7433111793955095,
+          "max_A": 1.984711621469714
+        },
+        "Li": {
+          "mean_A": 1.3460677814862008,
+          "rms_A": 1.5488536353792108,
+          "max_A": 3.4061763668809135
+        },
+        "O": {
+          "mean_A": 0.6527487235721575,
+          "rms_A": 0.7153161474883387,
+          "max_A": 1.5125960310163102
+        },
+        "P": {
+          "mean_A": 0.5841202406675665,
+          "rms_A": 0.6625962802860362,
+          "max_A": 1.1977424033819302
+        },
+        "Si": {
+          "mean_A": 0.6386827577933415,
+          "rms_A": 0.7242696215968077,
+          "max_A": 1.9226546895477614
+        },
+        "Zr": {
+          "mean_A": 0.4091901933816222,
+          "rms_A": 0.45212256383399285,
+          "max_A": 0.9050419865171777
+        }
+      }
+    },
+    "coordination": {
+      "P-O": {
+        "cutoff_A": 1.71,
+        "count": 32,
+        "mean_CN": 3.1875,
+        "std_CN": 0.7680128579652817,
+        "min_CN": 2,
+        "max_CN": 4,
+        "distribution": {
+          "2": 7,
+          "3": 12,
+          "4": 13
+        },
+        "shell_distance_mean_A": 1.592829748945263,
+        "shell_distance_std_A": 0.06532773254583439,
+        "fourfold_fraction": 0.40625
+      },
+      "Si-O": {
+        "cutoff_A": 1.81,
+        "count": 64,
+        "mean_CN": 0.515625,
+        "std_CN": 0.6844748785565472,
+        "min_CN": 0,
+        "max_CN": 3,
+        "distribution": {
+          "0": 37,
+          "1": 22,
+          "2": 4,
+          "3": 1
+        },
+        "shell_distance_mean_A": 1.6198842493928747,
+        "shell_distance_std_A": 0.06050389302083144,
+        "fourfold_fraction": 0.0
+      },
+      "Zr-O": {
+        "cutoff_A": 2.29,
+        "count": 64,
+        "mean_CN": 0.890625,
+        "std_CN": 0.8313615996514393,
+        "min_CN": 0,
+        "max_CN": 3,
+        "distribution": {
+          "0": 25,
+          "1": 22,
+          "2": 16,
+          "3": 1
+        },
+        "shell_distance_mean_A": 2.039527101468377,
+        "shell_distance_std_A": 0.09462098273493504
+      },
+      "Zr-Cl": {
+        "cutoff_A": 2.8899999999999997,
+        "count": 64,
+        "mean_CN": 4.875,
+        "std_CN": 0.8926785535678563,
+        "min_CN": 3,
+        "max_CN": 6,
+        "distribution": {
+          "3": 4,
+          "4": 18,
+          "5": 24,
+          "6": 18
+        },
+        "shell_distance_mean_A": 2.492670353350808,
+        "shell_distance_std_A": 0.0710519502366673
+      },
+      "Li-O": {
+        "cutoff_A": 2.3499999999999996,
+        "count": 96,
+        "mean_CN": 0.11458333333333333,
+        "std_CN": 0.3496960485748858,
+        "min_CN": 0,
+        "max_CN": 2,
+        "distribution": {
+          "0": 86,
+          "1": 9,
+          "2": 1
+        },
+        "shell_distance_mean_A": 2.101383429562553,
+        "shell_distance_std_A": 0.2223149899040907
+      },
+      "Li-Cl": {
+        "cutoff_A": 2.9299999999999997,
+        "count": 96,
+        "mean_CN": 3.7916666666666665,
+        "std_CN": 0.8405933750763339,
+        "min_CN": 2,
+        "max_CN": 5,
+        "distribution": {
+          "2": 5,
+          "3": 31,
+          "4": 39,
+          "5": 21
+        },
+        "shell_distance_mean_A": 2.4312470141286076,
+        "shell_distance_std_A": 0.22526540673284398
+      }
+    }
+  },
+  "best": {
+    "n_atoms": 896,
+    "formula": "Cl512Li96O128P32Si64Zr64",
+    "volume_A3": 20353.759009863963,
+    "density_A-3": 0.04402135249640005,
+    "cell_A": [
+      [
+        29.379999,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        24.742001,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        28.0
+      ]
+    ],
+    "positions_all_finite": true,
+    "pair_minimum_A": {
+      "Cl-Cl": 2.874865352528098,
+      "Cl-Li": 2.0916935084202826,
+      "Cl-O": 2.7055548172216803,
+      "Cl-P": 3.256585062342851,
+      "Cl-Si": 1.8727054893545403,
+      "Cl-Zr": 2.1868071792522588,
+      "Li-Li": 2.6382053883623358,
+      "Li-O": 1.9289613925247786,
+      "Li-P": 2.816852676172278,
+      "Li-Si": 3.444138752017099,
+      "Li-Zr": 2.8359123487414806,
+      "O-O": 2.266763242358969,
+      "O-P": 1.4009904015589536,
+      "O-Si": 1.5347161255613306,
+      "O-Zr": 1.8517426302131172,
+      "P-P": 3.433921237539656,
+      "P-Si": 2.721686297699528,
+      "P-Zr": 3.3551829382378195,
+      "Si-Si": 4.1411524366068235,
+      "Si-Zr": 3.6049511504980987,
+      "Zr-Zr": 3.9241481191115546
+    },
+    "hard_sphere_violations_by_pair": {
+      "Cl-Cl": 0,
+      "Cl-Li": 0,
+      "Cl-O": 0,
+      "Cl-P": 0,
+      "Cl-Si": 0,
+      "Cl-Zr": 0,
+      "Li-Li": 0,
+      "Li-O": 0,
+      "Li-P": 0,
+      "Li-Si": 0,
+      "Li-Zr": 0,
+      "O-O": 0,
+      "O-P": 0,
+      "O-Si": 0,
+      "O-Zr": 0,
+      "P-P": 0,
+      "P-Si": 0,
+      "P-Zr": 0,
+      "Si-Si": 0,
+      "Si-Zr": 0,
+      "Zr-Zr": 0
+    },
+    "hard_sphere_violation_total": 0,
+    "displacement_from_initial": {
+      "mean_A": 0.7059909213636756,
+      "rms_A": 0.8340923740256847,
+      "max_A": 3.56108871307871,
+      "by_species": {
+        "Cl": {
+          "mean_A": 0.6625985648284152,
+          "rms_A": 0.7362525192468268,
+          "max_A": 1.945948719596964
+        },
+        "Li": {
+          "mean_A": 1.323437813625425,
+          "rms_A": 1.5281971426859828,
+          "max_A": 3.56108871307871
+        },
+        "O": {
+          "mean_A": 0.6418555321385082,
+          "rms_A": 0.7030358921169432,
+          "max_A": 1.7941067460875828
+        },
+        "P": {
+          "mean_A": 0.5736156821327292,
+          "rms_A": 0.640090321053633,
+          "max_A": 1.3334688017633696
+        },
+        "Si": {
+          "mean_A": 0.6096257666789429,
+          "rms_A": 0.7053052609397419,
+          "max_A": 2.043013172564957
+        },
+        "Zr": {
+          "mean_A": 0.41778298800367586,
+          "rms_A": 0.4576975515431124,
+          "max_A": 0.8415767910986337
+        }
+      }
+    },
+    "coordination": {
+      "P-O": {
+        "cutoff_A": 1.71,
+        "count": 32,
+        "mean_CN": 3.40625,
+        "std_CN": 0.7441175562369161,
+        "min_CN": 1,
+        "max_CN": 4,
+        "distribution": {
+          "1": 1,
+          "2": 2,
+          "3": 12,
+          "4": 17
+        },
+        "shell_distance_mean_A": 1.5761753284550466,
+        "shell_distance_std_A": 0.06803921348849913,
+        "fourfold_fraction": 0.53125
+      },
+      "Si-O": {
+        "cutoff_A": 1.81,
+        "count": 64,
+        "mean_CN": 0.5,
+        "std_CN": 0.7288689868556626,
+        "min_CN": 0,
+        "max_CN": 3,
+        "distribution": {
+          "0": 39,
+          "1": 20,
+          "2": 3,
+          "3": 2
+        },
+        "shell_distance_mean_A": 1.6303123971731568,
+        "shell_distance_std_A": 0.06506308575759126,
+        "fourfold_fraction": 0.0
+      },
+      "Zr-O": {
+        "cutoff_A": 2.29,
+        "count": 64,
+        "mean_CN": 0.84375,
+        "std_CN": 0.7948810838735565,
+        "min_CN": 0,
+        "max_CN": 3,
+        "distribution": {
+          "0": 25,
+          "1": 25,
+          "2": 13,
+          "3": 1
+        },
+        "shell_distance_mean_A": 2.040352346589275,
+        "shell_distance_std_A": 0.09069678870675793
+      },
+      "Zr-Cl": {
+        "cutoff_A": 2.8899999999999997,
+        "count": 64,
+        "mean_CN": 4.875,
+        "std_CN": 0.8926785535678563,
+        "min_CN": 3,
+        "max_CN": 6,
+        "distribution": {
+          "3": 4,
+          "4": 18,
+          "5": 24,
+          "6": 18
+        },
+        "shell_distance_mean_A": 2.490951325722749,
+        "shell_distance_std_A": 0.06934589288551761
+      },
+      "Li-O": {
+        "cutoff_A": 2.3499999999999996,
+        "count": 96,
+        "mean_CN": 0.11458333333333333,
+        "std_CN": 0.3496960485748858,
+        "min_CN": 0,
+        "max_CN": 2,
+        "distribution": {
+          "0": 86,
+          "1": 9,
+          "2": 1
+        },
+        "shell_distance_mean_A": 2.1315172133174154,
+        "shell_distance_std_A": 0.14657204104574378
+      },
+      "Li-Cl": {
+        "cutoff_A": 2.9299999999999997,
+        "count": 96,
+        "mean_CN": 3.7916666666666665,
+        "std_CN": 0.789470638395684,
+        "min_CN": 2,
+        "max_CN": 6,
+        "distribution": {
+          "2": 4,
+          "3": 29,
+          "4": 47,
+          "5": 15,
+          "6": 1
+        },
+        "shell_distance_mean_A": 2.4319592419699303,
+        "shell_distance_std_A": 0.2256663969397335
+      }
+    }
+  }
+}

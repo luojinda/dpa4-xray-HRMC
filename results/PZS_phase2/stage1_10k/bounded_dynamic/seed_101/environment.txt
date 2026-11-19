@@ -1,0 +1,11 @@
+python=3.11.18
+numpy=2.4.6
+scipy=1.17.1
+ase=3.29.0
+matplotlib=3.11.2
+xraydb=4.6.1
+PyYAML=6.0.3
+psutil=7.2.2
+OMP_NUM_THREADS=1
+OPENBLAS_NUM_THREADS=1
+MKL_NUM_THREADS=1

@@ -1,0 +1,89 @@
+{
+  "scale": 0.95,
+  "pairs": {
+    "Cl-Cl": {
+      "minimum_input_A": 3.0256901451937224,
+      "hard_cutoff_A": 2.874405637934036
+    },
+    "Cl-Li": {
+      "minimum_input_A": 2.1975855082393756,
+      "hard_cutoff_A": 2.0877062328274065
+    },
+    "Cl-O": {
+      "minimum_input_A": 2.8463542835398417,
+      "hard_cutoff_A": 2.7040365693628496
+    },
+    "Cl-P": {
+      "minimum_input_A": 3.217085978960867,
+      "hard_cutoff_A": 3.0562316800128233
+    },
+    "Cl-Si": {
+      "minimum_input_A": 1.9711211666759043,
+      "hard_cutoff_A": 1.872565108342109
+    },
+    "Cl-Zr": {
+      "minimum_input_A": 2.2869679633457864,
+      "hard_cutoff_A": 2.172619565178497
+    },
+    "Li-Li": {
+      "minimum_input_A": 2.751616417857804,
+      "hard_cutoff_A": 2.614035596964914
+    },
+    "Li-O": {
+      "minimum_input_A": 1.80530325090959,
+      "hard_cutoff_A": 1.7150380883641105
+    },
+    "Li-P": {
+      "minimum_input_A": 2.9250226082476667,
+      "hard_cutoff_A": 2.778771477835283
+    },
+    "Li-Si": {
+      "minimum_input_A": 3.6152751148444664,
+      "hard_cutoff_A": 3.4345113591022427
+    },
+    "Li-Zr": {
+      "minimum_input_A": 2.9803743810825685,
+      "hard_cutoff_A": 2.83135566202844
+    },
+    "O-O": {
+      "minimum_input_A": 2.383568488502572,
+      "hard_cutoff_A": 2.2643900640774435
+    },
+    "O-P": {
+      "minimum_input_A": 1.4695286047538656,
+      "hard_cutoff_A": 1.3960521745161723
+    },
+    "O-Si": {
+      "minimum_input_A": 1.6012698199775532,
+      "hard_cutoff_A": 1.5212063289786755
+    },
+    "O-Zr": {
+      "minimum_input_A": 1.939765995148853,
+      "hard_cutoff_A": 1.8427776953914103
+    },
+    "P-P": {
+      "minimum_input_A": 3.048234733693253,
+      "hard_cutoff_A": 2.8958229970085902
+    },
+    "P-Si": {
+      "minimum_input_A": 2.858493520478776,
+      "hard_cutoff_A": 2.715568844454837
+    },
+    "P-Zr": {
+      "minimum_input_A": 3.3037422343726495,
+      "hard_cutoff_A": 3.138555122654017
+    },
+    "Si-Si": {
+      "minimum_input_A": 4.312018476711815,
+      "hard_cutoff_A": 4.096417552876224
+    },
+    "Si-Zr": {
+      "minimum_input_A": 3.4492580670246724,
+      "hard_cutoff_A": 3.2767951636734387
+    },
+    "Zr-Zr": {
+      "minimum_input_A": 3.7541186360329517,
+      "hard_cutoff_A": 3.566412704231304
+    }
+  }
+}

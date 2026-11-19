@@ -1,0 +1,72 @@
+{
+  "mode": "bounded_dynamic",
+  "seed": 101,
+  "s0": 0.6357769831752517,
+  "scale_bounds": [
+    0.5086215865402014,
+    0.7629323798103019
+  ],
+  "final_step": 10000,
+  "final_loss": 2.713654458745168,
+  "final_scale": 0.7629323798103019,
+  "best_loss": 2.707613936946146,
+  "best_scale": 0.7629323798103019,
+  "best_step": 9986,
+  "final_common_metrics": {
+    "loss_no_scale": 12.61345280059163,
+    "Rw_no_scale": 0.3317449833162502,
+    "scale_no_scale": 1.0,
+    "loss_fixed_initial": 6.130303742305756,
+    "Rw_fixed_initial": 0.23127482850923944,
+    "scale_fixed_initial": 0.6357769831752517,
+    "loss_bounded_dynamic": 2.713654458746447,
+    "Rw_bounded_dynamic": 0.15387378759924306,
+    "scale_bounded_dynamic": 0.7629323798103019,
+    "scale_unbounded_positive": 0.7706553640854917,
+    "loss_unbounded_positive": 2.702415858543347,
+    "Rw_shape_only": 0.15355482285536806,
+    "mode_scale": 0.7629323798103019,
+    "mode_loss": 2.713654458746447,
+    "fixed_scale": 0.6357769831752517
+  },
+  "best_common_metrics": {
+    "loss_no_scale": 12.576303218660883,
+    "Rw_no_scale": 0.3312560896157128,
+    "scale_no_scale": 1.0,
+    "loss_fixed_initial": 6.135238409892949,
+    "Rw_fixed_initial": 0.2313678936224406,
+    "scale_fixed_initial": 0.6357769831752517,
+    "loss_bounded_dynamic": 2.707613936947382,
+    "Rw_bounded_dynamic": 0.15370243273310874,
+    "scale_bounded_dynamic": 0.7629323798103019,
+    "scale_unbounded_positive": 0.7709312408459843,
+    "loss_unbounded_positive": 2.695565965548468,
+    "Rw_shape_only": 0.15336008941401608,
+    "mode_scale": 0.7629323798103019,
+    "mode_loss": 2.707613936947382,
+    "fixed_scale": 0.6357769831752517
+  },
+  "drift_checks": [],
+  "timings": {
+    "initialize_s": 4.385261103510857,
+    "hard_sphere_s": 11.52423795312643,
+    "delta_pdf_s": 17.931530326604843,
+    "score_s": 0.2739686518907547,
+    "commit_s": 0.12349575757980347,
+    "validation_s": 0.0,
+    "checkpoint_s": 0.0,
+    "output_s": 0.5984628573060036,
+    "sampling_wall_s": 30.013191990554333,
+    "total_wall_s": 35.02875629812479,
+    "attempts_per_s_sampling": 333.18682008721936,
+    "legal_pdf_evaluations_per_s_sampling": 294.73706104915425,
+    "accepts_per_s_sampling": 138.90558529436177,
+    "counters": {
+      "attempted": 10000,
+      "accepted": 4169,
+      "hard_sphere_rejected": 1154,
+      "metropolis_rejected": 4677,
+      "legal_pdf_evaluations": 8846
+    }
+  }
+}

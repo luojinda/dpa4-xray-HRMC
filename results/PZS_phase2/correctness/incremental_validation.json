@@ -1,0 +1,76 @@
+{
+  "structure": {
+    "formula": "Cl512Li96O128P32Si64Zr64",
+    "atoms": 896,
+    "cell_A": [
+      [
+        29.379999,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        24.742001,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        28.0
+      ]
+    ],
+    "density_A-3": 0.04402135249640005,
+    "minimum_periodic_separation_A": 1.4695286047538656
+  },
+  "cutoff_study": {
+    "seconds": 2.2108952701091766,
+    "metrics": {
+      "12_vs_40_A": {
+        "max_abs_A-2": 0.014946578123431892,
+        "rms_A-2": 0.005212972331952381,
+        "relative_rms": 0.01056371795018206
+      },
+      "20_vs_40_A": {
+        "max_abs_A-2": 0.003483693487142529,
+        "rms_A-2": 0.0017103726088174393,
+        "relative_rms": 0.0034659485373669053
+      },
+      "30_vs_40_A": {
+        "max_abs_A-2": 0.0008759767954500952,
+        "rms_A-2": 0.0004591231648776896,
+        "relative_rms": 0.000930380464219036
+      }
+    }
+  },
+  "incremental": {
+    "rcut_A": 12.0,
+    "dr_A": 0.01,
+    "minimum_image_safe": true,
+    "kernel_memory_bytes": 171568408,
+    "initialize_seconds": 0.7808929458260536,
+    "initial_errors": {
+      "max_abs_G_A-2": 9.769962616701378e-15,
+      "rms_G_A-2": 1.8444855150491123e-15,
+      "max_abs_hist_count": 0
+    },
+    "trial_moves": 100,
+    "trial_seconds": 33.970095723867416,
+    "trial_max_abs_G_A-2": 1.021405182655144e-14,
+    "trial_max_rms_G_A-2": 1.8670012269503075e-15,
+    "reject_byte_unchanged": true,
+    "after_trial_errors": {
+      "max_abs_G_A-2": 9.103828801926284e-15,
+      "rms_G_A-2": 1.855036246527259e-15,
+      "max_abs_hist_count": 0
+    },
+    "mixed_moves": 10000,
+    "mixed_accepted": 4965,
+    "mixed_seconds": 30.198863342404366,
+    "mixed_attempts_per_s": 331.1382910878732,
+    "after_mixed_errors": {
+      "max_abs_G_A-2": 1.4876988529977098e-14,
+      "rms_G_A-2": 2.287269128291725e-15,
+      "max_abs_hist_count": 0
+    }
+  }
+}

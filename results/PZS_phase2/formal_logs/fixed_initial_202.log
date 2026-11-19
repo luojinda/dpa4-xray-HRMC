@@ -1,0 +1,6 @@
+nohup: ignoring input
+Output: /root/autodl-tmp/PZS_phase2_formal/fixed_initial/seed_202
+Mode=fixed_initial; seed=202; attempted=1000000; accepted=386448; HS rejected=225953
+Final loss=1.392789435, scale=0.63577698; best loss=1.26400541 at step 807318
+Wall time: 3283.378 s
+
