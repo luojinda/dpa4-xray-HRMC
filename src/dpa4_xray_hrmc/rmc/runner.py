@@ -27,6 +27,7 @@ from dpa4_xray_hrmc.xray_pdf.structure import load_structure
 from dpa4_xray_hrmc.xray_pdf.transform import forward_transform
 
 from .config import Phase2Config
+from .diagnostics import coordination_cutoffs_from_initial, structure_diagnostics
 from .hard_sphere import HardSphereModel
 from .incremental_pdf import IncrementalXrayPDF
 from .objectives import ScaleMode, ScaleObjective, Score
@@ -250,6 +251,7 @@ def run_chain(
     )
     objective = ScaleObjective.from_initial(engine.g_r_A2, fit_target)
     hard_sphere = HardSphereModel.from_atoms(info.atoms, config.hard_sphere_scale)
+    coordination_cutoffs = coordination_cutoffs_from_initial(info.atoms)
     current = objective.score(selected_mode, engine.g_r_A2)
     timings.initialize_s = time.perf_counter() - init_started
 
@@ -468,6 +470,18 @@ def run_chain(
         experiment.g_r_A2,
         objective,
         selected_mode,
+    )
+    diagnostics = {
+        "coordination_cutoffs_from_initial": coordination_cutoffs,
+        "final": structure_diagnostics(
+            info.atoms, final_atoms, hard_sphere, coordination_cutoffs
+        ),
+        "best": structure_diagnostics(
+            info.atoms, best_atoms, hard_sphere, coordination_cutoffs
+        ),
+    }
+    (output_dir / "diagnostics.json").write_text(
+        json.dumps(diagnostics, indent=2), encoding="utf-8"
     )
     timings.output_s += time.perf_counter() - tick
     total_wall = time.perf_counter() - started

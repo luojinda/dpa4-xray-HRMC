@@ -41,6 +41,14 @@ class HardSphereModel:
                 pair = tuple(sorted((str(symbols[index]), str(symbols[offset]))))
                 minima[pair] = min(minima[pair], float(distance))  # type: ignore[index]
         missing = [pair for pair, value in minima.items() if not np.isfinite(value)]
+        shortest_basis_translation = float(np.min(np.linalg.norm(cell, axis=1)))
+        for pair in missing:
+            if pair[0] == pair[1] and np.count_nonzero(symbols == pair[0]) == 1:
+                # A lone species has no distinct same-species pair.  Its nearest
+                # periodic self image is invariant under translation, so this
+                # conservative value documents the otherwise unused constraint.
+                minima[pair] = shortest_basis_translation
+        missing = [pair for pair, value in minima.items() if not np.isfinite(value)]
         if missing:
             raise ValueError(f"No input distances available for pairs: {missing}")
         cutoffs = {pair: scale * value for pair, value in minima.items()}
