@@ -52,6 +52,34 @@ def _ensure_diagnostics(chain_dir: Path, initial_atoms, hard, cutoffs) -> dict[s
     return diagnostics
 
 
+def _curve_metrics(path: Path) -> dict[str, float]:
+    data = np.loadtxt(path)
+    r = data[:, 0]
+    scaled = data[:, 2]
+    observed = data[:, 5]
+    output: dict[str, float] = {}
+    for lo, hi, name in (
+        (1.5, 4.5, "short"),
+        (4.5, 10.0, "medium"),
+        (1.5, 10.0, "total"),
+    ):
+        mask = (r >= lo) & (r <= hi)
+        residual = scaled[mask] - observed[mask]
+        output[f"rms_{name}_A-2"] = float(np.sqrt(np.mean(residual**2)))
+        denominator = float(np.sum((observed[mask] - np.mean(observed[mask])) ** 2))
+        output[f"R2_{name}"] = float(1.0 - np.sum(residual**2) / denominator)
+    first = (r >= 2.2) & (r <= 2.7)
+    second = (r >= 3.1) & (r <= 3.8)
+    output["first_peak_r_A"] = float(r[first][np.argmax(scaled[first])])
+    output["first_peak_G_A-2"] = float(np.max(scaled[first]))
+    output["second_peak_r_A"] = float(r[second][np.argmax(scaled[second])])
+    output["second_peak_G_A-2"] = float(np.max(scaled[second]))
+    output["second_over_first_peak"] = (
+        output["second_peak_G_A-2"] / output["first_peak_G_A-2"]
+    )
+    return output
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", required=True, help="Root containing mode/seed_* directories")
@@ -71,6 +99,20 @@ def main() -> None:
     rows: list[dict[str, object]] = []
     traces: dict[tuple[str, int], np.ndarray] = {}
     diagnostics_rows: list[dict[str, object]] = []
+    initial_diagnostics = structure_diagnostics(initial_atoms, initial_atoms, hard, cutoffs)
+    initial_row: dict[str, object] = {
+        "mode": "initial_MQ",
+        "seed": 0,
+        "state": "initial",
+        "hard_sphere_violation_total": initial_diagnostics["hard_sphere_violation_total"],
+        "displacement_rms_A": 0.0,
+        "displacement_max_A": 0.0,
+    }
+    for pair_name, values in initial_diagnostics["coordination"].items():
+        initial_row[f"{pair_name}_mean_CN"] = values["mean_CN"]
+        if "fourfold_fraction" in values:
+            initial_row[f"{pair_name}_fourfold_fraction"] = values["fourfold_fraction"]
+    diagnostics_rows.append(initial_row)
     curve_candidates: dict[str, list[tuple[float, Path, int]]] = defaultdict(list)
     for mode in MODES:
         for chain_dir in sorted((chain_root / mode).glob("seed_*")):
@@ -91,6 +133,8 @@ def main() -> None:
             }
             _flatten("final_", summary["final_common_metrics"], row)
             _flatten("best_", summary["best_common_metrics"], row)
+            _flatten("final_curve_", _curve_metrics(chain_dir / "final_calc_Gr.dat"), row)
+            _flatten("best_curve_", _curve_metrics(chain_dir / "best_calc_Gr.dat"), row)
             counters = summary["timings"]["counters"]
             row.update(
                 {

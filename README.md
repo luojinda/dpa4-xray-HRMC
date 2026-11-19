@@ -1,9 +1,25 @@
-# DPA4 X-ray HRMC — Phase 1
+# DPA4 X-ray HRMC — Phase 1 and Phase 2
 
-This repository currently contains only the CPU forward model requested for
-Phase 1: periodic CIF → partial RDFs → Q-dependent neutral-atom X-ray weights →
-`S(Q)`, `F(Q)`, and reduced `G(r)`. It does **not** contain DPA4, RMC/HRMC, or
-incremental PDF updates.
+The repository contains the Phase 1 CPU X-ray PDF forward model and the Phase 2
+Pure-RMC benchmark with transactional single-atom partial-histogram/PDF
+updates. Phase 2 contains no DPA4, ML potential, energy, coordination, or
+bond-angle term; those remain explicitly outside the current scope.
+
+## Phase 2 Pure RMC
+
+Place the ignored PZS CIF and ZXS_1 `.gr` input in `PDF/`, then run:
+
+```bash
+python scripts/validate_incremental.py --config configs/pzs_phase2_common.yaml
+python scripts/benchmark_incremental_pdf.py --config configs/pzs_phase2_common.yaml
+python scripts/run_phase2_pzs.py --config configs/pzs_phase2_common.yaml \
+  --mode bounded_dynamic --seed 101 --steps 1000000
+python scripts/compare_phase2_results.py --root results/PZS_phase2
+```
+
+See [the incremental derivation](docs/phase2_incremental_derivation.md) and
+[the frozen RMC protocol](docs/phase2_rmc_protocol.md) for the exact histogram,
+scale, Metropolis, checkpoint, and diagnostic conventions.
 
 ## Reproduce the LNOC calculation
 
