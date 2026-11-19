@@ -138,6 +138,7 @@ def main() -> None:
     cutoffs = coordination_cutoffs_from_initial(initial_atoms)
 
     rows: list[dict[str, object]] = []
+    scale_rows: list[dict[str, object]] = []
     traces: dict[tuple[str, int], np.ndarray] = {}
     diagnostics_rows: list[dict[str, object]] = []
     initial_diagnostics = structure_diagnostics(initial_atoms, initial_atoms, hard, cutoffs)
@@ -177,6 +178,7 @@ def main() -> None:
             _flatten("final_curve_", _curve_metrics(chain_dir / "final_calc_Gr.dat"), row)
             _flatten("best_curve_", _curve_metrics(chain_dir / "best_calc_Gr.dat"), row)
             counters = summary["timings"]["counters"]
+            timing_values = summary["timings"]
             row.update(
                 {
                     "accepted": counters["accepted"],
@@ -185,14 +187,46 @@ def main() -> None:
                     "acceptance_rate": counters["accepted"] / counters["attempted"],
                     "attempts_per_s": summary["timings"]["attempts_per_s_sampling"],
                     "total_wall_s": summary["timings"]["total_wall_s"],
+                    "sampling_wall_s": timing_values["sampling_wall_s"],
+                    "legal_pdf_evaluations_per_s": timing_values["legal_pdf_evaluations_per_s_sampling"],
+                    "accepts_per_s": timing_values["accepts_per_s_sampling"],
                 }
             )
+            for timing_name in (
+                "initialize_s",
+                "hard_sphere_s",
+                "delta_pdf_s",
+                "score_s",
+                "commit_s",
+                "validation_s",
+                "checkpoint_s",
+                "output_s",
+            ):
+                row[timing_name] = timing_values[timing_name]
             rows.append(row)
             curve_candidates[mode].append(
                 (float(summary["best_common_metrics"]["Rw_shape_only"]), chain_dir, seed)
             )
             trace = np.genfromtxt(chain_dir / "trace.csv", delimiter=",", names=True)
             traces[(mode, seed)] = np.atleast_1d(trace)
+            trace_scales = np.atleast_1d(trace)["s_current"]
+            lower, upper = (float(value) for value in summary["scale_bounds"])
+            scale_rows.append(
+                {
+                    "mode": mode,
+                    "seed": seed,
+                    "s0": summary["s0"],
+                    "lower_bound": lower,
+                    "upper_bound": upper,
+                    "scale_min": float(np.min(trace_scales)),
+                    "scale_mean": float(np.mean(trace_scales)),
+                    "scale_max": float(np.max(trace_scales)),
+                    "scale_final": summary["final_scale"],
+                    "scale_best": summary["best_scale"],
+                    "fraction_at_lower_bound": float(np.mean(np.isclose(trace_scales, lower, rtol=0.0, atol=1e-12))),
+                    "fraction_at_upper_bound": float(np.mean(np.isclose(trace_scales, upper, rtol=0.0, atol=1e-12))),
+                }
+            )
             diagnostics = _ensure_diagnostics(chain_dir, initial_atoms, hard, cutoffs)
             _ensure_partial_rdfs(chain_dir, initial_atoms)
             for state_name in ("final", "best"):
@@ -223,6 +257,10 @@ def main() -> None:
         writer = csv.DictWriter(stream, fieldnames=diag_fields)
         writer.writeheader()
         writer.writerows(diagnostics_rows)
+    with (output / "scale_evolution.csv").open("w", newline="", encoding="utf-8") as stream:
+        writer = csv.DictWriter(stream, fieldnames=list(scale_rows[0]))
+        writer.writeheader()
+        writer.writerows(scale_rows)
 
     aggregate: dict[str, dict[str, dict[str, float]]] = {}
     aggregate_keys = (
@@ -234,6 +272,22 @@ def main() -> None:
         "best_Rw_fixed_initial",
         "best_Rw_bounded_dynamic",
         "best_Rw_shape_only",
+        "final_scale",
+        "best_scale",
+        "final_curve_rms_short_A-2",
+        "final_curve_rms_medium_A-2",
+        "final_curve_R2_short",
+        "final_curve_R2_medium",
+        "final_curve_first_peak_r_A",
+        "final_curve_second_peak_r_A",
+        "final_curve_second_over_first_peak",
+        "best_curve_rms_short_A-2",
+        "best_curve_rms_medium_A-2",
+        "best_curve_R2_short",
+        "best_curve_R2_medium",
+        "best_curve_first_peak_r_A",
+        "best_curve_second_peak_r_A",
+        "best_curve_second_over_first_peak",
         "acceptance_rate",
         "attempts_per_s",
     )
