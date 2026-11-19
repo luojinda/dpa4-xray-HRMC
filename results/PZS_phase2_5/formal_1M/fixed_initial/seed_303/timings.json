@@ -1,0 +1,26 @@
+{
+  "initialize_s": 4.170718878507614,
+  "hard_sphere_s": 1304.284935183823,
+  "delta_pdf_s": 1869.1610088199377,
+  "delta_cn_s": 193.32693473994732,
+  "score_s": 18.33813901990652,
+  "commit_s": 11.652682900428772,
+  "validation_s": 5.883446305990219,
+  "checkpoint_s": 0.15280044823884964,
+  "output_s": 2.478008806705475,
+  "sampling_wall_s": 3423.4700667634606,
+  "total_wall_s": 3430.1655184477568,
+  "attempts_per_s_sampling": 292.10128334651904,
+  "legal_evaluations_per_s_sampling": 224.6609390474747,
+  "counters": {
+    "attempted": 1000000,
+    "accepted": 339148,
+    "hard_sphere_rejected": 230880,
+    "metropolis_rejected": 429972,
+    "legal_evaluations": 769120,
+    "p_break_events": 0,
+    "p_recovery_events": 0,
+    "si_break_events": 0,
+    "si_recovery_events": 0
+  }
+}
