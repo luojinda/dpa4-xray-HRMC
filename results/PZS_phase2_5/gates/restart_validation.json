@@ -1,0 +1,10 @@
+{
+  "positions_bitwise_equal": true,
+  "histograms_bitwise_equal": true,
+  "G_bitwise_equal": true,
+  "final_total_equal": true,
+  "final_pdf_equal": true,
+  "final_scale_equal": true,
+  "coordination_equal": true,
+  "gate_passed": true
+}

@@ -1,0 +1,28 @@
+{
+  "moves": 2000,
+  "acceptance_sequences_equal": true,
+  "positions_bitwise_equal": true,
+  "histograms_bitwise_equal": true,
+  "G_bitwise_equal": true,
+  "score_fields_equal": true,
+  "pdf_validation": {
+    "max_abs_G_A-2": 1.0436096431476471e-14,
+    "rms_G_A-2": 2.012926154374124e-15,
+    "max_abs_hist_count": 0
+  },
+  "cn_validation": {
+    "max_abs_integer_error": 0,
+    "by_array": {
+      "p_o": 0,
+      "si_o": 0,
+      "si_cl": 0,
+      "zr_o": 0,
+      "zr_cl": 0,
+      "zr_hist_total": 0,
+      "zr_hist_o": 0
+    },
+    "max_abs_component_error": 0.0
+  },
+  "wall_s": 13.217230260372162,
+  "gate_passed": true
+}
