@@ -1,0 +1,8 @@
+phase2_config: configs/pzs_phase2_common.yaml
+coordination_cutoffs: configs/pzs_phase2_5_coordination_cutoffs.json
+weight_label: candidate_weak
+coordination_weights:
+  P: 50.0
+  Si: 100.0
+  Zr_total: 0.25
+  Zr_O: 0.05
