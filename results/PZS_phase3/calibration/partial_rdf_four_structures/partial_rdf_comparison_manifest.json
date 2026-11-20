@@ -1,0 +1,99 @@
+{
+  "rdf_definition": "Periodic partial g_ab(r), normalized so dN_b=rho_b*g_ab(r)*4*pi*r^2*dr.",
+  "cumulative_definition": "N_neighbor_around_central(r)=cumulative raw pair count / N_central.",
+  "rdf_rcut_A": 6.0,
+  "rdf_dr_A": 0.02,
+  "plot_range_A": [
+    0.8,
+    5.0
+  ],
+  "structures": {
+    "MQ": "PDF/PZS_quench_222.cif",
+    "Pure RMC + CN (no_scale, seed 101 final)": "results/PZS_phase2_5/formal_1M/no_scale/seed_101/final_structure.extxyz",
+    "Alternating 100k (seed 303 final)": "results/PZS_phase3/phase3B/validation_100k_seed303_A500_F10/final_structure.extxyz",
+    "Inline 100k (seed 303 final)": "results/PZS_phase3/phase3C/validation_100k_seed303_T100/final_structure.extxyz"
+  },
+  "selection_note": "Pure RMC uses the Phase 2.5 no_scale+coordination seed-101 final structure, which has the lowest final PDF/total loss among its three seeds. Phase 3 structures are the previously selected seed-303 final structures.",
+  "pairs": {
+    "Zr-Cl": {
+      "plot": "results/PZS_phase3/calibration/partial_rdf_four_structures/Zr_Cl_partial_rdf_with_CN_inset.png",
+      "data": "results/PZS_phase3/calibration/partial_rdf_four_structures/Zr_Cl_rdf_and_cumulative_CN.csv",
+      "max_partial_g_in_plot_range": {
+        "MQ": 12.15289676842644,
+        "Pure RMC + CN (no_scale, seed 101 final)": 16.47609863084469,
+        "Alternating 100k (seed 303 final)": 11.768641879174778,
+        "Inline 100k (seed 303 final)": 12.557993327373989
+      },
+      "cumulative_N_at_5A": {
+        "MQ": 11.765625,
+        "Pure RMC + CN (no_scale, seed 101 final)": 11.265625,
+        "Alternating 100k (seed 303 final)": 11.671875,
+        "Inline 100k (seed 303 final)": 11.84375
+      }
+    },
+    "Zr-O": {
+      "plot": "results/PZS_phase3/calibration/partial_rdf_four_structures/Zr_O_partial_rdf_with_CN_inset.png",
+      "data": "results/PZS_phase3/calibration/partial_rdf_four_structures/Zr_O_rdf_and_cumulative_CN.csv",
+      "max_partial_g_in_plot_range": {
+        "MQ": 27.158150114240154,
+        "Pure RMC + CN (no_scale, seed 101 final)": 28.884651911274975,
+        "Alternating 100k (seed 303 final)": 14.114155840804388,
+        "Inline 100k (seed 303 final)": 23.968734913497226
+      },
+      "cumulative_N_at_5A": {
+        "MQ": 4.953125,
+        "Pure RMC + CN (no_scale, seed 101 final)": 4.6875,
+        "Alternating 100k (seed 303 final)": 4.9375,
+        "Inline 100k (seed 303 final)": 5.0
+      }
+    },
+    "P-O": {
+      "plot": "results/PZS_phase3/calibration/partial_rdf_four_structures/P_O_partial_rdf_with_CN_inset.png",
+      "data": "results/PZS_phase3/calibration/partial_rdf_four_structures/P_O_rdf_and_cumulative_CN.csv",
+      "max_partial_g_in_plot_range": {
+        "MQ": 238.65657103507456,
+        "Pure RMC + CN (no_scale, seed 101 final)": 184.4877263800715,
+        "Alternating 100k (seed 303 final)": 192.5089318748572,
+        "Inline 100k (seed 303 final)": 246.8861079673185
+      },
+      "cumulative_N_at_5A": {
+        "MQ": 7.5,
+        "Pure RMC + CN (no_scale, seed 101 final)": 7.5,
+        "Alternating 100k (seed 303 final)": 7.4375,
+        "Inline 100k (seed 303 final)": 7.5625
+      }
+    },
+    "Si-Cl": {
+      "plot": "results/PZS_phase3/calibration/partial_rdf_four_structures/Si_Cl_partial_rdf_with_CN_inset.png",
+      "data": "results/PZS_phase3/calibration/partial_rdf_four_structures/Si_Cl_rdf_and_cumulative_CN.csv",
+      "max_partial_g_in_plot_range": {
+        "MQ": 46.17957906227515,
+        "Pure RMC + CN (no_scale, seed 101 final)": 16.604982193509365,
+        "Alternating 100k (seed 303 final)": 23.88574710668521,
+        "Inline 100k (seed 303 final)": 28.657029104659845
+      },
+      "cumulative_N_at_5A": {
+        "MQ": 13.078125,
+        "Pure RMC + CN (no_scale, seed 101 final)": 13.84375,
+        "Alternating 100k (seed 303 final)": 13.453125,
+        "Inline 100k (seed 303 final)": 13.953125
+      }
+    },
+    "Si-O": {
+      "plot": "results/PZS_phase3/calibration/partial_rdf_four_structures/Si_O_partial_rdf_with_CN_inset.png",
+      "data": "results/PZS_phase3/calibration/partial_rdf_four_structures/Si_O_rdf_and_cumulative_CN.csv",
+      "max_partial_g_in_plot_range": {
+        "MQ": 48.370159526455225,
+        "Pure RMC + CN (no_scale, seed 101 final)": 38.13796254876404,
+        "Alternating 100k (seed 303 final)": 37.032916195097776,
+        "Inline 100k (seed 303 final)": 70.69484853866533
+      },
+      "cumulative_N_at_5A": {
+        "MQ": 3.375,
+        "Pure RMC + CN (no_scale, seed 101 final)": 3.328125,
+        "Alternating 100k (seed 303 final)": 3.28125,
+        "Inline 100k (seed 303 final)": 3.421875
+      }
+    }
+  }
+}
