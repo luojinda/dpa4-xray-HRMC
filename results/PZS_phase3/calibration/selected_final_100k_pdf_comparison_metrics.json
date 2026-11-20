@@ -1,0 +1,17 @@
+{
+  "MQ": {
+    "Rw_no_scale_1p5_10A": 0.7130903037739525,
+    "loss_sum_A-4": 58.279299159326285,
+    "scale_applied": 1.0
+  },
+  "Alternating 100k, seed 303 final": {
+    "Rw_no_scale_1p5_10A": 0.14142391823459405,
+    "loss_sum_A-4": 2.292297543852996,
+    "scale_applied": 1.0
+  },
+  "Inline 100k, seed 303 final": {
+    "Rw_no_scale_1p5_10A": 0.20285299499604362,
+    "loss_sum_A-4": 4.716155395337168,
+    "scale_applied": 1.0
+  }
+}
