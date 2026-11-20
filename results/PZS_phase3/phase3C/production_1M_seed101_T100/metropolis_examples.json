@@ -1,0 +1,26 @@
+{
+  "accepted": {
+    "step": 1,
+    "atom": 395,
+    "element": "Cl",
+    "delta_phase25": -43.9741386554233,
+    "delta_E_eV": 0.07203825935721397,
+    "delta_E_over_kBT": 8.359692861557315,
+    "delta_total": -35.61444579386599,
+    "probability": 1.0,
+    "random_u": 0.7910726198213432,
+    "accepted": true
+  },
+  "rejected": {
+    "step": 2,
+    "atom": 183,
+    "element": "Si",
+    "delta_phase25": 18.530737473112822,
+    "delta_E_eV": 0.0823395811021328,
+    "delta_E_over_kBT": 9.555111610205625,
+    "delta_total": 28.085849083318447,
+    "probability": 6.345571230769795e-13,
+    "random_u": 0.10450581500717637,
+    "accepted": false
+  }
+}
