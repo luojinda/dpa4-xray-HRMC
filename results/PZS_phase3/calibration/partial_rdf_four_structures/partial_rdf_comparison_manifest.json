@@ -7,28 +7,63 @@
     0.8,
     5.0
   ],
+  "seeds": [
+    101,
+    202,
+    303
+  ],
   "structures": {
     "MQ": "PDF/PZS_quench_222.cif",
-    "Pure RMC + CN (no_scale, seed 101 final)": "results/PZS_phase2_5/formal_1M/no_scale/seed_101/final_structure.extxyz",
-    "Alternating 100k (seed 303 final)": "results/PZS_phase3/phase3B/validation_100k_seed303_A500_F10/final_structure.extxyz",
-    "Inline 100k (seed 303 final)": "results/PZS_phase3/phase3C/validation_100k_seed303_T100/final_structure.extxyz"
+    "Pure RMC + CN (3-seed mean)": [
+      "results/PZS_phase2_5/formal_1M/no_scale/seed_101/final_structure.extxyz",
+      "results/PZS_phase2_5/formal_1M/no_scale/seed_202/final_structure.extxyz",
+      "results/PZS_phase2_5/formal_1M/no_scale/seed_303/final_structure.extxyz"
+    ],
+    "Alternating 100k (3-seed mean)": [
+      "results/PZS_phase3/phase3B/validation_100k_seed101_A500_F10/final_structure.extxyz",
+      "results/PZS_phase3/phase3B/validation_100k_seed202_A500_F10/final_structure.extxyz",
+      "results/PZS_phase3/phase3B/validation_100k_seed303_A500_F10/final_structure.extxyz"
+    ],
+    "Inline 100k (3-seed mean)": [
+      "results/PZS_phase3/phase3C/validation_100k_seed101_T100/final_structure.extxyz",
+      "results/PZS_phase3/phase3C/validation_100k_seed202_T100/final_structure.extxyz",
+      "results/PZS_phase3/phase3C/validation_100k_seed303_T100/final_structure.extxyz"
+    ]
   },
-  "selection_note": "Pure RMC uses the Phase 2.5 no_scale+coordination seed-101 final structure, which has the lowest final PDF/total loss among its three seeds. Phase 3 structures are the previously selected seed-303 final structures.",
+  "statistics": "Pointwise population mean and standard deviation (ddof=0) over seeds 101, 202, 303. No smoothing or rebinning.",
   "pairs": {
     "Zr-Cl": {
       "plot": "results/PZS_phase3/calibration/partial_rdf_four_structures/Zr_Cl_partial_rdf_with_CN_inset.png",
       "data": "results/PZS_phase3/calibration/partial_rdf_four_structures/Zr_Cl_rdf_and_cumulative_CN.csv",
       "max_partial_g_in_plot_range": {
         "MQ": 12.15289676842644,
-        "Pure RMC + CN (no_scale, seed 101 final)": 16.47609863084469,
-        "Alternating 100k (seed 303 final)": 11.768641879174778,
-        "Inline 100k (seed 303 final)": 12.557993327373989
+        "Pure RMC + CN (3-seed mean)": {
+          "mean_curve_max": 16.874708160153485,
+          "largest_pointwise_std": 2.2142983188314926
+        },
+        "Alternating 100k (3-seed mean)": {
+          "mean_curve_max": 14.776183692741666,
+          "largest_pointwise_std": 2.9768395979363396
+        },
+        "Inline 100k (3-seed mean)": {
+          "mean_curve_max": 11.612768023163042,
+          "largest_pointwise_std": 2.039624595222504
+        }
       },
       "cumulative_N_at_5A": {
         "MQ": 11.765625,
-        "Pure RMC + CN (no_scale, seed 101 final)": 11.265625,
-        "Alternating 100k (seed 303 final)": 11.671875,
-        "Inline 100k (seed 303 final)": 11.84375
+        "Pure RMC + CN (3-seed mean)": {
+          "mean": 11.395833333333334,
+          "std": 0.09229190180556954
+        },
+        "Alternating 100k (3-seed mean)": {
+          "mean": 11.5625,
+          "std": 0.12303137303143455
+        },
+        "Inline 100k (3-seed mean)": {
+          "mean": 11.770833333333334,
+          "std": 0.05155986946151909
+        }
       }
     },
     "Zr-O": {
@@ -36,15 +71,33 @@
       "data": "results/PZS_phase3/calibration/partial_rdf_four_structures/Zr_O_rdf_and_cumulative_CN.csv",
       "max_partial_g_in_plot_range": {
         "MQ": 27.158150114240154,
-        "Pure RMC + CN (no_scale, seed 101 final)": 28.884651911274975,
-        "Alternating 100k (seed 303 final)": 14.114155840804388,
-        "Inline 100k (seed 303 final)": 23.968734913497226
+        "Pure RMC + CN (3-seed mean)": {
+          "mean_curve_max": 29.847473641650808,
+          "largest_pointwise_std": 9.60998891873389
+        },
+        "Alternating 100k (3-seed mean)": {
+          "mean_curve_max": 19.256434607516653,
+          "largest_pointwise_std": 12.102481487218155
+        },
+        "Inline 100k (3-seed mean)": {
+          "mean_curve_max": 18.884457810634178,
+          "largest_pointwise_std": 6.055434982547378
+        }
       },
       "cumulative_N_at_5A": {
         "MQ": 4.953125,
-        "Pure RMC + CN (no_scale, seed 101 final)": 4.6875,
-        "Alternating 100k (seed 303 final)": 4.9375,
-        "Inline 100k (seed 303 final)": 5.0
+        "Pure RMC + CN (3-seed mean)": {
+          "mean": 4.765625,
+          "std": 0.05846339666834283
+        },
+        "Alternating 100k (3-seed mean)": {
+          "mean": 4.942708333333333,
+          "std": 0.00736569563735987
+        },
+        "Inline 100k (3-seed mean)": {
+          "mean": 4.979166666666667,
+          "std": 0.01948779888944761
+        }
       }
     },
     "P-O": {
@@ -52,15 +105,33 @@
       "data": "results/PZS_phase3/calibration/partial_rdf_four_structures/P_O_rdf_and_cumulative_CN.csv",
       "max_partial_g_in_plot_range": {
         "MQ": 238.65657103507456,
-        "Pure RMC + CN (no_scale, seed 101 final)": 184.4877263800715,
-        "Alternating 100k (seed 303 final)": 192.5089318748572,
-        "Inline 100k (seed 303 final)": 246.8861079673185
+        "Pure RMC + CN (3-seed mean)": {
+          "mean_curve_max": 173.79278572035722,
+          "largest_pointwise_std": 30.861408830870932
+        },
+        "Alternating 100k (3-seed mean)": {
+          "mean_curve_max": 140.7723468001614,
+          "largest_pointwise_std": 49.156022921666064
+        },
+        "Inline 100k (3-seed mean)": {
+          "mean_curve_max": 246.8861079673185,
+          "largest_pointwise_std": 26.87755507118254
+        }
       },
       "cumulative_N_at_5A": {
         "MQ": 7.5,
-        "Pure RMC + CN (no_scale, seed 101 final)": 7.5,
-        "Alternating 100k (seed 303 final)": 7.4375,
-        "Inline 100k (seed 303 final)": 7.5625
+        "Pure RMC + CN (3-seed mean)": {
+          "mean": 7.447916666666667,
+          "std": 0.09660019266141358
+        },
+        "Alternating 100k (3-seed mean)": {
+          "mean": 7.489583333333333,
+          "std": 0.12058163440406484
+        },
+        "Inline 100k (3-seed mean)": {
+          "mean": 7.552083333333333,
+          "std": 0.01473139127471974
+        }
       }
     },
     "Si-Cl": {
@@ -68,15 +139,33 @@
       "data": "results/PZS_phase3/calibration/partial_rdf_four_structures/Si_Cl_rdf_and_cumulative_CN.csv",
       "max_partial_g_in_plot_range": {
         "MQ": 46.17957906227515,
-        "Pure RMC + CN (no_scale, seed 101 final)": 16.604982193509365,
-        "Alternating 100k (seed 303 final)": 23.88574710668521,
-        "Inline 100k (seed 303 final)": 28.657029104659845
+        "Pure RMC + CN (3-seed mean)": {
+          "mean_curve_max": 17.758105956947517,
+          "largest_pointwise_std": 2.221141343796182
+        },
+        "Alternating 100k (3-seed mean)": {
+          "mean_curve_max": 17.066231698884625,
+          "largest_pointwise_std": 8.46224534669408
+        },
+        "Inline 100k (3-seed mean)": {
+          "mean_curve_max": 26.30435100009274,
+          "largest_pointwise_std": 4.718031875887932
+        }
       },
       "cumulative_N_at_5A": {
         "MQ": 13.078125,
-        "Pure RMC + CN (no_scale, seed 101 final)": 13.84375,
-        "Alternating 100k (seed 303 final)": 13.453125,
-        "Inline 100k (seed 303 final)": 13.953125
+        "Pure RMC + CN (3-seed mean)": {
+          "mean": 13.703125,
+          "std": 0.12947711348600055
+        },
+        "Alternating 100k (3-seed mean)": {
+          "mean": 13.71875,
+          "std": 0.2235339972278639
+        },
+        "Inline 100k (3-seed mean)": {
+          "mean": 13.973958333333334,
+          "std": 0.11576099359840036
+        }
       }
     },
     "Si-O": {
@@ -84,15 +173,33 @@
       "data": "results/PZS_phase3/calibration/partial_rdf_four_structures/Si_O_rdf_and_cumulative_CN.csv",
       "max_partial_g_in_plot_range": {
         "MQ": 48.370159526455225,
-        "Pure RMC + CN (no_scale, seed 101 final)": 38.13796254876404,
-        "Alternating 100k (seed 303 final)": 37.032916195097776,
-        "Inline 100k (seed 303 final)": 70.69484853866533
+        "Pure RMC + CN (3-seed mean)": {
+          "mean_curve_max": 31.781635457303366,
+          "largest_pointwise_std": 8.447306269612882
+        },
+        "Alternating 100k (3-seed mean)": {
+          "mean_curve_max": 30.74795439667858,
+          "largest_pointwise_std": 15.548354706559415
+        },
+        "Inline 100k (3-seed mean)": {
+          "mean_curve_max": 66.9740670366303,
+          "largest_pointwise_std": 6.024792737286342
+        }
       },
       "cumulative_N_at_5A": {
         "MQ": 3.375,
-        "Pure RMC + CN (no_scale, seed 101 final)": 3.328125,
-        "Alternating 100k (seed 303 final)": 3.28125,
-        "Inline 100k (seed 303 final)": 3.421875
+        "Pure RMC + CN (3-seed mean)": {
+          "mean": 3.34375,
+          "std": 0.0459987545121242
+        },
+        "Alternating 100k (3-seed mean)": {
+          "mean": 3.2916666666666665,
+          "std": 0.01473139127471974
+        },
+        "Inline 100k (3-seed mean)": {
+          "mean": 3.4010416666666665,
+          "std": 0.01473139127471974
+        }
       }
     }
   }
