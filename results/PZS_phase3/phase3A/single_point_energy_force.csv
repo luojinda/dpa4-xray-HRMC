@@ -1,0 +1,5 @@
+label,path,energy_eV,energy_eV_atom,delta_E_vs_MQ_eV,delta_E_vs_MQ_eV_atom,force_rms_eV_A,force_max_eV_A,force_max_atom,wall_s
+MQ,/root/autodl-tmp/dpa4-xray-HRMC/PDF/PZS_quench_222.cif,-4518.551604658484,-5.0430263444849155,0.0,0.0,0.5542214154845454,2.939616596907066,232,1.1730426140129566
+phase2_5_no_scale_final_seed_101,/root/autodl-tmp/dpa4-xray-HRMC/results/PZS_phase2_5/formal_1M/no_scale/seed_101/final_structure.extxyz,-4243.756151117502,-4.7363349900864975,274.79545354098263,0.3066913543984181,2.9542680598610294,13.37451164576493,228,0.0276765339076519
+phase2_5_no_scale_final_seed_202,/root/autodl-tmp/dpa4-xray-HRMC/results/PZS_phase2_5/formal_1M/no_scale/seed_202/final_structure.extxyz,-4248.28010532458,-4.741384046121183,270.2714993339041,0.30164229836373224,2.9410118920116997,14.142836611178485,249,0.027920953929424286
+phase2_5_no_scale_final_seed_303,/root/autodl-tmp/dpa4-xray-HRMC/results/PZS_phase2_5/formal_1M/no_scale/seed_303/final_structure.extxyz,-4237.37194247183,-4.729209757223025,281.17966218665424,0.3138165872618909,2.9894457907725838,14.431267129332825,224,0.026752039790153503

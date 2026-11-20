@@ -1,0 +1,114 @@
+{
+  "repeatability": {
+    "energy_range_eV": 1.0387971997261047e-05,
+    "force_max_abs_range_eV_A": 4.162732030077443e-06
+  },
+  "perturbations": [
+    {
+      "rms_displacement_A": 0.005,
+      "energy_eV": -4518.0715345294475,
+      "delta_E_eV": 0.4800701290369034,
+      "force_rms_eV_A": 0.5939926617572252,
+      "force_max_eV_A": 2.5217252383313173,
+      "force_max_atom": 232
+    },
+    {
+      "rms_displacement_A": 0.01,
+      "energy_eV": -4516.646971687794,
+      "delta_E_eV": 1.9046329706907272,
+      "force_rms_eV_A": 0.7093568371982903,
+      "force_max_eV_A": 3.4160628532870394,
+      "force_max_atom": 244
+    },
+    {
+      "rms_displacement_A": 0.02,
+      "energy_eV": -4511.406928476065,
+      "delta_E_eV": 7.144676182419062,
+      "force_rms_eV_A": 1.03905779325698,
+      "force_max_eV_A": 5.644773255775801,
+      "force_max_atom": 243
+    }
+  ],
+  "finite_difference": [
+    {
+      "atom_index": 0,
+      "element": "Li",
+      "axis": 0,
+      "delta_A": 0.01,
+      "analytic_force_eV_A": -0.2731070108072089,
+      "fd_force_eV_A": -0.2730409614741802,
+      "abs_error_eV_A": 6.604933302867266e-05,
+      "relative_error": 0.00024184415051614353
+    },
+    {
+      "atom_index": 0,
+      "element": "Li",
+      "axis": 0,
+      "delta_A": 0.001,
+      "analytic_force_eV_A": -0.2731070108072089,
+      "fd_force_eV_A": -0.2734726294875145,
+      "abs_error_eV_A": 0.00036561868030560163,
+      "relative_error": 0.0013387378054666578
+    },
+    {
+      "atom_index": 160,
+      "element": "Si",
+      "axis": 1,
+      "delta_A": 0.01,
+      "analytic_force_eV_A": -0.22016879563286612,
+      "fd_force_eV_A": -0.22019809111952782,
+      "abs_error_eV_A": 2.929548666169568e-05,
+      "relative_error": 0.00013305921294380982
+    },
+    {
+      "atom_index": 160,
+      "element": "Si",
+      "axis": 1,
+      "delta_A": 0.001,
+      "analytic_force_eV_A": -0.22016879563286612,
+      "fd_force_eV_A": -0.21721981465816498,
+      "abs_error_eV_A": 0.002948980974701143,
+      "relative_error": 0.013394182251051602
+    },
+    {
+      "atom_index": 224,
+      "element": "P",
+      "axis": 2,
+      "delta_A": 0.01,
+      "analytic_force_eV_A": -0.2724209191327276,
+      "fd_force_eV_A": -0.2721915952861309,
+      "abs_error_eV_A": 0.00022932384659668514,
+      "relative_error": 0.0008417996948499947
+    },
+    {
+      "atom_index": 224,
+      "element": "P",
+      "axis": 2,
+      "delta_A": 0.001,
+      "analytic_force_eV_A": -0.2724209191327276,
+      "fd_force_eV_A": -0.2760188654065132,
+      "abs_error_eV_A": 0.003597946273785624,
+      "relative_error": 0.01320730539064311
+    },
+    {
+      "atom_index": 832,
+      "element": "O",
+      "axis": 0,
+      "delta_A": 0.01,
+      "analytic_force_eV_A": 0.15345980621454025,
+      "fd_force_eV_A": 0.15324074774980545,
+      "abs_error_eV_A": 0.0002190584647348004,
+      "relative_error": 0.001427464755354583
+    },
+    {
+      "atom_index": 832,
+      "element": "O",
+      "axis": 0,
+      "delta_A": 0.001,
+      "analytic_force_eV_A": 0.15345980621454025,
+      "fd_force_eV_A": 0.16111508011817932,
+      "abs_error_eV_A": 0.0076552739036390705,
+      "relative_error": 0.04988455343763973
+    }
+  ]
+}

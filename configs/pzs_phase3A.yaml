@@ -1,0 +1,16 @@
+model_path: /root/autodl-tmp/CODEX/DPA4_Neo_PZS_NPT_LoRA.pt2
+model_sha256: 166a5450f878e9e46238d71eca36ca87e7d07d30a4729cfbe7945c67479c2bcd
+device: cuda:0
+structure: PDF/PZS_quench_222.cif
+comparison_structures:
+  - results/PZS_phase2_5/formal_1M/no_scale/seed_101/final_structure.extxyz
+  - results/PZS_phase2_5/formal_1M/no_scale/seed_202/final_structure.extxyz
+  - results/PZS_phase2_5/formal_1M/no_scale/seed_303/final_structure.extxyz
+fire:
+  step_counts: [5, 10, 20]
+  fmax_eV_A: 0.05
+  maxstep_A: 0.05
+  dt: 0.05
+benchmark:
+  warmup_calls: 10
+  measured_calls: 100

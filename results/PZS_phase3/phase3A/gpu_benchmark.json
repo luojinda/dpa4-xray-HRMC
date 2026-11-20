@@ -1,0 +1,26 @@
+{
+  "model_load_s": 1.1320469118654728,
+  "warmup_calls": 10,
+  "warmup_s": [
+    1.0843308195471764,
+    0.02629971131682396,
+    0.027280472218990326,
+    0.026904568076133728,
+    0.025921571999788284,
+    0.025764551013708115,
+    0.025733236223459244,
+    0.025762341916561127,
+    0.025780685245990753,
+    0.02580844983458519
+  ],
+  "measured_calls": 100,
+  "api_note": "DeePMD ASE DP.calculate always returns energy, forces and virial; energy-only and energy+forces are the same model call in this interface.",
+  "median_s": 0.025751637294888496,
+  "p95_s": 0.027615190297365186,
+  "mean_s": 0.026169214472174643,
+  "min_s": 0.025615088641643524,
+  "max_s": 0.041261106729507446,
+  "calls_per_s_median": 38.832482321366506,
+  "gpu_peak_allocated_MiB": 2839.1875,
+  "gpu_peak_reserved_MiB": 3298.0
+}
