@@ -55,6 +55,55 @@ def _write_outputs(out, state, summary, trace, examples=None):
         (out / "metropolis_examples.json").write_text(json.dumps(examples, indent=2))
 
 
+def _jsonable(value):
+    if isinstance(value, dict):
+        return {str(key): _jsonable(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [_jsonable(item) for item in value]
+    if isinstance(value, np.ndarray):
+        return value.tolist()
+    if isinstance(value, np.generic):
+        return value.item()
+    return value
+
+
+def _save_inline_checkpoint(path, state, counters, energy, initial_energy, step,
+                            rngs, model_calls, trace, examples, wall_s, identity):
+    metadata = {
+        "step": step, "counters": counters, "energy_eV": energy,
+        "initial_energy_eV": initial_energy, "model_calls": model_calls,
+        "rng_states": [_jsonable(rng.bit_generator.state) for rng in rngs],
+        "trace": trace, "examples": examples, "wall_s": wall_s,
+        "identity": identity,
+    }
+    temporary = path.with_name(path.name + ".tmp.npz")
+    np.savez_compressed(
+        temporary, positions_A=state.atoms.positions,
+        metadata_json=np.asarray(json.dumps(metadata)),
+    )
+    temporary.replace(path)
+    (path.parent / "trace_progress.json").write_text(json.dumps(trace, indent=2))
+
+
+def _restore_inline_checkpoint(path, state, q, exp, mask, config, cutoffs, rngs,
+                               backend, expected_identity):
+    archive = np.load(path, allow_pickle=False)
+    metadata = json.loads(str(archive["metadata_json"]))
+    if metadata.get("identity") != expected_identity:
+        raise ValueError(
+            f"Checkpoint identity mismatch: {metadata.get('identity')} != {expected_identity}"
+        )
+    atoms = state.atoms.copy(); atoms.positions[:] = archive["positions_A"]
+    state = state.rebuilt(atoms, q, exp.r_A[mask], exp.g_r_A2[mask], config, cutoffs)
+    for rng, rng_state in zip(rngs, metadata["rng_states"], strict=True):
+        rng.bit_generator.state = rng_state
+    recomputed_energy = backend.get_energy(state.atoms)
+    metadata["resume_energy_drift_eV"] = recomputed_energy - metadata["energy_eV"]
+    metadata["energy_eV"] = recomputed_energy
+    metadata["model_calls"] += 1
+    return state, metadata
+
+
 def run_alternating(root, config, cutoffs, weights, backend, out, seed=101,
                     target_attempts=10000, accepted_per_block=500, fire_steps=5,
                     watchdog_attempts=20000):
@@ -115,15 +164,42 @@ def run_alternating(root, config, cutoffs, weights, backend, out, seed=101,
 
 
 def run_inline(root, config, cutoffs, weights, backend, out, seed=101,
-               target_attempts=1000, temperature_K=300.0):
-    state, _, _, _ = _setup(root, config, cutoffs, weights)
-    ra, rd, rx = (np.random.default_rng(x) for x in np.random.SeedSequence(seed).spawn(3))
+               target_attempts=1000, temperature_K=300.0,
+               checkpoint_interval=10000, resume=False):
+    if checkpoint_interval <= 0:
+        raise ValueError("checkpoint_interval must be positive")
+    out.mkdir(parents=True, exist_ok=True)
+    state, q, exp, mask = _setup(root, config, cutoffs, weights)
+    rngs = tuple(np.random.default_rng(x) for x in np.random.SeedSequence(seed).spawn(3))
+    ra, rd, rx = rngs
     counters = dict(attempted=0, accepted=0, hard_sphere_rejected=0,
                     metropolis_rejected=0)
     energy = backend.get_energy(state.atoms)
     initial_energy = energy; trace=[]; examples={"accepted":None,"rejected":None}
-    start=time.perf_counter(); model_calls=1
-    for step in range(1, target_attempts+1):
+    start_step=0; wall_offset=0.0; model_calls=1
+    checkpoint = out / "checkpoint_latest.npz"
+    identity = {
+        "seed": seed, "temperature_K": temperature_K,
+        "move_max_A": config.move_max_A,
+        "model_sha256": backend.manifest()["model_sha256"],
+        "atom_count": len(state.atoms),
+    }
+    if resume:
+        if not checkpoint.exists():
+            raise FileNotFoundError(f"No checkpoint to resume: {checkpoint}")
+        state, restored = _restore_inline_checkpoint(
+            checkpoint, state, q, exp, mask, config, cutoffs, rngs, backend,
+            identity,
+        )
+        counters = restored["counters"]; energy = restored["energy_eV"]
+        initial_energy = restored["initial_energy_eV"]
+        trace = restored["trace"]; examples = restored["examples"]
+        model_calls = restored["model_calls"]; start_step = restored["step"]
+        wall_offset = restored["wall_s"]
+        if start_step > target_attempts:
+            raise ValueError("Checkpoint step exceeds requested target_attempts")
+    start=time.perf_counter()
+    for step in range(start_step+1, target_attempts+1):
         counters["attempted"] += 1
         i=int(ra.integers(len(state.atoms)))
         new=state.atoms.positions[i]+rd.uniform(-config.move_max_A,config.move_max_A,3)
@@ -151,16 +227,31 @@ def run_inline(root, config, cutoffs, weights, backend, out, seed=101,
                     or cn_drift["max_abs_integer_error"]
                     or cn_drift["max_abs_component_error"] > 1e-12):
                 raise RuntimeError(f"incremental state drift at step {step}: {pdf_drift}, {cn_drift}")
-            trace.append(_summary(state,energy,counters,time.perf_counter()-start,
+            trace.append(_summary(state,energy,counters,
+                                  wall_offset + time.perf_counter()-start,
                                   {"step":step,"temperature_K":temperature_K,
                                    "model_calls":model_calls,"pdf_drift":pdf_drift,
                                    "cn_drift":cn_drift}))
+        if step % checkpoint_interval == 0 or step == target_attempts:
+            _save_inline_checkpoint(
+                checkpoint, state, counters, energy, initial_energy, step, rngs,
+                model_calls, trace, examples,
+                wall_offset + time.perf_counter() - start,
+                identity,
+            )
     check_energy=backend.get_energy(state.atoms); model_calls+=1
     drift=check_energy-energy; energy=check_energy
-    summary=_summary(state,energy,counters,time.perf_counter()-start,
+    wall_total = wall_offset + time.perf_counter()-start
+    summary=_summary(state,energy,counters,wall_total,
                      {"target_attempts":target_attempts,"temperature_K":temperature_K,
                       "model_calls":model_calls,"energy_drift_eV":drift,
-                      "delta_energy_from_MQ_eV":energy-initial_energy})
+                      "delta_energy_from_MQ_eV":energy-initial_energy,
+                      "resumed_from_step":start_step,
+                      "checkpoint_interval":checkpoint_interval})
     _write_outputs(out,state,summary,trace,examples)
+    _save_inline_checkpoint(
+        checkpoint, state, counters, energy, initial_energy, target_attempts,
+        rngs, model_calls, trace, examples, wall_total, identity,
+    )
     return summary
 

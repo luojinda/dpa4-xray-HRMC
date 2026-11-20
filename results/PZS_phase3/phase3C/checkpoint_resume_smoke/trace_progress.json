@@ -1,0 +1,110 @@
+[
+  {
+    "attempted": 100,
+    "accepted": 36,
+    "hard_sphere_rejected": 0,
+    "metropolis_rejected": 64,
+    "acceptance_rate": 0.36,
+    "energy_eV": -4516.462679514781,
+    "energy_eV_atom": -5.040694954815604,
+    "pdf_loss_sum": 55.83909221730471,
+    "phase25_total": 31021.71789850262,
+    "Rw_no_scale": 0.6980018048219837,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 3.2850033193826675,
+    "step": 100,
+    "temperature_K": 100.0,
+    "model_calls": 101,
+    "pdf_drift": {
+      "max_abs_G_A-2": 1.176836406102666e-14,
+      "rms_G_A-2": 2.0023677611491966e-15,
+      "max_abs_hist_count": 0
+    },
+    "cn_drift": {
+      "max_abs_integer_error": 0,
+      "by_array": {
+        "p_o": 0,
+        "si_o": 0,
+        "si_cl": 0,
+        "zr_o": 0,
+        "zr_cl": 0,
+        "zr_hist_total": 0,
+        "zr_hist_o": 0
+      },
+      "max_abs_component_error": 0.0
+    }
+  },
+  {
+    "attempted": 200,
+    "accepted": 84,
+    "hard_sphere_rejected": 0,
+    "metropolis_rejected": 116,
+    "acceptance_rate": 0.42,
+    "energy_eV": -4514.230902692422,
+    "energy_eV_atom": -5.038204132469221,
+    "pdf_loss_sum": 52.251828238513156,
+    "phase25_total": 29028.79346584064,
+    "Rw_no_scale": 0.6752088348267371,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 6.510422430932522,
+    "step": 200,
+    "temperature_K": 100.0,
+    "model_calls": 201,
+    "pdf_drift": {
+      "max_abs_G_A-2": 1.1102230246251565e-14,
+      "rms_G_A-2": 1.993626357599519e-15,
+      "max_abs_hist_count": 0
+    },
+    "cn_drift": {
+      "max_abs_integer_error": 0,
+      "by_array": {
+        "p_o": 0,
+        "si_o": 0,
+        "si_cl": 0,
+        "zr_o": 0,
+        "zr_cl": 0,
+        "zr_hist_total": 0,
+        "zr_hist_o": 0
+      },
+      "max_abs_component_error": 0.0
+    }
+  },
+  {
+    "attempted": 300,
+    "accepted": 137,
+    "hard_sphere_rejected": 1,
+    "metropolis_rejected": 162,
+    "acceptance_rate": 0.45666666666666667,
+    "energy_eV": -4512.503724485755,
+    "energy_eV_atom": -5.036276478220708,
+    "pdf_loss_sum": 49.28350750807584,
+    "phase25_total": 27379.72639337547,
+    "Rw_no_scale": 0.6557498130261562,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 9.706187296658754,
+    "step": 300,
+    "temperature_K": 100.0,
+    "model_calls": 302,
+    "pdf_drift": {
+      "max_abs_G_A-2": 1.0103029524088925e-14,
+      "rms_G_A-2": 1.8905827083595945e-15,
+      "max_abs_hist_count": 0
+    },
+    "cn_drift": {
+      "max_abs_integer_error": 0,
+      "by_array": {
+        "p_o": 0,
+        "si_o": 0,
+        "si_cl": 0,
+        "zr_o": 0,
+        "zr_cl": 0,
+        "zr_hist_total": 0,
+        "zr_hist_o": 0
+      },
+      "max_abs_component_error": 0.0
+    }
+  }
+]
