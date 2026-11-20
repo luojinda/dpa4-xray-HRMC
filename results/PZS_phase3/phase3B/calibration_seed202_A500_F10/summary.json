@@ -1,0 +1,19 @@
+{
+  "attempted": 10000,
+  "accepted": 4710,
+  "hard_sphere_rejected": 644,
+  "metropolis_rejected": 4646,
+  "acceptance_rate": 0.471,
+  "energy_eV": -4412.3702425399115,
+  "energy_eV_atom": -4.9245203599775795,
+  "pdf_loss_sum": 4.632251560503633,
+  "phase25_total": 2573.473089168685,
+  "Rw_no_scale": 0.20104044601245674,
+  "P_fourfold": 1.0,
+  "Si_fourfold": 1.0,
+  "wall_s": 40.2729015648365,
+  "blocks_completed": 9,
+  "target_attempts": 10000,
+  "accepted_per_block": 500,
+  "fire_steps": 10
+}

@@ -1,0 +1,3602 @@
+[
+  {
+    "phase": "Alternating",
+    "tag": "calibration_seed101_A100_F5",
+    "path": "results/PZS_phase3/phase3B/calibration_seed101_A100_F5",
+    "attempted": 10000,
+    "accepted": 5365,
+    "hard_sphere_rejected": 159,
+    "metropolis_rejected": 4476,
+    "acceptance_rate": 0.5365,
+    "energy_eV": -4491.2987736744135,
+    "energy_eV_atom": -5.012610238475908,
+    "pdf_loss_sum": 15.821495986550858,
+    "phase25_total": 8789.719992528255,
+    "Rw_no_scale": 0.3715447625035299,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 106.6053156144917,
+    "blocks_completed": 53,
+    "target_attempts": 10000,
+    "accepted_per_block": 100,
+    "fire_steps": 5,
+    "recomputed_energy_eV": -4491.298772985235,
+    "delta_energy_from_MQ_eV": 27.252843338996172,
+    "force_rms_eV_A": 1.105012552658727,
+    "force_max_eV_A": 7.797236887791265,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 15.8214959865508,
+        "Rw_no_scale": 0.37154476250352925,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          63,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          23,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.5564786521674485,
+              "std": 0.04085349555963712,
+              "min": 1.4648706451445135,
+              "max": 1.6908013708440293
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 109.38163128766278,
+            "std": 4.245183962824079,
+            "min": 97.37730803703482,
+            "max": 128.0552914398938
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 3.987914202593374,
+            "std": 1.4581335473947012,
+            "min": 1.7589065317564687,
+            "max": 9.684762883412358
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 0.4181563838306106,
+            "std": 0.3297905888321251,
+            "min": 0.07403755005111569,
+            "max": 1.9496835857583248
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.921006010010105,
+            "std": 0.06495376192381233,
+            "min": 1.8150008834802778,
+            "max": 2.1378596879243736
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.6397728722209777,
+              "std": 0.03255785690428164,
+              "min": 1.5556846373016915,
+              "max": 1.7308615323213778
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 2.014583922939226,
+              "std": 0.042484779145494096,
+              "min": 1.874355956715419,
+              "max": 2.1520572811335734
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 109.37233055639187,
+            "std": 5.11820674353108,
+            "min": 93.72245453156319,
+            "max": 126.16814047595953
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 4.874819702067944,
+            "std": 1.5626747548365958,
+            "min": 1.6968038523291595,
+            "max": 9.181984393899395
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 0.933820303147715,
+            "std": 0.44008515238137924,
+            "min": 0.12721618267073403,
+            "max": 2.0953648028278193
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.7451826332141245,
+            "std": 0.48275236971602686,
+            "min": 2.366623394396935,
+            "max": 4.418549698109136
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Alternating",
+    "tag": "calibration_seed101_A250_F5",
+    "path": "results/PZS_phase3/phase3B/calibration_seed101_A250_F5",
+    "attempted": 10000,
+    "accepted": 4769,
+    "hard_sphere_rejected": 662,
+    "metropolis_rejected": 4569,
+    "acceptance_rate": 0.4769,
+    "energy_eV": -4434.427410339124,
+    "energy_eV_atom": -4.949137734753487,
+    "pdf_loss_sum": 5.256650828758197,
+    "phase25_total": 2920.3615715323317,
+    "Rw_no_scale": 0.21416176430218917,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 52.59275645390153,
+    "blocks_completed": 19,
+    "target_attempts": 10000,
+    "accepted_per_block": 250,
+    "fire_steps": 5,
+    "recomputed_energy_eV": -4434.4273899301215,
+    "delta_energy_from_MQ_eV": 84.12422639410943,
+    "force_rms_eV_A": 1.7829252804591638,
+    "force_max_eV_A": 8.683013614612408,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 5.256650828758211,
+        "Rw_no_scale": 0.21416176430218947,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          62,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          23,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.5690751274197319,
+              "std": 0.053544375642786024,
+              "min": 1.4515684437178706,
+              "max": 1.705226061818763
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 109.32003801501442,
+            "std": 6.2652523229589585,
+            "min": 92.56236562158946,
+            "max": 131.3246060529163
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 6.0952573657373526,
+            "std": 1.4574225537567616,
+            "min": 3.0397042015021007,
+            "max": 10.79373551877644
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 0.8528479822953154,
+            "std": 0.40436782811980426,
+            "min": 0.17347055387138488,
+            "max": 2.276926232492605
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.949014475230685,
+            "std": 0.10083283931935282,
+            "min": 1.7938030764341695,
+            "max": 2.2863538383977624
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.6213650229133514,
+              "std": 0.03867019297831642,
+              "min": 1.5604621448080331,
+              "max": 1.7496085849009375
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 2.0086576058307615,
+              "std": 0.0768572379837697,
+              "min": 1.9004690110185307,
+              "max": 2.237386526859103
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 109.25525514178905,
+            "std": 7.707761964882841,
+            "min": 91.83241689026045,
+            "max": 131.85164029025134
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 7.4194380597909415,
+            "std": 2.099565306976207,
+            "min": 1.7061682489834065,
+            "max": 12.231641079106044
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 1.6652632539889833,
+            "std": 0.7521419363576721,
+            "min": 0.2984071069571054,
+            "max": 3.7517972665517068
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.6427446623188313,
+            "std": 0.5127853186491675,
+            "min": 2.2320406692822274,
+            "max": 4.723632233892265
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Alternating",
+    "tag": "calibration_seed101_A500_F10",
+    "path": "results/PZS_phase3/phase3B/calibration_seed101_A500_F10",
+    "attempted": 10000,
+    "accepted": 4775,
+    "hard_sphere_rejected": 638,
+    "metropolis_rejected": 4587,
+    "acceptance_rate": 0.4775,
+    "energy_eV": -4430.57542561379,
+    "energy_eV_atom": -4.9448386446582475,
+    "pdf_loss_sum": 5.189154546607142,
+    "phase25_total": 2882.863637003968,
+    "Rw_no_scale": 0.21278238556759527,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 41.1114305742085,
+    "blocks_completed": 9,
+    "target_attempts": 10000,
+    "accepted_per_block": 500,
+    "fire_steps": 10,
+    "recomputed_energy_eV": -4430.575422110154,
+    "delta_energy_from_MQ_eV": 87.97619421407671,
+    "force_rms_eV_A": 2.0205262214966018,
+    "force_max_eV_A": 11.10639204427347,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 5.1891545466072415,
+        "Rw_no_scale": 0.2127823855675973,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          63,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          23,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.5780423736406286,
+              "std": 0.063551725538088,
+              "min": 1.4000841498119159,
+              "max": 1.7381955236764097
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 109.29532037645318,
+            "std": 6.3326804850011476,
+            "min": 95.58609670696859,
+            "max": 134.88580642382612
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 6.036795808433095,
+            "std": 1.9211661544948797,
+            "min": 3.153529406574199,
+            "max": 12.44677144838818
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 0.9175062894613839,
+            "std": 0.5632667233826162,
+            "min": 0.20386994567598524,
+            "max": 2.96977087526285
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.9823681592837028,
+            "std": 0.11285221594423075,
+            "min": 1.8040238089831329,
+            "max": 2.2615909902209896
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.6144837685080957,
+              "std": 0.047811963588252626,
+              "min": 1.5356214429452786,
+              "max": 1.7661712533763376
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 2.0107539057747337,
+              "std": 0.08195431160285828,
+              "min": 1.874061492431237,
+              "max": 2.2575372244735257
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 109.25842457807208,
+            "std": 7.506217121748668,
+            "min": 92.04354615817434,
+            "max": 133.13631451161396
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 7.255424529442221,
+            "std": 1.935818312246345,
+            "min": 2.704568900834509,
+            "max": 13.330413680189274
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 1.6617821195386457,
+            "std": 0.6483367102066198,
+            "min": 0.28704218176427215,
+            "max": 3.549017648845778
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.6486322562595612,
+            "std": 0.5041182002371815,
+            "min": 2.3170529466903806,
+            "max": 4.583420459011749
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Alternating",
+    "tag": "calibration_seed101_A500_F20",
+    "path": "results/PZS_phase3/phase3B/calibration_seed101_A500_F20",
+    "attempted": 10000,
+    "accepted": 5216,
+    "hard_sphere_rejected": 341,
+    "metropolis_rejected": 4443,
+    "acceptance_rate": 0.5216,
+    "energy_eV": -4477.818705922112,
+    "energy_eV_atom": -4.9975655200023565,
+    "pdf_loss_sum": 12.759833951598225,
+    "phase25_total": 7088.796639776791,
+    "Rw_no_scale": 0.3336644075506686,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 45.636913549155,
+    "blocks_completed": 10,
+    "target_attempts": 10000,
+    "accepted_per_block": 500,
+    "fire_steps": 20,
+    "recomputed_energy_eV": -4477.818704206616,
+    "delta_energy_from_MQ_eV": 40.73291211761534,
+    "force_rms_eV_A": 1.4204780289990804,
+    "force_max_eV_A": 9.498165394590487,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 12.759833951598054,
+        "Rw_no_scale": 0.3336644075506664,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          63,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          23,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.5589876850101891,
+              "std": 0.05639239093600471,
+              "min": 1.4204681626722988,
+              "max": 1.7375521980701494
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 109.35302654238012,
+            "std": 4.936842488730021,
+            "min": 98.63942659877114,
+            "max": 129.22682674428341
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 4.695414539773932,
+            "std": 1.5295312685981373,
+            "min": 1.93586143830179,
+            "max": 10.406128415925926
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 0.5917357953402993,
+            "std": 0.37074074474137214,
+            "min": 0.09438020457018964,
+            "max": 2.1550048736422633
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.9258011993680344,
+            "std": 0.0927284043780895,
+            "min": 1.8052439125718054,
+            "max": 2.189888182489061
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.6360706826464946,
+              "std": 0.04608537953984571,
+              "min": 1.5323337867129183,
+              "max": 1.7682641178855456
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 2.016864221545428,
+              "std": 0.04868814619063066,
+              "min": 1.877914669841088,
+              "max": 2.1546165903755554
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 109.35213814866336,
+            "std": 5.69554142723435,
+            "min": 92.38795260471755,
+            "max": 127.1584169540612
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 5.431722115232288,
+            "std": 1.717488762894824,
+            "min": 2.002744173013533,
+            "max": 9.844822163765313
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 1.085107150386845,
+            "std": 0.5523644838805225,
+            "min": 0.09808531073621093,
+            "max": 2.6994287865127577
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.739990353460149,
+            "std": 0.4901213289469638,
+            "min": 2.3286999501560355,
+            "max": 4.413448915274373
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Alternating",
+    "tag": "calibration_seed101_A500_F5",
+    "path": "results/PZS_phase3/phase3B/calibration_seed101_A500_F5",
+    "attempted": 10000,
+    "accepted": 4384,
+    "hard_sphere_rejected": 992,
+    "metropolis_rejected": 4624,
+    "acceptance_rate": 0.4384,
+    "energy_eV": -4397.550458032756,
+    "energy_eV_atom": -4.907980421911558,
+    "pdf_loss_sum": 3.763186142789678,
+    "phase25_total": 2090.6589682164877,
+    "Rw_no_scale": 0.18120293231287346,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 36.77871062979102,
+    "blocks_completed": 8,
+    "target_attempts": 10000,
+    "accepted_per_block": 500,
+    "fire_steps": 5,
+    "recomputed_energy_eV": -4397.550474003076,
+    "delta_energy_from_MQ_eV": 121.00114232115538,
+    "force_rms_eV_A": 2.443948973874314,
+    "force_max_eV_A": 11.149303003103887,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 3.7631861427899196,
+        "Rw_no_scale": 0.1812029323128793,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          62,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          23,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.582403952698464,
+              "std": 0.06277805859022084,
+              "min": 1.4405988934558436,
+              "max": 1.7779470371543722
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 109.21806664801638,
+            "std": 7.220992041430026,
+            "min": 90.83570191069748,
+            "max": 135.71541805285375
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 6.913904382006653,
+            "std": 2.0987470547288014,
+            "min": 3.605921090745022,
+            "max": 12.329519638382733
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 1.1632757893604606,
+            "std": 0.7256342659435812,
+            "min": 0.3730101319949949,
+            "max": 3.4215781126172717
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.9873315173238997,
+            "std": 0.12473630701509748,
+            "min": 1.694888062477914,
+            "max": 2.2839871984101885
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.605999350369204,
+              "std": 0.06471535537467969,
+              "min": 1.5228143454873697,
+              "max": 1.8444393341162932
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 2.0076344488223783,
+              "std": 0.10810931223648514,
+              "min": 1.8728667579305085,
+              "max": 2.2853602665879342
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 109.20860037967388,
+            "std": 8.455682905771885,
+            "min": 89.15874879238918,
+            "max": 133.2605068938392
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 8.102521573486445,
+            "std": 2.432424089748669,
+            "min": 3.139562928763416,
+            "max": 14.39151575849164
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 2.04279326714669,
+            "std": 0.9596458722376339,
+            "min": 0.6014496955665707,
+            "max": 5.572222685539001
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.601820883395513,
+            "std": 0.5378421978365692,
+            "min": 2.2122643182584474,
+            "max": 4.799497158358639
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Alternating",
+    "tag": "calibration_seed202_A500_F10",
+    "path": "results/PZS_phase3/phase3B/calibration_seed202_A500_F10",
+    "attempted": 10000,
+    "accepted": 4710,
+    "hard_sphere_rejected": 644,
+    "metropolis_rejected": 4646,
+    "acceptance_rate": 0.471,
+    "energy_eV": -4412.3702425399115,
+    "energy_eV_atom": -4.9245203599775795,
+    "pdf_loss_sum": 4.632251560503633,
+    "phase25_total": 2573.473089168685,
+    "Rw_no_scale": 0.20104044601245674,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 40.2729015648365,
+    "blocks_completed": 9,
+    "target_attempts": 10000,
+    "accepted_per_block": 500,
+    "fire_steps": 10,
+    "recomputed_energy_eV": -4412.370242737352,
+    "delta_energy_from_MQ_eV": 106.18137358687909,
+    "force_rms_eV_A": 2.2763028214116354,
+    "force_max_eV_A": 10.336993576644554,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 4.6322515605038035,
+        "Rw_no_scale": 0.20104044601246043,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          62,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          23,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.5818831847592127,
+              "std": 0.062218485465305735,
+              "min": 1.4429677717108902,
+              "max": 1.7632448020795002
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 109.31958983407863,
+            "std": 6.58417505070004,
+            "min": 92.76366917232266,
+            "max": 128.29604377849842
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 6.168235703555443,
+            "std": 2.308077404091631,
+            "min": 1.1430456864879128,
+            "max": 10.994340724350296
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 0.9597525921173669,
+            "std": 0.5194543843844354,
+            "min": 0.057929512545882786,
+            "max": 2.0419158414696956
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.9919933975921391,
+            "std": 0.09390697523734581,
+            "min": 1.8512049685720948,
+            "max": 2.2760107383097847
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.608167589054738,
+              "std": 0.046724935239373835,
+              "min": 1.5246520621972863,
+              "max": 1.7240918139968693
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 2.0196163315036024,
+              "std": 0.10196088351532641,
+              "min": 1.8755706494001547,
+              "max": 2.2797624078453524
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 109.1779753213578,
+            "std": 8.54940914208555,
+            "min": 85.53663608915559,
+            "max": 135.0221188401615
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 8.1729369258483,
+            "std": 2.526161415776059,
+            "min": 3.3315906790395435,
+            "max": 13.913854058530312
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 2.052688229520675,
+            "std": 0.8630161921288929,
+            "min": 0.4859601978705083,
+            "max": 4.310394359765524
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.665422844619939,
+            "std": 0.5672236645096965,
+            "min": 2.4246497516198615,
+            "max": 4.821883147382082
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Alternating",
+    "tag": "calibration_seed303_A500_F10",
+    "path": "results/PZS_phase3/phase3B/calibration_seed303_A500_F10",
+    "attempted": 10000,
+    "accepted": 4817,
+    "hard_sphere_rejected": 646,
+    "metropolis_rejected": 4537,
+    "acceptance_rate": 0.4817,
+    "energy_eV": -4428.624526459842,
+    "energy_eV_atom": -4.942661301852502,
+    "pdf_loss_sum": 5.072058336110302,
+    "phase25_total": 2817.810186727946,
+    "Rw_no_scale": 0.21036790933598865,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 40.893862925469875,
+    "blocks_completed": 9,
+    "target_attempts": 10000,
+    "accepted_per_block": 500,
+    "fire_steps": 10,
+    "recomputed_energy_eV": -4428.624537393569,
+    "delta_energy_from_MQ_eV": 89.92707893066199,
+    "force_rms_eV_A": 1.8780106488232748,
+    "force_max_eV_A": 5.956384847325879,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 5.0720583361107,
+        "Rw_no_scale": 0.2103679093359969,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          62,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          23,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.5743683915109568,
+              "std": 0.056768443910463144,
+              "min": 1.4131283410519495,
+              "max": 1.7596728454656103
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 109.3378802554093,
+            "std": 5.808453938327486,
+            "min": 95.16065254577153,
+            "max": 132.71045515008953
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 5.407648144223253,
+            "std": 2.1244430702291055,
+            "min": 1.6753624868840504,
+            "max": 11.471101412209173
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 0.7808772088575422,
+            "std": 0.6597723059572306,
+            "min": 0.1264233596952886,
+            "max": 3.505176055043186
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.9714154036603917,
+            "std": 0.08442831016941599,
+            "min": 1.7968952328376397,
+            "max": 2.1664424876263397
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.631520356615171,
+              "std": 0.03678769995890173,
+              "min": 1.5408768395423325,
+              "max": 1.7477353020097655
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 2.0165155781420254,
+              "std": 0.0906515446718089,
+              "min": 1.874246996067411,
+              "max": 2.276673060625891
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 109.19476728220825,
+            "std": 7.653645229447475,
+            "min": 88.28349859998016,
+            "max": 128.7577323503706
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 7.317816367545448,
+            "std": 2.2592643415758715,
+            "min": 2.2065767004304666,
+            "max": 12.250020078487143
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 1.7233954530358218,
+            "std": 0.6970587398077948,
+            "min": 0.13142259798646358,
+            "max": 3.4633663583382646
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.6922013209644637,
+            "std": 0.5169123864261689,
+            "min": 2.4585441867986364,
+            "max": 4.708605529353038
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Inline",
+    "tag": "calibration_seed101_T100_10k",
+    "path": "results/PZS_phase3/phase3C/calibration_seed101_T100_10k",
+    "attempted": 10000,
+    "accepted": 3171,
+    "hard_sphere_rejected": 569,
+    "metropolis_rejected": 6260,
+    "acceptance_rate": 0.3171,
+    "energy_eV": -4473.18331648235,
+    "energy_eV_atom": -4.992392094288337,
+    "pdf_loss_sum": 6.830232122656582,
+    "phase25_total": 3796.573401475879,
+    "Rw_no_scale": 0.24412097878395086,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 305.35770696774125,
+    "target_attempts": 10000,
+    "temperature_K": 100.0,
+    "model_calls": 9433,
+    "energy_drift_eV": 1.0808929800987244e-05,
+    "delta_energy_from_MQ_eV": 45.368299432098866,
+    "recomputed_energy_eV": -4473.183316892132,
+    "force_rms_eV_A": 1.286693952457707,
+    "force_max_eV_A": 3.688048237993278,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 6.830232122656653,
+        "Rw_no_scale": 0.24412097878395214,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          62,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          23,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.5541020181019112,
+              "std": 0.03906892009354747,
+              "min": 1.4632239163998702,
+              "max": 1.6387843288782862
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 109.37017028628897,
+            "std": 4.152469410230038,
+            "min": 98.5594998502033,
+            "max": 121.65823877633989
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 3.963459746226447,
+            "std": 1.2426585274364323,
+            "min": 1.2369362227504925,
+            "max": 6.417046379739846
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 0.41486743675861815,
+            "std": 0.21240597802407102,
+            "min": 0.0424957808469718,
+            "max": 0.9014699375556247
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.912945024180471,
+            "std": 0.04218436496064998,
+            "min": 1.8371210836648075,
+            "max": 2.0115514611913703
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.625455569805383,
+              "std": 0.025778341422788575,
+              "min": 1.557517812666531,
+              "max": 1.6780260746620752
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 1.9964138281608377,
+              "std": 0.05167656363920705,
+              "min": 1.8984842338839851,
+              "max": 2.162904231657555
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 109.34138419618523,
+            "std": 6.291461219331743,
+            "min": 92.14881207219767,
+            "max": 125.00957501896652
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 6.111303858699653,
+            "std": 1.5004355773274107,
+            "min": 2.5176292111635092,
+            "max": 9.612760003272372
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 1.214434117449159,
+            "std": 0.41048241666531526,
+            "min": 0.2570585647075321,
+            "max": 2.126653687822302
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.6182268662956036,
+            "std": 0.44530961481146897,
+            "min": 2.4786171960068275,
+            "max": 4.412918556262766
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Inline",
+    "tag": "calibration_seed101_T175_10k",
+    "path": "results/PZS_phase3/phase3C/calibration_seed101_T175_10k",
+    "attempted": 10000,
+    "accepted": 3547,
+    "hard_sphere_rejected": 829,
+    "metropolis_rejected": 5624,
+    "acceptance_rate": 0.3547,
+    "energy_eV": -4455.099617522329,
+    "energy_eV_atom": -4.972209394556171,
+    "pdf_loss_sum": 4.983929403141147,
+    "phase25_total": 2770.8496684117486,
+    "Rw_no_scale": 0.20853228973288504,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 303.36816453933716,
+    "target_attempts": 10000,
+    "temperature_K": 175.0,
+    "model_calls": 9173,
+    "energy_drift_eV": -8.903443813323975e-07,
+    "delta_energy_from_MQ_eV": 63.45200802758336,
+    "recomputed_energy_eV": -4455.099608296648,
+    "force_rms_eV_A": 1.6382659534738222,
+    "force_max_eV_A": 4.892768512662186,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 4.983929403140735,
+        "Rw_no_scale": 0.20853228973287644,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          62,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          23,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.5566583495283977,
+              "std": 0.03994765018785282,
+              "min": 1.4728131800467645,
+              "max": 1.67695041073972
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 109.36717703798786,
+            "std": 4.368808874738961,
+            "min": 100.52782139497936,
+            "max": 124.48375820387253
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 4.16073378072922,
+            "std": 1.3362673609236595,
+            "min": 1.7519116494126266,
+            "max": 7.568537402450516
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 0.44683803023401125,
+            "std": 0.26969271733898315,
+            "min": 0.06569797729440778,
+            "max": 1.2136833154955966
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.9207007772565923,
+            "std": 0.049433976656034224,
+            "min": 1.7536753035110149,
+            "max": 2.065663936840424
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.62178630113074,
+              "std": 0.03298875571530008,
+              "min": 1.5520553645577668,
+              "max": 1.7176245362978764
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 1.9904002656745743,
+              "std": 0.0705496539594625,
+              "min": 1.8726694640840575,
+              "max": 2.1836305865385706
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 109.31484713143347,
+            "std": 6.768246960227969,
+            "min": 92.66279343268162,
+            "max": 129.99327702163708
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 6.461451359122783,
+            "std": 2.0207092618147375,
+            "min": 3.051261242381093,
+            "max": 13.864433736042605
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 1.3748118656769417,
+            "std": 0.5930700383204237,
+            "min": 0.2526333038234764,
+            "max": 3.1358001295495583
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.5736168549563136,
+            "std": 0.4534143694199201,
+            "min": 2.373236753105538,
+            "max": 4.523039680073883
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Inline",
+    "tag": "calibration_seed101_T300_10k",
+    "path": "results/PZS_phase3/phase3C/calibration_seed101_T300_10k",
+    "attempted": 10000,
+    "accepted": 3748,
+    "hard_sphere_rejected": 999,
+    "metropolis_rejected": 5253,
+    "acceptance_rate": 0.3748,
+    "energy_eV": -4437.629221847399,
+    "energy_eV_atom": -4.952711185097543,
+    "pdf_loss_sum": 4.06752809447633,
+    "phase25_total": 2259.737830264628,
+    "Rw_no_scale": 0.1883877467046346,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 291.16143222898245,
+    "target_attempts": 10000,
+    "temperature_K": 300.0,
+    "model_calls": 9003,
+    "energy_drift_eV": -2.748332917690277e-06,
+    "delta_energy_from_MQ_eV": 80.92240344639958,
+    "recomputed_energy_eV": -4437.629212877831,
+    "force_rms_eV_A": 1.9037078879044735,
+    "force_max_eV_A": 5.389498671605771,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 4.0675280944765575,
+        "Rw_no_scale": 0.18838774670463987,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          63,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          23,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.560472055262076,
+              "std": 0.043496368243102386,
+              "min": 1.4663588836931416,
+              "max": 1.6699971520496881
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 109.36398845856907,
+            "std": 4.83637906512895,
+            "min": 95.87292245282514,
+            "max": 129.14964671895046
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 4.576704172808848,
+            "std": 1.5671120303808967,
+            "min": 2.2069435935915673,
+            "max": 9.38119797563515
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 0.5307621391199813,
+            "std": 0.35493742471627593,
+            "min": 0.13684053217036812,
+            "max": 1.7229406177614064
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.930958594243132,
+            "std": 0.05613471850316596,
+            "min": 1.8249890988009934,
+            "max": 2.0669172058594274
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.6080324502792005,
+              "std": 0.032373869328216495,
+              "min": 1.5360828217174802,
+              "max": 1.6893530099212695
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 1.9884220090076226,
+              "std": 0.08420797908411229,
+              "min": 1.8728548093349964,
+              "max": 2.267732872950897
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 109.2862465148449,
+            "std": 7.18957340129046,
+            "min": 91.83859569684907,
+            "max": 126.74344350189173
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 6.979682997801945,
+            "std": 1.7344181640182572,
+            "min": 3.215410638534544,
+            "max": 11.443431811337437
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 1.5460808035444904,
+            "std": 0.6096317690127337,
+            "min": 0.2515453322201203,
+            "max": 3.0584076713481743
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.5445248818580466,
+            "std": 0.4899950602249378,
+            "min": 2.277448841168567,
+            "max": 4.643541785794476
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Inline",
+    "tag": "calibration_seed202_T100_10k",
+    "path": "results/PZS_phase3/phase3C/calibration_seed202_T100_10k",
+    "attempted": 10000,
+    "accepted": 3231,
+    "hard_sphere_rejected": 584,
+    "metropolis_rejected": 6185,
+    "acceptance_rate": 0.3231,
+    "energy_eV": -4472.882229875892,
+    "energy_eV_atom": -4.992056060129344,
+    "pdf_loss_sum": 6.594877907740241,
+    "phase25_total": 3663.8210598556893,
+    "Rw_no_scale": 0.2398781831562855,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 299.55152978003025,
+    "target_attempts": 10000,
+    "temperature_K": 100.0,
+    "model_calls": 9418,
+    "energy_drift_eV": 8.497387170791626e-06,
+    "delta_energy_from_MQ_eV": 45.6693822555244,
+    "recomputed_energy_eV": -4472.882234068707,
+    "force_rms_eV_A": 1.2878065218814183,
+    "force_max_eV_A": 4.3454301191991656,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 6.594877907738805,
+        "Rw_no_scale": 0.2398781831562594,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          63,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          23,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.5505091069194186,
+              "std": 0.03549881211538929,
+              "min": 1.4747607352442482,
+              "max": 1.6209929179583036
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 109.36202312203268,
+            "std": 4.184709815326483,
+            "min": 99.26268520381447,
+            "max": 121.51804533426257
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 4.050555939241472,
+            "std": 1.056748275746144,
+            "min": 1.431992785616539,
+            "max": 5.822415238207148
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 0.41333857496740145,
+            "std": 0.1859794715602848,
+            "min": 0.04455523638588249,
+            "max": 0.7711233422783227
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.8996035240547724,
+            "std": 0.03895567974337588,
+            "min": 1.80168983342753,
+            "max": 1.989062805541879
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.6250092505813853,
+              "std": 0.025706221599517833,
+              "min": 1.5642454034676512,
+              "max": 1.704923887980638
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 1.9980783572607932,
+              "std": 0.05399849067955485,
+              "min": 1.8858788401813817,
+              "max": 2.1808158906600097
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 109.3626329795372,
+            "std": 6.459800709147322,
+            "min": 88.36890136514177,
+            "max": 126.21583853116165
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 6.1729633158167845,
+            "std": 1.9066568601320948,
+            "min": 2.5505795207840887,
+            "max": 10.22593786541176
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 1.2325178062253561,
+            "std": 0.5410274929806513,
+            "min": 0.22054135745312548,
+            "max": 2.6143266178580156
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.6251265941083366,
+            "std": 0.46948466915272047,
+            "min": 2.484730916894253,
+            "max": 4.612156115314643
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Inline",
+    "tag": "calibration_seed303_T100_10k",
+    "path": "results/PZS_phase3/phase3C/calibration_seed303_T100_10k",
+    "attempted": 10000,
+    "accepted": 3279,
+    "hard_sphere_rejected": 510,
+    "metropolis_rejected": 6211,
+    "acceptance_rate": 0.3279,
+    "energy_eV": -4473.501192016646,
+    "energy_eV_atom": -4.992746866090007,
+    "pdf_loss_sum": 6.7520116499665335,
+    "phase25_total": 3753.117583314741,
+    "Rw_no_scale": 0.24271910520959575,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 306.94149647280574,
+    "target_attempts": 10000,
+    "temperature_K": 100.0,
+    "model_calls": 9492,
+    "energy_drift_eV": 1.1082738637924194e-06,
+    "delta_energy_from_MQ_eV": 45.050436053425074,
+    "recomputed_energy_eV": -4473.501180270806,
+    "force_rms_eV_A": 1.2703120558910994,
+    "force_max_eV_A": 4.568723071286369,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 6.752011649964857,
+        "Rw_no_scale": 0.24271910520956563,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          62,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          23,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.55379195990101,
+              "std": 0.03587329908161529,
+              "min": 1.4605565649074381,
+              "max": 1.6472701978353828
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 109.34506112914669,
+            "std": 4.321521060403993,
+            "min": 98.23643464203703,
+            "max": 119.31257174237159
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 4.151555466273079,
+            "std": 1.2066680184549594,
+            "min": 1.3043325635352339,
+            "max": 6.175930360824494
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 0.4504163717843671,
+            "std": 0.23070739406683505,
+            "min": 0.04223321072851857,
+            "max": 0.9115486894124452
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.9104498220906236,
+            "std": 0.03485856452069656,
+            "min": 1.8389113978637965,
+            "max": 1.9984388164348177
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.6307611746871373,
+              "std": 0.02309328165916347,
+              "min": 1.585807838086312,
+              "max": 1.690659046699054
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 1.9968214929471797,
+              "std": 0.05383747204807925,
+              "min": 1.873750499200399,
+              "max": 2.1515633064120427
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 109.36132499439582,
+            "std": 6.285990227539993,
+            "min": 89.7340762691449,
+            "max": 125.72539714919019
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 6.013669853042899,
+            "std": 1.833446233474864,
+            "min": 2.577235858055647,
+            "max": 10.827427982441483
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 1.1768581799825764,
+            "std": 0.4570755307231212,
+            "min": 0.3119575897861457,
+            "max": 2.460579134845889
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.6280849801691026,
+            "std": 0.4547795421134907,
+            "min": 2.4771249515632703,
+            "max": 4.671439391864838
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Alternating",
+    "tag": "validation_100k_seed101_A500_F10",
+    "path": "results/PZS_phase3/phase3B/validation_100k_seed101_A500_F10",
+    "attempted": 100000,
+    "accepted": 37485,
+    "hard_sphere_rejected": 21513,
+    "metropolis_rejected": 41002,
+    "acceptance_rate": 0.37485,
+    "energy_eV": -4307.18640049,
+    "energy_eV_atom": -4.807127679118303,
+    "pdf_loss_sum": 1.8824353613949683,
+    "phase25_total": 1045.7974229972046,
+    "Rw_no_scale": 0.1281584974830835,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 315.5802160836756,
+    "blocks_completed": 74,
+    "target_attempts": 100000,
+    "accepted_per_block": 500,
+    "fire_steps": 10,
+    "recomputed_energy_eV": -4307.186392588659,
+    "delta_energy_from_MQ_eV": 211.36522373557182,
+    "force_rms_eV_A": 3.0587467258040935,
+    "force_max_eV_A": 12.046882355943652,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 1.8824353613952525,
+        "Rw_no_scale": 0.1281584974830932,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          60,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          25,
+          16,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.5819582590076566,
+              "std": 0.05830983589379794,
+              "min": 1.4468705539485573,
+              "max": 1.735634089534841
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 108.8828293515035,
+            "std": 11.052508537529084,
+            "min": 88.80260659082232,
+            "max": 144.63331982582318
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 10.646109764931944,
+            "std": 3.027291883361977,
+            "min": 6.52044284358586,
+            "max": 17.046782653687465
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 2.548432409406353,
+            "std": 1.363116257440057,
+            "min": 0.9135669041404888,
+            "max": 5.345202795137244
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.921490074459989,
+            "std": 0.09685180110588722,
+            "min": 1.6982073105681808,
+            "max": 2.1097376520839806
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.5861341837391565,
+              "std": 0.04683958878351262,
+              "min": 1.5249918050693794,
+              "max": 1.7269863487043693
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 2.0335221786818902,
+              "std": 0.1336676435465533,
+              "min": 1.8727611818785685,
+              "max": 2.2933250406322028
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 108.89193734460078,
+            "std": 11.571449393630232,
+            "min": 83.93499433207609,
+            "max": 142.063581347831
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 11.134823797171006,
+            "std": 3.2015167038835584,
+            "min": 2.6054369676777007,
+            "max": 18.51615519932287
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 3.524906697590626,
+            "std": 1.4088281910886653,
+            "min": 0.9129918799128941,
+            "max": 6.551992783683329
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.5951552344710596,
+            "std": 0.5730144710844043,
+            "min": 2.353014700338756,
+            "max": 5.116447895937704
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Alternating",
+    "tag": "validation_100k_seed202_A500_F10",
+    "path": "results/PZS_phase3/phase3B/validation_100k_seed202_A500_F10",
+    "attempted": 100000,
+    "accepted": 37312,
+    "hard_sphere_rejected": 21619,
+    "metropolis_rejected": 41069,
+    "acceptance_rate": 0.37312,
+    "energy_eV": -4306.192515857636,
+    "energy_eV_atom": -4.806018432876826,
+    "pdf_loss_sum": 1.9388592467205257,
+    "phase25_total": 1077.1440259558476,
+    "Rw_no_scale": 0.13006501999331502,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 321.0016048774123,
+    "blocks_completed": 74,
+    "target_attempts": 100000,
+    "accepted_per_block": 500,
+    "fire_steps": 10,
+    "recomputed_energy_eV": -4306.192511636882,
+    "delta_energy_from_MQ_eV": 212.35910468734892,
+    "force_rms_eV_A": 2.89869155993486,
+    "force_max_eV_A": 10.879700592291334,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 1.9388592467203836,
+        "Rw_no_scale": 0.13006501999331024,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          58,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          26,
+          16,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.5899216021727347,
+              "std": 0.06069042271589366,
+              "min": 1.458807100117121,
+              "max": 1.750002868278078
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 108.86907144087722,
+            "std": 11.47465540447075,
+            "min": 86.71235351787806,
+            "max": 145.95303703199616
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 10.994092675726854,
+            "std": 3.34069252405071,
+            "min": 5.5993926914383945,
+            "max": 19.18256486400525
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 2.7535735872642872,
+            "std": 1.4973070077192543,
+            "min": 0.7504565697072584,
+            "max": 6.223272253639612
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.939244275423762,
+            "std": 0.11330653377474813,
+            "min": 1.7423699669110915,
+            "max": 2.12391950273423
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.605853819160757,
+              "std": 0.04678946766539624,
+              "min": 1.522644605840555,
+              "max": 1.741295215071543
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 2.0245217346031823,
+              "std": 0.12864666419985493,
+              "min": 1.8735578537628128,
+              "max": 2.296574864244111
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 108.7197726017343,
+            "std": 11.843472357268492,
+            "min": 82.27393969823586,
+            "max": 141.93141739478088
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 11.325210973085053,
+            "std": 3.5457168581868244,
+            "min": 3.3195429949336046,
+            "max": 17.74747220670589
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 3.652383961488474,
+            "std": 1.8445793533659711,
+            "min": 0.8156450709921046,
+            "max": 8.484748282967018
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.562228508132493,
+            "std": 0.5428688900456039,
+            "min": 2.373537929553151,
+            "max": 4.904166072419044
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Alternating",
+    "tag": "validation_100k_seed303_A500_F10",
+    "path": "results/PZS_phase3/phase3B/validation_100k_seed303_A500_F10",
+    "attempted": 100000,
+    "accepted": 36827,
+    "hard_sphere_rejected": 22178,
+    "metropolis_rejected": 40995,
+    "acceptance_rate": 0.36827,
+    "energy_eV": -4338.471727037921,
+    "energy_eV_atom": -4.842044338211965,
+    "pdf_loss_sum": 2.2922975438526407,
+    "phase25_total": 1273.4986354736893,
+    "Rw_no_scale": 0.14142391823458308,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 321.9353489764035,
+    "blocks_completed": 73,
+    "target_attempts": 100000,
+    "accepted_per_block": 500,
+    "fire_steps": 10,
+    "recomputed_energy_eV": -4338.471721483513,
+    "delta_energy_from_MQ_eV": 180.07989484071823,
+    "force_rms_eV_A": 2.416659037670568,
+    "force_max_eV_A": 8.16668776202639,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 2.292297543852996,
+        "Rw_no_scale": 0.14142391823459405,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          60,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          20,
+          23,
+          17,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.579082356358463,
+              "std": 0.05795764466146989,
+              "min": 1.4648481068832986,
+              "max": 1.789944909102316
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 108.96478015343217,
+            "std": 10.366883478682146,
+            "min": 88.57359153621648,
+            "max": 141.54606014010812
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 9.863129394023531,
+            "std": 3.2322489969333543,
+            "min": 3.811156584430165,
+            "max": 17.27366829295669
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 2.2635163412553085,
+            "std": 1.4159461134586053,
+            "min": 0.482174083633167,
+            "max": 6.457956749586991
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.9232318335363783,
+            "std": 0.09353830593828663,
+            "min": 1.7416625474097926,
+            "max": 2.124813798634796
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.6005275222122368,
+              "std": 0.05167963521434782,
+              "min": 1.525287658569043,
+              "max": 1.7414793804571063
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 2.0234955497751788,
+              "std": 0.10903935034660157,
+              "min": 1.8768046019589757,
+              "max": 2.266352873225507
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 108.9957811605495,
+            "std": 11.125430952107967,
+            "min": 81.13540838854934,
+            "max": 149.16945923663724
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 10.73234652176274,
+            "std": 2.9695108520277715,
+            "min": 4.606961747721382,
+            "max": 19.464415823760156
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 3.078414706960115,
+            "std": 1.2862933628636164,
+            "min": 0.7961733207221061,
+            "max": 8.004014360203367
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.5844203019002245,
+            "std": 0.5715779978595497,
+            "min": 2.2916399098359386,
+            "max": 4.745237977199384
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Inline",
+    "tag": "validation_100k_seed101_T100",
+    "path": "results/PZS_phase3/phase3C/validation_100k_seed101_T100",
+    "attempted": 100000,
+    "accepted": 21652,
+    "hard_sphere_rejected": 5720,
+    "metropolis_rejected": 72628,
+    "acceptance_rate": 0.21652,
+    "energy_eV": -4488.517534356683,
+    "energy_eV_atom": -5.00950617673737,
+    "pdf_loss_sum": 4.724000121747608,
+    "phase25_total": 2626.444512082004,
+    "Rw_no_scale": 0.20302163501332277,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 3067.430173024535,
+    "target_attempts": 100000,
+    "temperature_K": 100.0,
+    "model_calls": 94282,
+    "energy_drift_eV": -5.822628736495972e-06,
+    "delta_energy_from_MQ_eV": 30.034085584804416,
+    "recomputed_energy_eV": -4488.517530739427,
+    "force_rms_eV_A": 0.8861882480901716,
+    "force_max_eV_A": 2.730653238898161,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 4.724000121746698,
+        "Rw_no_scale": 0.20302163501330323,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          62,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          23,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.5530099529179862,
+              "std": 0.03223771820897356,
+              "min": 1.4704007910996504,
+              "max": 1.6270979981969405
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 109.38866058230876,
+            "std": 3.5793206443335905,
+            "min": 99.75794894032772,
+            "max": 117.70667711005007
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 3.474909109525514,
+            "std": 0.8621827635168272,
+            "min": 2.21499599311637,
+            "max": 5.579282048350411
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 0.3116744122999259,
+            "std": 0.15067764433083947,
+            "min": 0.11876121124066251,
+            "max": 0.7608924749648608
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.912288504634089,
+            "std": 0.026720484183182062,
+            "min": 1.857505601677989,
+            "max": 1.9636257079443455
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.6401460588297891,
+              "std": 0.02092603692090528,
+              "min": 1.5896968848130675,
+              "max": 1.682992842085641
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 2.004922630864912,
+              "std": 0.037248634461702325,
+              "min": 1.9115419754620615,
+              "max": 2.1168190575503814
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 109.41876462023954,
+            "std": 4.6484743221607925,
+            "min": 96.02122646953953,
+            "max": 120.19749835858141
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 4.421081318841225,
+            "std": 1.4370473650553388,
+            "min": 1.1061383512370735,
+            "max": 8.639594726175075
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 0.7996376700651573,
+            "std": 0.42640714214601594,
+            "min": 0.033773519220926924,
+            "max": 1.7749310160107346
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.7064468496939016,
+            "std": 0.4746887703671404,
+            "min": 2.5236039430595842,
+            "max": 4.430449628292707
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Inline",
+    "tag": "validation_100k_seed202_T100",
+    "path": "results/PZS_phase3/phase3C/validation_100k_seed202_T100",
+    "attempted": 100000,
+    "accepted": 21525,
+    "hard_sphere_rejected": 5690,
+    "metropolis_rejected": 72785,
+    "acceptance_rate": 0.21525,
+    "energy_eV": -4489.133726682633,
+    "energy_eV_atom": -5.0101938913868675,
+    "pdf_loss_sum": 4.727788294744045,
+    "phase25_total": 2628.54905263558,
+    "Rw_no_scale": 0.2031030201674297,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 2997.565925657749,
+    "target_attempts": 100000,
+    "temperature_K": 100.0,
+    "model_calls": 94312,
+    "energy_drift_eV": -1.5808269381523132e-05,
+    "delta_energy_from_MQ_eV": 29.4179023001343,
+    "recomputed_energy_eV": -4489.133714024097,
+    "force_rms_eV_A": 0.9132560253071815,
+    "force_max_eV_A": 2.732201509588785,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 4.72778829474278,
+        "Rw_no_scale": 0.20310302016740256,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          62,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          23,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.5542305717291607,
+              "std": 0.03317813432198852,
+              "min": 1.4566391656067104,
+              "max": 1.6284948638737358
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 109.37225985689498,
+            "std": 3.8960744118455715,
+            "min": 99.09780589982438,
+            "max": 118.95396602022417
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 3.7490521197139426,
+            "std": 1.064799165011202,
+            "min": 2.1321936676935738,
+            "max": 6.282158184472841
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 0.36424566122645324,
+            "std": 0.19611715003164917,
+            "min": 0.11410598941447571,
+            "max": 0.899494311869198
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.9150865062758273,
+            "std": 0.03146546852161486,
+            "min": 1.8399796288131285,
+            "max": 1.9874480503099028
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.6390492496501572,
+              "std": 0.021336859481693737,
+              "min": 1.5931008846716481,
+              "max": 1.6816144978659617
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 2.0048169569000986,
+              "std": 0.03676477934831121,
+              "min": 1.9200678414837207,
+              "max": 2.1104934401556026
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 109.43071176646845,
+            "std": 4.372074639536636,
+            "min": 95.56636669852008,
+            "max": 121.80503795835533
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 4.127536363144475,
+            "std": 1.4422625256824544,
+            "min": 1.6026208729981015,
+            "max": 7.712919787462701
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 0.7536698305073595,
+            "std": 0.4111905021676089,
+            "min": 0.11579774931900069,
+            "max": 1.7842351872642168
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.7103725997847943,
+            "std": 0.46757040143696976,
+            "min": 2.517491433825269,
+            "max": 4.435387225575961
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Inline",
+    "tag": "validation_100k_seed303_T100",
+    "path": "results/PZS_phase3/phase3C/validation_100k_seed303_T100",
+    "attempted": 100000,
+    "accepted": 21466,
+    "hard_sphere_rejected": 5477,
+    "metropolis_rejected": 73057,
+    "acceptance_rate": 0.21466,
+    "energy_eV": -4489.39640655753,
+    "energy_eV_atom": -5.0104870608901,
+    "pdf_loss_sum": 4.716155395339442,
+    "phase25_total": 2622.0863307441346,
+    "Rw_no_scale": 0.20285299499609252,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 3020.0699105262756,
+    "target_attempts": 100000,
+    "temperature_K": 100.0,
+    "model_calls": 94525,
+    "energy_drift_eV": 9.533017873764038e-06,
+    "delta_energy_from_MQ_eV": 29.155211886391044,
+    "recomputed_energy_eV": -4489.39640443784,
+    "force_rms_eV_A": 0.8629377960522032,
+    "force_max_eV_A": 2.319041679003775,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 4.716155395337168,
+        "Rw_no_scale": 0.20285299499604362,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          62,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          23,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.5557353093644724,
+              "std": 0.03323582005834732,
+              "min": 1.4847803394135042,
+              "max": 1.6291205996142346
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 109.36165568632809,
+            "std": 3.924035426822924,
+            "min": 100.07170635212,
+            "max": 118.78758506914112
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 3.8222162393637262,
+            "std": 0.894830446716835,
+            "min": 1.9423820936509992,
+            "max": 5.866506527320959
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 0.3754211363249987,
+            "std": 0.1632502405405418,
+            "min": 0.10230546214708174,
+            "max": 0.8311176521428854
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.9205899328820963,
+            "std": 0.028093246181741485,
+            "min": 1.8768216310650014,
+            "max": 1.9848256651222655
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.636040384555566,
+              "std": 0.018267133124845947,
+              "min": 1.5997840749896364,
+              "max": 1.6845636547628413
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 2.0066045855601375,
+              "std": 0.03710622267868434,
+              "min": 1.92829514800431,
+              "max": 2.160548847761987
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 109.43636315508316,
+            "std": 4.225023589812563,
+            "min": 96.77366720764873,
+            "max": 120.18143857521666
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 4.020734614018464,
+            "std": 1.2983576325408512,
+            "min": 1.507958621803742,
+            "max": 8.475896985378778
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 0.7373720552225699,
+            "std": 0.38652829959031487,
+            "min": 0.054101763687365294,
+            "max": 1.4308805322775289
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.7187010288820956,
+            "std": 0.47482099080951334,
+            "min": 2.559070805545798,
+            "max": 4.39920129827618
+          }
+        }
+      }
+    }
+  }
+]

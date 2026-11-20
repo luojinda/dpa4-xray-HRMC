@@ -1,0 +1,20 @@
+{
+  "attempted": 100000,
+  "accepted": 21466,
+  "hard_sphere_rejected": 5477,
+  "metropolis_rejected": 73057,
+  "acceptance_rate": 0.21466,
+  "energy_eV": -4489.39640655753,
+  "energy_eV_atom": -5.0104870608901,
+  "pdf_loss_sum": 4.716155395339442,
+  "phase25_total": 2622.0863307441346,
+  "Rw_no_scale": 0.20285299499609252,
+  "P_fourfold": 1.0,
+  "Si_fourfold": 1.0,
+  "wall_s": 3020.0699105262756,
+  "target_attempts": 100000,
+  "temperature_K": 100.0,
+  "model_calls": 94525,
+  "energy_drift_eV": 9.533017873764038e-06,
+  "delta_energy_from_MQ_eV": 29.155200619250536
+}
