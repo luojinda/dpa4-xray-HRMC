@@ -1,0 +1,11 @@
+base_config: configs/pzs_phase2_common.yaml
+coordination_cutoffs: configs/pzs_phase2_5_coordination_cutoffs.json
+scale_mode: no_scale
+seed: 101
+target_attempts: 10000
+accepted_moves_per_block: 500
+fire_max_steps: 5
+fire_maxstep_A: 0.05
+fire_dt: 0.05
+model_path_env: DPA4_MODEL_PATH
+

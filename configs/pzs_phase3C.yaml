@@ -1,0 +1,9 @@
+base_config: configs/pzs_phase2_common.yaml
+coordination_cutoffs: configs/pzs_phase2_5_coordination_cutoffs.json
+scale_mode: no_scale
+seed: 101
+target_attempts: 1000
+effective_temperature_K: 175.0
+kB_eV_per_K: 8.617333262145e-5
+model_path_env: DPA4_MODEL_PATH
+

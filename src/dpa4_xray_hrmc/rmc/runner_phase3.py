@@ -145,8 +145,16 @@ def run_inline(root, config, cutoffs, weights, backend, out, seed=101,
             state.reject(proposal); counters["metropolis_rejected"]+=1
             if examples["rejected"] is None: examples["rejected"]=record
         if step % 100 == 0 or step == target_attempts:
+            pdf_drift = state.pdf.validation_errors()
+            cn_drift = state.cn.validation_errors()
+            if (pdf_drift["max_abs_hist_count"] or pdf_drift["max_abs_G_A-2"] > 1e-8
+                    or cn_drift["max_abs_integer_error"]
+                    or cn_drift["max_abs_component_error"] > 1e-12):
+                raise RuntimeError(f"incremental state drift at step {step}: {pdf_drift}, {cn_drift}")
             trace.append(_summary(state,energy,counters,time.perf_counter()-start,
-                                  {"step":step,"temperature_K":temperature_K,"model_calls":model_calls}))
+                                  {"step":step,"temperature_K":temperature_K,
+                                   "model_calls":model_calls,"pdf_drift":pdf_drift,
+                                   "cn_drift":cn_drift}))
     check_energy=backend.get_energy(state.atoms); model_calls+=1
     drift=check_energy-energy; energy=check_energy
     summary=_summary(state,energy,counters,time.perf_counter()-start,
