@@ -181,6 +181,8 @@ def run_inline(root, config, cutoffs, weights, backend, out, seed=101,
     identity = {
         "seed": seed, "temperature_K": temperature_K,
         "move_max_A": config.move_max_A,
+        "fit_rmin_A": config.fit_rmin_A,
+        "fit_rmax_A": config.fit_rmax_A,
         "model_sha256": backend.manifest()["model_sha256"],
         "atom_count": len(state.atoms),
     }
@@ -247,7 +249,9 @@ def run_inline(root, config, cutoffs, weights, backend, out, seed=101,
                       "model_calls":model_calls,"energy_drift_eV":drift,
                       "delta_energy_from_MQ_eV":energy-initial_energy,
                       "resumed_from_step":start_step,
-                      "checkpoint_interval":checkpoint_interval})
+                      "checkpoint_interval":checkpoint_interval,
+                      "fit_rmin_A":config.fit_rmin_A,
+                      "fit_rmax_A":config.fit_rmax_A})
     _write_outputs(out,state,summary,trace,examples)
     _save_inline_checkpoint(
         checkpoint, state, counters, energy, initial_energy, target_attempts,
