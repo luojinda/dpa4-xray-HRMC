@@ -194,6 +194,7 @@ def run_inline(root, config, cutoffs, weights, backend, out, seed=101,
         "move_max_A": config.move_max_A,
         "fit_rmin_A": config.fit_rmin_A,
         "fit_rmax_A": config.fit_rmax_A,
+        "structure": config.structure,
         "scale_mode": state.mode.value,
         "scale_initial": state.objective.s0,
         "scale_bounds": [state.objective.lower_scale, state.objective.upper_scale],
@@ -265,7 +266,10 @@ def run_inline(root, config, cutoffs, weights, backend, out, seed=101,
                       "resumed_from_step":start_step,
                       "checkpoint_interval":checkpoint_interval,
                       "fit_rmin_A":config.fit_rmin_A,
-                      "fit_rmax_A":config.fit_rmax_A})
+                      "fit_rmax_A":config.fit_rmax_A,
+                      "structure":config.structure,
+                      "model_path":backend.manifest()["model_path"],
+                      "model_sha256":backend.manifest()["model_sha256"]})
     _write_outputs(out,state,summary,trace,examples)
     _save_inline_checkpoint(
         checkpoint, state, counters, energy, initial_energy, target_attempts,

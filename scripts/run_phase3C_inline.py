@@ -10,6 +10,7 @@ p=argparse.ArgumentParser(); p.add_argument('--attempts',type=int,default=1000);
 p.add_argument('--fit-rmin',type=float,default=None,help='Override PDF fit-range lower bound in A')
 p.add_argument('--fit-rmax',type=float,default=None,help='Override PDF fit-range upper bound in A')
 p.add_argument('--scale-mode',choices=['no_scale','fixed_initial','bounded_dynamic'],default='no_scale')
+p.add_argument('--structure',default=None,help='Override input structure path relative to repository root')
 a=p.parse_args(); root=Path(__file__).resolve().parents[1]
 c=load_phase2_config(root/'configs/pzs_phase2_common.yaml')
 overrides={}
@@ -21,6 +22,10 @@ if a.fit_rmin is not None:
     overrides['fit_rmin_A']=a.fit_rmin
 if a.fit_rmax is not None:
     overrides['fit_rmax_A']=a.fit_rmax
+if a.structure is not None:
+    if not (root/a.structure).is_file():
+        p.error(f'--structure does not exist: {a.structure}')
+    overrides['structure']=a.structure
 if overrides:
     c=replace(c,**overrides)
     try:
