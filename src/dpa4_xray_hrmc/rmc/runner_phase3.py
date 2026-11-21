@@ -18,13 +18,13 @@ from .phase3 import Phase3State, inline_delta, metropolis_accept
 from .runner import inclusive_grid
 
 
-def _setup(root: Path, config: Phase2Config, cutoffs, weights):
+def _setup(root: Path, config: Phase2Config, cutoffs, weights, scale_mode="no_scale"):
     atoms = load_structure(root / config.structure).atoms
     exp = read_pdfgetx_gr(root / config.experimental_gr)
     mask = (exp.r_A >= config.fit_rmin_A) & (exp.r_A <= config.fit_rmax_A)
     q = inclusive_grid(config.qmin_Ainv, config.qmax_Ainv, config.qstep_Ainv)
     state = Phase3State.build(atoms, q, exp.r_A[mask], exp.g_r_A2[mask],
-                              config, cutoffs, weights)
+                              config, cutoffs, weights, mode=scale_mode)
     return state, q, exp, mask
 
 
@@ -38,7 +38,17 @@ def _summary(state, energy, counters, wall, extra=None):
         "acceptance_rate": counters["accepted"] / max(counters["attempted"], 1),
         "energy_eV": energy, "energy_eV_atom": energy / len(state.atoms),
         "pdf_loss_sum": state.score.loss, "phase25_total": state.total,
-        "Rw_no_scale": common["Rw_no_scale"], "P_fourfold": float(np.mean(snap.p_o == 4)),
+        "Rw_no_scale": common["Rw_no_scale"],
+        "Rw_fixed_initial": common["Rw_fixed_initial"],
+        "Rw_bounded_dynamic": common["Rw_bounded_dynamic"],
+        "Rw_shape_only": common["Rw_shape_only"],
+        "Rw_active": float(np.sqrt(state.score.loss / state.objective.C)),
+        "scale_strategy": state.mode.value,
+        "scale_current": state.score.scale,
+        "scale_raw": state.score.B / state.score.A,
+        "scale_initial": state.objective.s0,
+        "scale_bounds": [state.objective.lower_scale, state.objective.upper_scale],
+        "P_fourfold": float(np.mean(snap.p_o == 4)),
         "Si_fourfold": float(np.mean(snap.si_total == 4)), "wall_s": wall,
     }
     if extra: value.update(extra)
@@ -165,11 +175,12 @@ def run_alternating(root, config, cutoffs, weights, backend, out, seed=101,
 
 def run_inline(root, config, cutoffs, weights, backend, out, seed=101,
                target_attempts=1000, temperature_K=300.0,
-               checkpoint_interval=10000, resume=False):
+               checkpoint_interval=10000, resume=False,
+               scale_mode="no_scale"):
     if checkpoint_interval <= 0:
         raise ValueError("checkpoint_interval must be positive")
     out.mkdir(parents=True, exist_ok=True)
-    state, q, exp, mask = _setup(root, config, cutoffs, weights)
+    state, q, exp, mask = _setup(root, config, cutoffs, weights, scale_mode)
     rngs = tuple(np.random.default_rng(x) for x in np.random.SeedSequence(seed).spawn(3))
     ra, rd, rx = rngs
     counters = dict(attempted=0, accepted=0, hard_sphere_rejected=0,
@@ -183,6 +194,9 @@ def run_inline(root, config, cutoffs, weights, backend, out, seed=101,
         "move_max_A": config.move_max_A,
         "fit_rmin_A": config.fit_rmin_A,
         "fit_rmax_A": config.fit_rmax_A,
+        "scale_mode": state.mode.value,
+        "scale_initial": state.objective.s0,
+        "scale_bounds": [state.objective.lower_scale, state.objective.upper_scale],
         "model_sha256": backend.manifest()["model_sha256"],
         "atom_count": len(state.atoms),
     }

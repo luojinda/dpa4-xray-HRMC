@@ -40,20 +40,22 @@ class Phase3State:
     objective: ScaleObjective
     weights: dict[str, float]
     sigma: float
+    mode: ScaleMode
     score: Score
     total: float
 
     @classmethod
     def build(cls, atoms, q, r_fit, g_exp_fit, config, cutoffs, weights,
-              hard_sphere=None, objective=None):
+              hard_sphere=None, objective=None, mode=ScaleMode.NO_SCALE):
         pdf = IncrementalXrayPDF(atoms, q, r_fit, config.rdf_rcut_A,
                                  config.rdf_dr_A, config.biso_A2, config.lorch_mod)
         obj = objective or ScaleObjective.from_initial(pdf.g_r_A2, g_exp_fit)
         cn = IncrementalCoordination(atoms, cutoffs)
         hs = hard_sphere or HardSphereModel.from_atoms(atoms, config.hard_sphere_scale)
-        score = obj.score(ScaleMode.NO_SCALE, pdf.g_r_A2)
+        selected_mode = ScaleMode(mode)
+        score = obj.score(selected_mode, pdf.g_r_A2)
         total = phase25_total(score, cn.components, weights, config.sigma_rmc_A2)
-        return cls(pdf, cn, hs, obj, dict(weights), config.sigma_rmc_A2, score, total)
+        return cls(pdf, cn, hs, obj, dict(weights), config.sigma_rmc_A2, selected_mode, score, total)
 
     @property
     def atoms(self) -> Atoms:
@@ -68,7 +70,7 @@ class Phase3State:
         pp = self.pdf.propose_move(atom_index, new_position_A)
         cp = self.cn.propose_move(atom_index, new_position_A)
         trial = self.objective.trial_score(
-            ScaleMode.NO_SCALE, self.pdf.g_r_A2, self.score, pp.delta_g_A2
+            self.mode, self.pdf.g_r_A2, self.score, pp.delta_g_A2
         )
         total = phase25_total(trial, cp.trial.components, self.weights, self.sigma)
         return (pp, cp, trial, total), {"delta_phase25": total - self.total}
@@ -87,6 +89,6 @@ class Phase3State:
     def rebuilt(self, atoms, q, r_fit, g_exp_fit, config, cutoffs):
         return self.build(
             atoms, q, r_fit, g_exp_fit, config, cutoffs, self.weights,
-            hard_sphere=self.hard_sphere, objective=self.objective
+            hard_sphere=self.hard_sphere, objective=self.objective, mode=self.mode
         )
 
