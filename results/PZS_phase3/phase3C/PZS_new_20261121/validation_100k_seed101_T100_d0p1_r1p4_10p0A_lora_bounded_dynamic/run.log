@@ -1,0 +1,42 @@
+nohup: ignoring input
+To get the best performance, it is recommended to adjust the number of threads by setting the environment variables OMP_NUM_THREADS, DP_INTRA_OP_PARALLELISM_THREADS, and DP_INTER_OP_PARALLELISM_THREADS. See https://deepmd.rtfd.io/parallelism/ for more information.
+W1121 18:44:39.374000 14149 site-packages/torch/_inductor/package/package.py:120] Loading outdated pt2 file. Please regenerate your package.
+{
+  "attempted": 100000,
+  "accepted": 21830,
+  "hard_sphere_rejected": 487,
+  "metropolis_rejected": 77683,
+  "acceptance_rate": 0.2183,
+  "energy_eV": -4499.87678381098,
+  "energy_eV_atom": -5.022183910503325,
+  "pdf_loss_sum": 3.7502817358388683,
+  "phase25_total": 2158.77556752953,
+  "Rw_no_scale": 0.35587209531342023,
+  "Rw_fixed_initial": 0.18099781473498378,
+  "Rw_bounded_dynamic": 0.18070485355999272,
+  "Rw_shape_only": 0.18070485355999272,
+  "Rw_active": 0.18070485355999272,
+  "scale_strategy": "bounded_dynamic",
+  "scale_current": 0.762363277167638,
+  "scale_raw": 0.762363277167638,
+  "scale_initial": 0.7703423419967008,
+  "scale_bounds": [
+    0.6162738735973607,
+    0.9244108103960409
+  ],
+  "P_fourfold": 0.90625,
+  "Si_fourfold": 1.0,
+  "wall_s": 9757.170601660386,
+  "target_attempts": 100000,
+  "temperature_K": 100.0,
+  "model_calls": 99515,
+  "energy_drift_eV": 4.019588232040405e-06,
+  "delta_energy_from_MQ_eV": -5.152223497629166,
+  "resumed_from_step": 0,
+  "checkpoint_interval": 10000,
+  "fit_rmin_A": 1.4,
+  "fit_rmax_A": 10.0,
+  "structure": "inputs/PZS_new_20261121/PZS_new_20261121.cif",
+  "model_path": "/root/autodl-tmp/dpa4-xray-HRMC/models/PZS_new_20261121/DPA4_PZS_new_LoRA.pt2",
+  "model_sha256": "64b0fede16c72af54adf45fca8b79fb76e0ed70fd5d594d14debef97eeac75ab"
+}
