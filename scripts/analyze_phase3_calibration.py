@@ -4,6 +4,7 @@ from __future__ import annotations
 import csv
 import json
 import os
+from dataclasses import replace
 from pathlib import Path
 import numpy as np
 from ase.io import read
@@ -52,7 +53,15 @@ for phase, pattern in (("Alternating", "phase3B/calibration_*"),
         atoms = read(structure_path)
         ef = backend.evaluate(atoms)
         force_norms = np.linalg.norm(ef.forces_eV_A, axis=1)
-        diagnostics = evaluator.evaluate(atoms)
+        run_config = replace(
+            config,
+            fit_rmin_A=float(summary.get("fit_rmin_A", config.fit_rmin_A)),
+            fit_rmax_A=float(summary.get("fit_rmax_A", config.fit_rmax_A)),
+        )
+        run_evaluator = evaluator if run_config == config else Phase3StructureEvaluator(
+            root, run_config, root / "configs/pzs_phase2_5_coordination_cutoffs.json"
+        )
+        diagnostics = run_evaluator.evaluate(atoms)
         diagnostics.pop("g_r_A2", None)
         record = {
             "phase": phase, "tag": directory.name,

@@ -20,10 +20,10 @@
     "target_attempts": 10000,
     "accepted_per_block": 100,
     "fire_steps": 5,
-    "recomputed_energy_eV": -4491.298760188863,
-    "delta_energy_from_MQ_eV": 27.252845780923963,
-    "force_rms_eV_A": 1.1050125937806614,
-    "force_max_eV_A": 7.79723579110824,
+    "recomputed_energy_eV": -4491.298765964925,
+    "delta_energy_from_MQ_eV": 27.252842409536242,
+    "force_rms_eV_A": 1.1050124944335185,
+    "force_max_eV_A": 7.7972350790152065,
     "diagnostics": {
       "pdf": {
         "loss_sum": 15.8214959865508,
@@ -220,10 +220,10 @@
     "target_attempts": 10000,
     "accepted_per_block": 250,
     "fire_steps": 5,
-    "recomputed_energy_eV": -4434.427393653549,
-    "delta_energy_from_MQ_eV": 84.12421231623739,
-    "force_rms_eV_A": 1.7829252233437738,
-    "force_max_eV_A": 8.683013862134267,
+    "recomputed_energy_eV": -4434.427399240553,
+    "delta_energy_from_MQ_eV": 84.12420913390815,
+    "force_rms_eV_A": 1.7829252309632695,
+    "force_max_eV_A": 8.683014651607616,
     "diagnostics": {
       "pdf": {
         "loss_sum": 5.256650828758211,
@@ -420,10 +420,10 @@
     "target_attempts": 10000,
     "accepted_per_block": 500,
     "fire_steps": 10,
-    "recomputed_energy_eV": -4430.575408360108,
-    "delta_energy_from_MQ_eV": 87.97619760967882,
-    "force_rms_eV_A": 2.0205262670957316,
-    "force_max_eV_A": 11.106390994093994,
+    "recomputed_energy_eV": -4430.575414510562,
+    "delta_energy_from_MQ_eV": 87.97619386389943,
+    "force_rms_eV_A": 2.020526218617498,
+    "force_max_eV_A": 11.106390125798246,
     "diagnostics": {
       "pdf": {
         "loss_sum": 5.1891545466072415,
@@ -620,10 +620,10 @@
     "target_attempts": 10000,
     "accepted_per_block": 500,
     "fire_steps": 20,
-    "recomputed_energy_eV": -4477.818717373654,
-    "delta_energy_from_MQ_eV": 40.7328885961324,
-    "force_rms_eV_A": 1.4204780332271243,
-    "force_max_eV_A": 9.498165853605263,
+    "recomputed_energy_eV": -4477.818713462099,
+    "delta_energy_from_MQ_eV": 40.7328949123621,
+    "force_rms_eV_A": 1.4204780536334871,
+    "force_max_eV_A": 9.498167561545687,
     "diagnostics": {
       "pdf": {
         "loss_sum": 12.759833951598054,
@@ -820,10 +820,10 @@
     "target_attempts": 10000,
     "accepted_per_block": 500,
     "fire_steps": 5,
-    "recomputed_energy_eV": -4397.55045933102,
-    "delta_energy_from_MQ_eV": 121.00114663876684,
-    "force_rms_eV_A": 2.4439489366598135,
-    "force_max_eV_A": 11.149300497088781,
+    "recomputed_energy_eV": -4397.550465885668,
+    "delta_energy_from_MQ_eV": 121.00114248879345,
+    "force_rms_eV_A": 2.4439489929326803,
+    "force_max_eV_A": 11.14930544502502,
     "diagnostics": {
       "pdf": {
         "loss_sum": 3.7631861427899196,
@@ -1020,10 +1020,10 @@
     "target_attempts": 10000,
     "accepted_per_block": 500,
     "fire_steps": 10,
-    "recomputed_energy_eV": -4412.370250064998,
-    "delta_energy_from_MQ_eV": 106.18135590478869,
-    "force_rms_eV_A": 2.2763027298398346,
-    "force_max_eV_A": 10.336992535779041,
+    "recomputed_energy_eV": -4412.370244935273,
+    "delta_energy_from_MQ_eV": 106.18136343918832,
+    "force_rms_eV_A": 2.2763028181192073,
+    "force_max_eV_A": 10.336993106759852,
     "diagnostics": {
       "pdf": {
         "loss_sum": 4.6322515605038035,
@@ -1220,10 +1220,10 @@
     "target_attempts": 10000,
     "accepted_per_block": 500,
     "fire_steps": 10,
-    "recomputed_energy_eV": -4428.62453138095,
-    "delta_energy_from_MQ_eV": 89.92707458883615,
-    "force_rms_eV_A": 1.8780105402490808,
-    "force_max_eV_A": 5.956382409775873,
+    "recomputed_energy_eV": -4428.624540187537,
+    "delta_energy_from_MQ_eV": 89.92706818692477,
+    "force_rms_eV_A": 1.878010607905921,
+    "force_max_eV_A": 5.956384294308487,
     "diagnostics": {
       "pdf": {
         "loss_sum": 5.0720583361107,
@@ -1420,10 +1420,10 @@
     "temperature_K": 100.0,
     "model_calls": 9433,
     "energy_drift_eV": 1.0808929800987244e-05,
-    "delta_energy_from_MQ_eV": 45.36828915961087,
-    "recomputed_energy_eV": -4473.183316810176,
-    "force_rms_eV_A": 1.2866939724733475,
-    "force_max_eV_A": 3.6880476764381385,
+    "delta_energy_from_MQ_eV": 45.36829428933561,
+    "recomputed_energy_eV": -4473.183314085126,
+    "force_rms_eV_A": 1.286693959501166,
+    "force_max_eV_A": 3.688047766146855,
     "diagnostics": {
       "pdf": {
         "loss_sum": 6.830232122656653,
@@ -1620,12 +1620,12 @@
     "temperature_K": 100.0,
     "model_calls": 7974,
     "energy_drift_eV": -2.201646566390991e-06,
-    "delta_energy_from_MQ_eV": 52.78085384517908,
+    "delta_energy_from_MQ_eV": 52.780866695567966,
     "resumed_from_step": 0,
     "checkpoint_interval": 10000,
-    "recomputed_energy_eV": -4465.7707521246075,
-    "force_rms_eV_A": 1.3417510307901221,
-    "force_max_eV_A": 4.791021819713959,
+    "recomputed_energy_eV": -4465.7707416788935,
+    "force_rms_eV_A": 1.3417510217114572,
+    "force_max_eV_A": 4.791021933044694,
     "diagnostics": {
       "pdf": {
         "loss_sum": 5.913060715612161,
@@ -1822,12 +1822,12 @@
     "temperature_K": 100.0,
     "model_calls": 6461,
     "energy_drift_eV": -8.556991815567017e-06,
-    "delta_energy_from_MQ_eV": 57.14288985542953,
+    "delta_energy_from_MQ_eV": 57.142901603132486,
     "resumed_from_step": 0,
     "checkpoint_interval": 10000,
-    "recomputed_energy_eV": -4461.408716114357,
-    "force_rms_eV_A": 1.349208423060463,
-    "force_max_eV_A": 5.034072503887519,
+    "recomputed_energy_eV": -4461.408706771329,
+    "force_rms_eV_A": 1.3492083978726073,
+    "force_max_eV_A": 5.034072026686163,
     "diagnostics": {
       "pdf": {
         "loss_sum": 6.675253650008827,
@@ -2024,10 +2024,10 @@
     "temperature_K": 175.0,
     "model_calls": 9173,
     "energy_drift_eV": -8.903443813323975e-07,
-    "delta_energy_from_MQ_eV": 63.451997919008136,
-    "recomputed_energy_eV": -4455.099608050778,
-    "force_rms_eV_A": 1.6382659655347391,
-    "force_max_eV_A": 4.892768624703482,
+    "delta_energy_from_MQ_eV": 63.452011773362756,
+    "recomputed_energy_eV": -4455.099596601099,
+    "force_rms_eV_A": 1.6382659251988132,
+    "force_max_eV_A": 4.892767457322621,
     "diagnostics": {
       "pdf": {
         "loss_sum": 4.983929403140735,
@@ -2224,10 +2224,10 @@
     "temperature_K": 300.0,
     "model_calls": 9003,
     "energy_drift_eV": -2.748332917690277e-06,
-    "delta_energy_from_MQ_eV": 80.92238395940603,
-    "recomputed_energy_eV": -4437.6292220103805,
-    "force_rms_eV_A": 1.903707866298705,
-    "force_max_eV_A": 5.389497438689404,
+    "delta_energy_from_MQ_eV": 80.92238267324956,
+    "recomputed_energy_eV": -4437.629225701212,
+    "force_rms_eV_A": 1.9037078235673497,
+    "force_max_eV_A": 5.389497780863189,
     "diagnostics": {
       "pdf": {
         "loss_sum": 4.0675280944765575,
@@ -2424,10 +2424,10 @@
     "temperature_K": 100.0,
     "model_calls": 9418,
     "energy_drift_eV": 8.497387170791626e-06,
-    "delta_energy_from_MQ_eV": 45.66938592866063,
-    "recomputed_energy_eV": -4472.882220041126,
-    "force_rms_eV_A": 1.2878065476630232,
-    "force_max_eV_A": 4.3454295085015096,
+    "delta_energy_from_MQ_eV": 45.66936798207462,
+    "recomputed_energy_eV": -4472.882240392387,
+    "force_rms_eV_A": 1.2878065715062552,
+    "force_max_eV_A": 4.345430251460222,
     "diagnostics": {
       "pdf": {
         "loss_sum": 6.594877907738805,
@@ -2624,10 +2624,10 @@
     "temperature_K": 100.0,
     "model_calls": 9492,
     "energy_drift_eV": 1.1082738637924194e-06,
-    "delta_energy_from_MQ_eV": 45.05042597092688,
-    "recomputed_energy_eV": -4473.50117999886,
-    "force_rms_eV_A": 1.2703120799831167,
-    "force_max_eV_A": 4.568723166328786,
+    "delta_energy_from_MQ_eV": 45.050424261018634,
+    "recomputed_energy_eV": -4473.501184113443,
+    "force_rms_eV_A": 1.2703120270981572,
+    "force_max_eV_A": 4.568722961328309,
     "diagnostics": {
       "pdf": {
         "loss_sum": 6.752011649964857,
@@ -2824,10 +2824,10 @@
     "target_attempts": 100000,
     "accepted_per_block": 500,
     "fire_steps": 10,
-    "recomputed_energy_eV": -4307.1863980089565,
-    "delta_energy_from_MQ_eV": 211.36520796083005,
-    "force_rms_eV_A": 3.058746787453664,
-    "force_max_eV_A": 12.046881739644817,
+    "recomputed_energy_eV": -4307.186399718865,
+    "delta_energy_from_MQ_eV": 211.3652086555967,
+    "force_rms_eV_A": 3.05874671802571,
+    "force_max_eV_A": 12.046879155493952,
     "diagnostics": {
       "pdf": {
         "loss_sum": 1.8824353613952525,
@@ -3024,14 +3024,14 @@
     "target_attempts": 100000,
     "accepted_per_block": 500,
     "fire_steps": 10,
-    "recomputed_energy_eV": -4306.192511569827,
-    "delta_energy_from_MQ_eV": 212.35909439995976,
-    "force_rms_eV_A": 2.8986915779074063,
-    "force_max_eV_A": 10.879699117448554,
+    "recomputed_energy_eV": -4306.192512864365,
+    "delta_energy_from_MQ_eV": 212.35909551009627,
+    "force_rms_eV_A": 2.8986916148623303,
+    "force_max_eV_A": 10.879699963955517,
     "diagnostics": {
       "pdf": {
-        "loss_sum": 1.9388592467203694,
-        "Rw_no_scale": 0.13006501999330977,
+        "loss_sum": 1.9388592467203836,
+        "Rw_no_scale": 0.13006501999331024,
         "scale": 1.0
       },
       "coordination": {
@@ -3224,10 +3224,10 @@
     "target_attempts": 100000,
     "accepted_per_block": 500,
     "fire_steps": 10,
-    "recomputed_energy_eV": -4338.471720236472,
-    "delta_energy_from_MQ_eV": 180.07988573331477,
-    "force_rms_eV_A": 2.41665893447937,
-    "force_max_eV_A": 8.166687043591947,
+    "recomputed_energy_eV": -4338.471722822755,
+    "delta_energy_from_MQ_eV": 180.07988555170687,
+    "force_rms_eV_A": 2.4166590885003196,
+    "force_max_eV_A": 8.166687683511348,
     "diagnostics": {
       "pdf": {
         "loss_sum": 2.292297543852996,
@@ -3424,10 +3424,10 @@
     "temperature_K": 100.0,
     "model_calls": 94282,
     "energy_drift_eV": -5.822628736495972e-06,
-    "delta_energy_from_MQ_eV": 30.034085610881448,
-    "recomputed_energy_eV": -4488.517520358905,
-    "force_rms_eV_A": 0.886188226057604,
-    "force_max_eV_A": 2.7306539291659173,
+    "delta_energy_from_MQ_eV": 30.034084014594555,
+    "recomputed_energy_eV": -4488.517524359867,
+    "force_rms_eV_A": 0.88618820943516,
+    "force_max_eV_A": 2.730653102555514,
     "diagnostics": {
       "pdf": {
         "loss_sum": 4.724000121746698,
@@ -3605,6 +3605,210 @@
   },
   {
     "phase": "Inline",
+    "tag": "validation_100k_seed101_T100_d0p1_r1p0_10p0A",
+    "path": "results/PZS_phase3/phase3C/validation_100k_seed101_T100_d0p1_r1p0_10p0A",
+    "attempted": 100000,
+    "accepted": 21634,
+    "hard_sphere_rejected": 5564,
+    "metropolis_rejected": 72802,
+    "acceptance_rate": 0.21634,
+    "energy_eV": -4489.969201317176,
+    "energy_eV_atom": -5.011126340755777,
+    "pdf_loss_sum": 7.098340353139264,
+    "phase25_total": 3945.5224184107024,
+    "Rw_no_scale": 0.24483232815308734,
+    "P_fourfold": 1.0,
+    "Si_fourfold": 1.0,
+    "wall_s": 3024.922237843275,
+    "target_attempts": 100000,
+    "temperature_K": 100.0,
+    "model_calls": 94438,
+    "energy_drift_eV": 1.1492520570755005e-06,
+    "delta_energy_from_MQ_eV": 28.582405956462026,
+    "resumed_from_step": 0,
+    "checkpoint_interval": 10000,
+    "fit_rmin_A": 1.0,
+    "fit_rmax_A": 10.0,
+    "recomputed_energy_eV": -4489.969202417999,
+    "force_rms_eV_A": 0.8807455348571659,
+    "force_max_eV_A": 2.8270308489029743,
+    "diagnostics": {
+      "pdf": {
+        "loss_sum": 7.098340353141737,
+        "Rw_no_scale": 0.24483232815312997,
+        "scale": 1.0
+      },
+      "coordination": {
+        "components": {
+          "C_P": 0.0,
+          "C_Si": 0.0,
+          "C_Zr_total": 0.0,
+          "C_Zr_O": 0.0
+        },
+        "p_fourfold_fraction": 1.0,
+        "si_fourfold_fraction": 1.0,
+        "zr_hist_total": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          62,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "zr_hist_o": [
+          19,
+          23,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "hard_sphere": {
+        "violation_total": 0,
+        "violations_by_pair": {
+          "Cl-Cl": 0,
+          "Cl-Li": 0,
+          "Cl-O": 0,
+          "Cl-P": 0,
+          "Cl-Si": 0,
+          "Cl-Zr": 0,
+          "Li-Li": 0,
+          "Li-O": 0,
+          "Li-P": 0,
+          "Li-Si": 0,
+          "Li-Zr": 0,
+          "O-O": 0,
+          "O-P": 0,
+          "O-Si": 0,
+          "O-Zr": 0,
+          "P-P": 0,
+          "P-Si": 0,
+          "P-Zr": 0,
+          "Si-Si": 0,
+          "Si-Zr": 0,
+          "Zr-Zr": 0
+        }
+      },
+      "tetrahedra": {
+        "P": {
+          "centers": 32,
+          "tetrahedral_count": 32,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "P-O": {
+              "count": 128,
+              "mean": 1.5439469645768513,
+              "std": 0.032305655885459784,
+              "min": 1.4709881097632298,
+              "max": 1.622352347993381
+            }
+          },
+          "angles_deg": {
+            "count": 192,
+            "mean": 109.38998327484883,
+            "std": 3.5471509151874145,
+            "min": 101.71781255856972,
+            "max": 119.07980783252435
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 32,
+            "mean": 3.4494923253430363,
+            "std": 0.8305912479167975,
+            "min": 1.8587957774226178,
+            "max": 5.905827869049576
+          },
+          "fixed_center_csm_percent": {
+            "count": 32,
+            "mean": 0.3070967914592796,
+            "std": 0.1482034007234017,
+            "min": 0.0945395856263153,
+            "max": 0.8613793482879716
+          },
+          "volume_A3": {
+            "count": 32,
+            "mean": 1.8793237446316886,
+            "std": 0.03061429211153787,
+            "min": 1.8228012113026304,
+            "max": 1.9384497875392264
+          }
+        },
+        "Si": {
+          "centers": 64,
+          "tetrahedral_count": 64,
+          "tetrahedral_fraction": 1.0,
+          "bond_lengths_A": {
+            "Si-O": {
+              "count": 46,
+              "mean": 1.630375911048467,
+              "std": 0.018910845348302605,
+              "min": 1.580211182904915,
+              "max": 1.6717168156333846
+            },
+            "Si-Cl": {
+              "count": 210,
+              "mean": 2.0028153929936305,
+              "std": 0.03434480437031897,
+              "min": 1.9144202285446614,
+              "max": 2.1147183826515885
+            }
+          },
+          "angles_deg": {
+            "count": 384,
+            "mean": 109.43185384538823,
+            "std": 4.411395245905123,
+            "min": 96.16682273922495,
+            "max": 121.91344112155555
+          },
+          "angle_rms_from_ideal_deg": {
+            "count": 64,
+            "mean": 4.198165776252681,
+            "std": 1.3554932219599174,
+            "min": 1.7613674794755707,
+            "max": 8.170424567673388
+          },
+          "fixed_center_csm_percent": {
+            "count": 64,
+            "mean": 0.782511265916874,
+            "std": 0.4063822565650081,
+            "min": 0.13973382834516712,
+            "max": 1.6294025238196088
+          },
+          "volume_A3": {
+            "count": 64,
+            "mean": 3.689183430501438,
+            "std": 0.4536625950084094,
+            "min": 2.5123955569044214,
+            "max": 4.401507337650344
+          }
+        }
+      }
+    }
+  },
+  {
+    "phase": "Inline",
     "tag": "validation_100k_seed101_T100_d0p2",
     "path": "results/PZS_phase3/phase3C/validation_100k_seed101_T100_d0p2",
     "attempted": 100000,
@@ -3624,12 +3828,12 @@
     "temperature_K": 100.0,
     "model_calls": 78163,
     "energy_drift_eV": 4.0978193283081055e-07,
-    "delta_energy_from_MQ_eV": 31.583399411290884,
+    "delta_energy_from_MQ_eV": 31.583404624834657,
     "resumed_from_step": 0,
     "checkpoint_interval": 10000,
-    "recomputed_energy_eV": -4486.968206558496,
-    "force_rms_eV_A": 0.9317004224726446,
-    "force_max_eV_A": 3.0839998032138594,
+    "recomputed_energy_eV": -4486.968203749627,
+    "force_rms_eV_A": 0.9317004094518095,
+    "force_max_eV_A": 3.0839995123514727,
     "diagnostics": {
       "pdf": {
         "loss_sum": 5.159861222567869,
@@ -3826,10 +4030,10 @@
     "temperature_K": 100.0,
     "model_calls": 94312,
     "energy_drift_eV": -1.5808269381523132e-05,
-    "delta_energy_from_MQ_eV": 29.417876759544015,
-    "recomputed_energy_eV": -4489.133729210243,
-    "force_rms_eV_A": 0.9132560097753958,
-    "force_max_eV_A": 2.732203592045992,
+    "delta_energy_from_MQ_eV": 29.41789417527616,
+    "recomputed_energy_eV": -4489.133714199185,
+    "force_rms_eV_A": 0.9132560296499582,
+    "force_max_eV_A": 2.7322019637666117,
     "diagnostics": {
       "pdf": {
         "loss_sum": 4.72778829474278,
@@ -4026,12 +4230,12 @@
     "temperature_K": 100.0,
     "model_calls": 78109,
     "energy_drift_eV": 1.6713514924049377e-05,
-    "delta_energy_from_MQ_eV": 31.656029537320137,
+    "delta_energy_from_MQ_eV": 31.656035317108035,
     "resumed_from_step": 0,
     "checkpoint_interval": 10000,
-    "recomputed_energy_eV": -4486.895576432466,
-    "force_rms_eV_A": 0.8931447630887532,
-    "force_max_eV_A": 2.4983222766335347,
+    "recomputed_energy_eV": -4486.895573057353,
+    "force_rms_eV_A": 0.893144762526196,
+    "force_max_eV_A": 2.4983208018131946,
     "diagnostics": {
       "pdf": {
         "loss_sum": 5.072059569875279,
@@ -4228,14 +4432,14 @@
     "temperature_K": 100.0,
     "model_calls": 94525,
     "energy_drift_eV": 9.533017873764038e-06,
-    "delta_energy_from_MQ_eV": 29.15520148910582,
-    "recomputed_energy_eV": -4489.396404480681,
-    "force_rms_eV_A": 0.8629378114700632,
-    "force_max_eV_A": 2.319042201448152,
+    "delta_energy_from_MQ_eV": 29.155190959572792,
+    "recomputed_energy_eV": -4489.396417414889,
+    "force_rms_eV_A": 0.8629377911326718,
+    "force_max_eV_A": 2.319041214242235,
     "diagnostics": {
       "pdf": {
-        "loss_sum": 4.716155395337182,
-        "Rw_no_scale": 0.20285299499604392,
+        "loss_sum": 4.716155395337168,
+        "Rw_no_scale": 0.20285299499604362,
         "scale": 1.0
       },
       "coordination": {
@@ -4428,12 +4632,12 @@
     "temperature_K": 100.0,
     "model_calls": 77967,
     "energy_drift_eV": 6.282702088356018e-06,
-    "delta_energy_from_MQ_eV": 31.888340700417757,
+    "delta_energy_from_MQ_eV": 31.888344610109925,
     "resumed_from_step": 0,
     "checkpoint_interval": 10000,
-    "recomputed_energy_eV": -4486.663265269369,
-    "force_rms_eV_A": 0.9335113457639542,
-    "force_max_eV_A": 3.144231729568218,
+    "recomputed_energy_eV": -4486.6632637643515,
+    "force_rms_eV_A": 0.9335114011549395,
+    "force_max_eV_A": 3.144230636102126,
     "diagnostics": {
       "pdf": {
         "loss_sum": 5.127187025139165,
