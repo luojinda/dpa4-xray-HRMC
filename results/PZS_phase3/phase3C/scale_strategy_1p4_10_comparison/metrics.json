@@ -1,0 +1,101 @@
+{
+  "fit_range_A": [
+    1.4,
+    10.0
+  ],
+  "scale_initial": 0.6338648874375366,
+  "scale_bounds": [
+    0.5070919099500293,
+    0.7606378649250438
+  ],
+  "structures": {
+    "MQ": {
+      "loss_no_scale": 58.88241705553233,
+      "Rw_no_scale": 0.7160291194117652,
+      "scale_no_scale": 1.0,
+      "loss_fixed_initial": 30.859792487444864,
+      "Rw_fixed_initial": 0.5183634488547852,
+      "scale_fixed_initial": 0.6338648874375366,
+      "loss_bounded_dynamic": 30.859792487444864,
+      "Rw_bounded_dynamic": 0.5183634488547852,
+      "scale_bounded_dynamic": 0.6338648874375366,
+      "scale_unbounded_positive": 0.6338648874375366,
+      "loss_unbounded_positive": 30.859792487444864,
+      "Rw_shape_only": 0.5183634488547852,
+      "Rw_active": 0.5183634488547852,
+      "scale_active": 0.6338648874375366,
+      "scale_raw": 0.6338648874375366
+    },
+    "fixed_initial": {
+      "loss_no_scale": 35.901143237257344,
+      "Rw_no_scale": 0.5591032403471481,
+      "scale_no_scale": 1.0,
+      "loss_fixed_initial": 6.135668568031917,
+      "Rw_fixed_initial": 0.23113665085973636,
+      "scale_fixed_initial": 0.6338648874375366,
+      "loss_bounded_dynamic": 6.0101991693109085,
+      "Rw_bounded_dynamic": 0.22876116631855054,
+      "scale_bounded_dynamic": 0.656142931027753,
+      "scale_unbounded_positive": 0.656142931027753,
+      "loss_unbounded_positive": 6.0101991693109085,
+      "Rw_shape_only": 0.22876116631855054,
+      "Rw_active": 0.23113665085973636,
+      "scale_active": 0.6338648874375366,
+      "scale_raw": 0.656142931027753,
+      "acceptance_rate": 0.19922,
+      "delta_energy_meV_atom": 17.315881156329333,
+      "wall_s": 3110.428301937878,
+      "hard_sphere_rejected": 2987,
+      "P_fourfold": 1.0,
+      "Si_fourfold": 1.0,
+      "energy_drift_eV": 7.662922143936157e-06
+    },
+    "bounded_dynamic": {
+      "loss_no_scale": 22.926939900036984,
+      "Rw_no_scale": 0.44679768711850437,
+      "scale_no_scale": 1.0,
+      "loss_fixed_initial": 6.8479927624542825,
+      "Rw_fixed_initial": 0.24418530032207633,
+      "scale_fixed_initial": 0.6338648874375366,
+      "loss_bounded_dynamic": 5.45566377341386,
+      "Rw_bounded_dynamic": 0.21795240655820328,
+      "scale_bounded_dynamic": 0.7144696780213522,
+      "scale_unbounded_positive": 0.7144696780213522,
+      "loss_unbounded_positive": 5.45566377341386,
+      "Rw_shape_only": 0.21795240655820328,
+      "Rw_active": 0.21795240655820328,
+      "scale_active": 0.7144696780213522,
+      "scale_raw": 0.7144696780213522,
+      "acceptance_rate": 0.20855,
+      "delta_energy_meV_atom": 19.535175181642575,
+      "wall_s": 3092.8684442993253,
+      "hard_sphere_rejected": 3656,
+      "P_fourfold": 1.0,
+      "Si_fourfold": 1.0,
+      "energy_drift_eV": 4.218891263008118e-06
+    }
+  },
+  "tetrahedral_geometry": [
+    {
+      "structure": "MQ",
+      "P_angle_RMS_deg": 3.672118590659494,
+      "Si_angle_RMS_deg": 2.9490000481385,
+      "P_CSM_percent": 0.35886126485430114,
+      "Si_CSM_percent": 0.6012831208403746
+    },
+    {
+      "structure": "fixed_initial",
+      "P_angle_RMS_deg": 3.4190897280401495,
+      "Si_angle_RMS_deg": 3.7659122339255306,
+      "P_CSM_percent": 0.3077541223722395,
+      "Si_CSM_percent": 0.7539942496174632
+    },
+    {
+      "structure": "bounded_dynamic",
+      "P_angle_RMS_deg": 3.5400255767761815,
+      "Si_angle_RMS_deg": 3.9384291731210537,
+      "P_CSM_percent": 0.32866071819859244,
+      "Si_CSM_percent": 0.7692133188089516
+    }
+  ]
+}
