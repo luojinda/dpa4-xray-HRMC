@@ -51,7 +51,7 @@ cutoffs = CoordinationCutoffs.from_mapping(
 )
 structures = {name: read(path) for name, path in PATHS.items()}
 rdfs = {
-    name: compute_partial_rdfs(atoms, r_max_A=6.0, dr_A=0.02)
+    name: compute_partial_rdfs(atoms, 6.0, 0.02)
     for name, atoms in structures.items()
 }
 
