@@ -219,6 +219,7 @@ def run_inline(root, config, cutoffs, weights, backend, out, seed=101,
         "scale_bounds": [state.objective.lower_scale, state.objective.upper_scale],
         "p_coordination_mode": state.cn.p_coordination_mode,
         "p_cl_cutoff_A": state.cn.p_cl_cutoff_A,
+        "coordination_weights": {str(key): float(value) for key, value in weights.items()},
         "model_sha256": backend.manifest()["model_sha256"],
         "atom_count": len(state.atoms),
     }
@@ -289,6 +290,7 @@ def run_inline(root, config, cutoffs, weights, backend, out, seed=101,
                       "fit_rmin_A":config.fit_rmin_A,
                       "fit_rmax_A":config.fit_rmax_A,
                       "structure":config.structure,
+                      "coordination_weights":identity["coordination_weights"],
                       "model_path":backend.manifest()["model_path"],
                       "model_sha256":backend.manifest()["model_sha256"]})
     _write_outputs(out,state,summary,trace,examples)

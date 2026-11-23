@@ -13,6 +13,10 @@ p.add_argument('--scale-mode',choices=['no_scale','fixed_initial','bounded_dynam
 p.add_argument('--structure',default=None,help='Override input structure path relative to repository root')
 p.add_argument('--p-coordination-mode',choices=['P-O','P-total'],default='P-O')
 p.add_argument('--p-cl-cutoff',type=float,default=None,help='P-Cl cutoff in A; required for P-total')
+p.add_argument('--weight-p',type=float,default=800.0,help='P coordination penalty weight')
+p.add_argument('--weight-si',type=float,default=2500.0,help='Si coordination penalty weight')
+p.add_argument('--weight-zr-total',type=float,default=1.0,help='Zr total-CN distribution penalty weight')
+p.add_argument('--weight-zr-o',type=float,default=0.2,help='Zr-O CN distribution penalty weight')
 a=p.parse_args(); root=Path(__file__).resolve().parents[1]
 c=load_phase2_config(root/'configs/pzs_phase2_common.yaml')
 overrides={}
@@ -34,8 +38,11 @@ if overrides:
         c.validate()
     except ValueError as exc:
         p.error(str(exc))
+weights=(a.weight_p,a.weight_si,a.weight_zr_total,a.weight_zr_o)
+if any(value < 0.0 for value in weights):
+    p.error('coordination penalty weights must be non-negative')
 cut=CoordinationCutoffs.from_mapping(json.loads((root/'configs/pzs_phase2_5_coordination_cutoffs.json').read_text()))
-w={'P':800.0,'Si':2500.0,'Zr_total':1.0,'Zr_O':0.2}
+w={'P':a.weight_p,'Si':a.weight_si,'Zr_total':a.weight_zr_total,'Zr_O':a.weight_zr_o}
 b=DPA4Backend(os.environ['DPA4_MODEL_PATH'])
 print(json.dumps(run_inline(
     root,c,cut,w,b,root/'results/PZS_phase3/phase3C'/a.tag,
