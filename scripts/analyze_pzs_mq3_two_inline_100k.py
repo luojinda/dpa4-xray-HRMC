@@ -6,6 +6,7 @@ constraint: P-O < 1.80 A plus P-Cl < 2.30 A, with total coordination four.
 
 from __future__ import annotations
 
+import argparse
 import csv
 import itertools
 import json
@@ -41,13 +42,24 @@ from dpa4_xray_hrmc.xray_pdf.transform import forward_transform
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "results/PZS_phase3/phase3C/PZS_MQ_3"
+PARSER = argparse.ArgumentParser()
+PARSER.add_argument("--fit-rmin", type=float, default=1.4)
+ARGS = PARSER.parse_args()
+FIT_RMIN_A = float(ARGS.fit_rmin)
+FIT_RMAX_A = 10.0
+RMIN_FILE_TAG = f"{FIT_RMIN_A:.1f}".replace(".", "p")
+RUN_RANGE_TAG = f"r{RMIN_FILE_TAG}_10p0A"
 RUNS = {
     "no_scale": BASE
-    / "validation_100k_seed101_T100_d0p1_r1p4_10p0A_lora_no_scale_p_total",
+    / f"validation_100k_seed101_T100_d0p1_{RUN_RANGE_TAG}_lora_no_scale_p_total",
     "bounded_dynamic": BASE
-    / "validation_100k_seed101_T100_d0p1_r1p4_10p0A_lora_bounded_dynamic_p_total",
+    / f"validation_100k_seed101_T100_d0p1_{RUN_RANGE_TAG}_lora_bounded_dynamic_p_total",
 }
-OUT = BASE / "comparison_100k_lora_p_total"
+OUT = BASE / (
+    "comparison_100k_lora_p_total"
+    if np.isclose(FIT_RMIN_A, 1.4)
+    else f"comparison_100k_lora_p_total_{RUN_RANGE_TAG}"
+)
 OUT.mkdir(parents=True, exist_ok=True)
 
 STRUCTURE_KEYS = ("initial_mq3", "no_scale", "bounded_dynamic")
@@ -210,8 +222,8 @@ def hard_sphere_diagnostics(atoms: Atoms, model: HardSphereModel) -> dict:
 config = replace(
     load_phase2_config(ROOT / "configs/pzs_phase2_common.yaml"),
     structure="inputs/PZS_MQ_3/PZS_equilibrated.cif",
-    fit_rmin_A=1.4,
-    fit_rmax_A=10.0,
+    fit_rmin_A=FIT_RMIN_A,
+    fit_rmax_A=FIT_RMAX_A,
     move_max_A=0.1,
 )
 experiment = read_pdfgetx_gr(ROOT / config.experimental_gr)
@@ -480,13 +492,15 @@ axes[1].plot(
 )
 axes[1].set_title("Bounded-dynamic-scale Inline HRMC")
 for axis in axes:
-    axis.set_xlim(1.4, 10.0)
+    axis.set_xlim(FIT_RMIN_A, FIT_RMAX_A)
     axis.set_ylabel(r"$G(r)$ ($\mathrm{\AA}^{-2}$)")
     axis.grid(True, ls=":", alpha=0.45)
     axis.legend(fontsize=9, ncol=1)
 axes[-1].set_xlabel(r"$r$ ($\mathrm{\AA}$)")
 figure.tight_layout()
-figure.savefig(OUT / "pdf_two_strategies_1p4_10A.png", bbox_inches="tight")
+figure.savefig(
+    OUT / f"pdf_two_strategies_{RMIN_FILE_TAG}_10A.png", bbox_inches="tight"
+)
 plt.close(figure)
 
 # Common unscaled PDF diagnostic so that structure amplitudes are compared fairly.
@@ -502,7 +516,7 @@ for name in STRUCTURE_KEYS:
         label=f"{LABELS[name]} ($R_w$={pdf_metrics[name]['Rw_no_scale']:.3f})",
     )
 axis.set(
-    xlim=(1.4, 10.0),
+    xlim=(FIT_RMIN_A, FIT_RMAX_A),
     xlabel=r"$r$ ($\mathrm{\AA}$)",
     ylabel=r"$G(r)$ ($\mathrm{\AA}^{-2}$)",
     title="Common no-scale PDF diagnostic",
@@ -510,7 +524,9 @@ axis.set(
 axis.grid(True, ls=":", alpha=0.45)
 axis.legend(fontsize=9)
 figure.tight_layout()
-figure.savefig(OUT / "pdf_common_no_scale_1p4_10A.png", bbox_inches="tight")
+figure.savefig(
+    OUT / f"pdf_common_no_scale_{RMIN_FILE_TAG}_10A.png", bbox_inches="tight"
+)
 plt.close(figure)
 
 # Four diagnostics make the strategy-dependent and common residuals explicit.
@@ -622,7 +638,7 @@ figure.savefig(OUT / "zr_coordination_distributions.png", bbox_inches="tight")
 plt.close(figure)
 
 metrics = {
-    "fit_range_A": [1.4, 10.0],
+    "fit_range_A": [FIT_RMIN_A, FIT_RMAX_A],
     "model_sha256": summaries["no_scale"]["model_sha256"],
     "scale_initial": objective.s0,
     "scale_bounds": [objective.lower_scale, objective.upper_scale],
@@ -638,10 +654,10 @@ def fmt(value: float | None, digits: int = 4) -> str:
 
 
 report_lines = [
-    "# PZS MQ3: two Inline 100k HRMC runs",
+    f"# PZS MQ3: two Inline 100k HRMC runs ({FIT_RMIN_A:.1f}-{FIT_RMAX_A:.1f} A)",
     "",
     "Both runs use the LoRA DPA4 model, seed 101, T=100 K, d=0.1 A, "
-    "PDF range 1.4-10 A, and the P-total coordination constraint.",
+    f"PDF range {FIT_RMIN_A:.1f}-{FIT_RMAX_A:.1f} A, and the P-total coordination constraint.",
     "",
     "## PDF and energy",
     "",

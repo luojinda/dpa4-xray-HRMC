@@ -1,0 +1,725 @@
+{
+  "fit_range_A": [
+    1.5,
+    10.0
+  ],
+  "model_sha256": "64b0fede16c72af54adf45fca8b79fb76e0ed70fd5d594d14debef97eeac75ab",
+  "scale_initial": 0.8386833160199759,
+  "scale_bounds": [
+    0.6709466528159808,
+    1.006419979223971
+  ],
+  "pdf": {
+    "initial_mq3": {
+      "loss_no_scale": 30.449474408764573,
+      "Rw_no_scale": 0.5154389946376988,
+      "scale_no_scale": 1.0,
+      "loss_fixed_initial": 27.21616734358554,
+      "Rw_fixed_initial": 0.4873049851326889,
+      "scale_fixed_initial": 0.8386833160199759,
+      "loss_bounded_dynamic": 27.21616734358554,
+      "Rw_bounded_dynamic": 0.4873049851326889,
+      "scale_bounded_dynamic": 0.8386833160199759,
+      "scale_unbounded_positive": 0.8386833160199759,
+      "loss_unbounded_positive": 27.21616734358554,
+      "Rw_shape_only": 0.4873049851326889,
+      "Rw_active": 0.5154389946376988,
+      "scale_active": 1.0,
+      "scale_raw": 0.8386833160199759,
+      "Rw_dynamic": 0.4873049851326889,
+      "scale_dynamic": 0.8386833160199759
+    },
+    "no_scale": {
+      "loss_no_scale": 2.9314424174218345,
+      "Rw_no_scale": 0.15992930678346187,
+      "scale_no_scale": 1.0,
+      "loss_fixed_initial": 4.494596830898999,
+      "Rw_fixed_initial": 0.1980307998279883,
+      "scale_fixed_initial": 0.8386833160199759,
+      "loss_bounded_dynamic": 2.728844532328182,
+      "Rw_bounded_dynamic": 0.15430385200034719,
+      "scale_bounded_dynamic": 0.9591831832251191,
+      "scale_unbounded_positive": 0.9591831832251191,
+      "loss_unbounded_positive": 2.728844532328182,
+      "Rw_shape_only": 0.15430385200034719,
+      "Rw_active": 0.15992930678346187,
+      "scale_active": 1.0,
+      "scale_raw": 0.9591831832251191
+    },
+    "bounded_dynamic": {
+      "loss_no_scale": 11.867256752082312,
+      "Rw_no_scale": 0.32178258796886416,
+      "scale_no_scale": 1.0,
+      "loss_fixed_initial": 3.3718084293136172,
+      "Rw_fixed_initial": 0.17152159909145823,
+      "scale_fixed_initial": 0.8386833160199759,
+      "loss_bounded_dynamic": 2.672208049274417,
+      "Rw_bounded_dynamic": 0.15269418731071022,
+      "scale_bounded_dynamic": 0.7772379359863009,
+      "scale_unbounded_positive": 0.7772379359863009,
+      "loss_unbounded_positive": 2.672208049274417,
+      "Rw_shape_only": 0.15269418731071022,
+      "Rw_active": 0.15269418731071022,
+      "scale_active": 0.7772379359863009,
+      "scale_raw": 0.7772379359863009
+    }
+  },
+  "runs": {
+    "no_scale": {
+      "attempted": 100000,
+      "accepted": 22572,
+      "hard_sphere_rejected": 789,
+      "metropolis_rejected": 76639,
+      "acceptance_rate": 0.22572,
+      "energy_eV": -4495.050890041939,
+      "energy_eV_atom": -5.016797868350379,
+      "pdf_loss_sum": 2.9314424174217635,
+      "phase25_total": 1630.0640048914497,
+      "Rw_no_scale": 0.15992930678345993,
+      "Rw_fixed_initial": 0.1980307998279883,
+      "Rw_bounded_dynamic": 0.15430385200034558,
+      "Rw_shape_only": 0.15430385200034558,
+      "Rw_active": 0.15992930678345993,
+      "scale_strategy": "no_scale",
+      "scale_current": 1.0,
+      "scale_raw": 0.9591831832251212,
+      "scale_initial": 0.838683316019976,
+      "scale_bounds": [
+        0.6709466528159809,
+        1.0064199792239712
+      ],
+      "P_fourfold": 1.0,
+      "Si_fourfold": 1.0,
+      "wall_s": 3016.1665605250746,
+      "target_attempts": 100000,
+      "temperature_K": 100.0,
+      "model_calls": 99213,
+      "energy_drift_eV": 1.930631697177887e-05,
+      "delta_energy_from_MQ_eV": -2.57001924328506,
+      "resumed_from_step": 0,
+      "checkpoint_interval": 10000,
+      "fit_rmin_A": 1.5,
+      "fit_rmax_A": 10.0,
+      "structure": "inputs/PZS_MQ_3/PZS_equilibrated.cif",
+      "model_path": "/root/autodl-tmp/dpa4-xray-HRMC/models/PZS_new_20261121/DPA4_PZS_new_LoRA.pt2",
+      "model_sha256": "64b0fede16c72af54adf45fca8b79fb76e0ed70fd5d594d14debef97eeac75ab"
+    },
+    "bounded_dynamic": {
+      "attempted": 100000,
+      "accepted": 22004,
+      "hard_sphere_rejected": 811,
+      "metropolis_rejected": 77185,
+      "acceptance_rate": 0.22004,
+      "energy_eV": -4501.424758868716,
+      "energy_eV_atom": -5.023911561237406,
+      "pdf_loss_sum": 2.672208049276648,
+      "phase25_total": 1486.0449114774965,
+      "Rw_no_scale": 0.3217825879689077,
+      "Rw_fixed_initial": 0.1715215990915211,
+      "Rw_bounded_dynamic": 0.15269418731077394,
+      "Rw_shape_only": 0.15269418731077394,
+      "Rw_active": 0.15269418731077394,
+      "scale_strategy": "bounded_dynamic",
+      "scale_current": 0.77723793598629,
+      "scale_raw": 0.77723793598629,
+      "scale_initial": 0.838683316019976,
+      "scale_bounds": [
+        0.6709466528159809,
+        1.0064199792239712
+      ],
+      "P_fourfold": 1.0,
+      "Si_fourfold": 1.0,
+      "wall_s": 3025.760541085154,
+      "target_attempts": 100000,
+      "temperature_K": 100.0,
+      "model_calls": 99191,
+      "energy_drift_eV": 4.43682074546814e-06,
+      "delta_energy_from_MQ_eV": -8.943881439045072,
+      "resumed_from_step": 0,
+      "checkpoint_interval": 10000,
+      "fit_rmin_A": 1.5,
+      "fit_rmax_A": 10.0,
+      "structure": "inputs/PZS_MQ_3/PZS_equilibrated.cif",
+      "model_path": "/root/autodl-tmp/dpa4-xray-HRMC/models/PZS_new_20261121/DPA4_PZS_new_LoRA.pt2",
+      "model_sha256": "64b0fede16c72af54adf45fca8b79fb76e0ed70fd5d594d14debef97eeac75ab"
+    }
+  },
+  "local_structure": {
+    "initial_mq3": {
+      "P": {
+        "centers": 32,
+        "fourfold_count": 32,
+        "fourfold_fraction": 1.0,
+        "total_cn_histogram": {
+          "4": 32
+        },
+        "ligand_patterns": {
+          "O3Cl1": 1,
+          "O4": 31
+        },
+        "bond_lengths_A": {
+          "P-O": {
+            "count": 127,
+            "mean": 1.5507770863963972,
+            "std": 0.04543736556922096,
+            "min": 1.4676962014918875,
+            "max": 1.6632520347421793
+          },
+          "P-Cl": {
+            "count": 1,
+            "mean": 2.0595504862895697,
+            "std": 0.0,
+            "min": 2.0595504862895697,
+            "max": 2.0595504862895697
+          }
+        },
+        "angles_deg": {
+          "count": 192,
+          "mean": 109.30811686866006,
+          "std": 5.210260110604282,
+          "min": 96.46062887972653,
+          "max": 123.29952700100536
+        },
+        "angle_rms_from_ideal_deg": {
+          "count": 32,
+          "mean": 4.921033738743684,
+          "std": 1.7195465101964076,
+          "min": 1.643280124553662,
+          "max": 8.363772603695452
+        },
+        "fixed_center_csm_percent": {
+          "count": 32,
+          "mean": 0.6904606162040708,
+          "std": 0.5118656111396637,
+          "min": 0.1004088523208047,
+          "max": 2.601702221042956
+        },
+        "volume_A3": {
+          "count": 32,
+          "mean": 1.9074985397372004,
+          "std": 0.08328346643431034,
+          "min": 1.8083398000905795,
+          "max": 2.304546688128564
+        }
+      },
+      "Si": {
+        "centers": 64,
+        "fourfold_count": 64,
+        "fourfold_fraction": 1.0,
+        "total_cn_histogram": {
+          "4": 64
+        },
+        "ligand_patterns": {
+          "Cl4": 30,
+          "O1Cl3": 26,
+          "O2Cl2": 5,
+          "O3Cl1": 3
+        },
+        "bond_lengths_A": {
+          "Si-O": {
+            "count": 45,
+            "mean": 1.655224126009572,
+            "std": 0.02916299524376893,
+            "min": 1.6032259519098835,
+            "max": 1.7070649801639173
+          },
+          "Si-Cl": {
+            "count": 211,
+            "mean": 2.0276834851355807,
+            "std": 0.04031300666344034,
+            "min": 1.9241767249792594,
+            "max": 2.2023135378417016
+          }
+        },
+        "angles_deg": {
+          "count": 384,
+          "mean": 109.42368476206111,
+          "std": 4.224536613650746,
+          "min": 96.70260137713792,
+          "max": 122.0667786754071
+        },
+        "angle_rms_from_ideal_deg": {
+          "count": 64,
+          "mean": 4.045915637600979,
+          "std": 1.2163617523825763,
+          "min": 1.14078829024389,
+          "max": 7.612083326516468
+        },
+        "fixed_center_csm_percent": {
+          "count": 64,
+          "mean": 0.7450844323492767,
+          "std": 0.4628962225819699,
+          "min": 0.0662245868951387,
+          "max": 1.9642857185380087
+        },
+        "volume_A3": {
+          "count": 64,
+          "mean": 3.8480352812001035,
+          "std": 0.4691953037794715,
+          "min": 2.620525130054094,
+          "max": 4.4643929139699745
+        }
+      },
+      "Zr": {
+        "centers": 64,
+        "total_cn_histogram": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          55,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "o_cn_histogram": [
+          25,
+          20,
+          11,
+          7,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_total_cn": 5.953125,
+        "mean_o_cn": 1.046875
+      },
+      "coordination_penalty_components": {
+        "C_P": 0.0,
+        "C_Si": 0.0,
+        "C_Zr_total": 0.0,
+        "C_Zr_O": 0.0
+      },
+      "hard_sphere": {
+        "violation_count": 0,
+        "minimum_margin_A": 0.07338481007459441,
+        "pair_minima_A": {
+          "Cl-Cl": 2.991315834765699,
+          "Cl-Li": 2.114545660651413,
+          "Cl-O": 2.7509926284502,
+          "Cl-P": 2.0595504862895697,
+          "Cl-Si": 1.9241767249792594,
+          "Cl-Zr": 2.2329638563097243,
+          "Li-Li": 2.5339647656385704,
+          "Li-O": 1.7514727522200095,
+          "Li-P": 2.763871199226496,
+          "Li-Si": 3.395978884558753,
+          "Li-Zr": 2.9853824079715094,
+          "O-O": 2.3463381584540777,
+          "O-P": 1.4676962014918875,
+          "O-Si": 1.6032259519098835,
+          "O-Zr": 1.9441004482824324,
+          "P-P": 2.8529512351918003,
+          "P-Si": 2.8888006258588885,
+          "P-Zr": 2.7963344845117795,
+          "Si-Si": 3.2837428750223885,
+          "Si-Zr": 3.488910910733962,
+          "Zr-Zr": 3.6495043234722098
+        }
+      }
+    },
+    "no_scale": {
+      "P": {
+        "centers": 32,
+        "fourfold_count": 32,
+        "fourfold_fraction": 1.0,
+        "total_cn_histogram": {
+          "4": 32
+        },
+        "ligand_patterns": {
+          "O3Cl1": 1,
+          "O4": 31
+        },
+        "bond_lengths_A": {
+          "P-O": {
+            "count": 127,
+            "mean": 1.5562516023217037,
+            "std": 0.03689509618902404,
+            "min": 1.4618242469584397,
+            "max": 1.6367243645160396
+          },
+          "P-Cl": {
+            "count": 1,
+            "mean": 1.973378828532601,
+            "std": 0.0,
+            "min": 1.973378828532601,
+            "max": 1.973378828532601
+          }
+        },
+        "angles_deg": {
+          "count": 192,
+          "mean": 109.35011263483669,
+          "std": 4.289842044346415,
+          "min": 97.98973386375066,
+          "max": 118.88568469298798
+        },
+        "angle_rms_from_ideal_deg": {
+          "count": 32,
+          "mean": 4.160372091397772,
+          "std": 1.0529558272505812,
+          "min": 2.0665407192196805,
+          "max": 6.8439139793275015
+        },
+        "fixed_center_csm_percent": {
+          "count": 32,
+          "mean": 0.4790250700720247,
+          "std": 0.29015785402235594,
+          "min": 0.11561638511021761,
+          "max": 1.6019523486917995
+        },
+        "volume_A3": {
+          "count": 32,
+          "mean": 1.9325234650811622,
+          "std": 0.0682146868463148,
+          "min": 1.876505113478656,
+          "max": 2.28367831360224
+        }
+      },
+      "Si": {
+        "centers": 64,
+        "fourfold_count": 64,
+        "fourfold_fraction": 1.0,
+        "total_cn_histogram": {
+          "4": 64
+        },
+        "ligand_patterns": {
+          "Cl4": 30,
+          "O1Cl3": 26,
+          "O2Cl2": 5,
+          "O3Cl1": 3
+        },
+        "bond_lengths_A": {
+          "Si-O": {
+            "count": 45,
+            "mean": 1.6407427147296023,
+            "std": 0.02161943141512038,
+            "min": 1.5982985843441746,
+            "max": 1.6843593500481064
+          },
+          "Si-Cl": {
+            "count": 211,
+            "mean": 2.019001238646155,
+            "std": 0.04231732237592077,
+            "min": 1.9049248114221935,
+            "max": 2.1384377372695824
+          }
+        },
+        "angles_deg": {
+          "count": 384,
+          "mean": 109.43782869801096,
+          "std": 4.128641324134453,
+          "min": 98.73974782939477,
+          "max": 120.62809304256045
+        },
+        "angle_rms_from_ideal_deg": {
+          "count": 64,
+          "mean": 3.9747754461702947,
+          "std": 1.1171187749269516,
+          "min": 2.022184627718349,
+          "max": 6.425691598041
+        },
+        "fixed_center_csm_percent": {
+          "count": 64,
+          "mean": 0.7274027698945618,
+          "std": 0.35425193845886377,
+          "min": 0.11532923879731202,
+          "max": 1.4455592057002762
+        },
+        "volume_A3": {
+          "count": 64,
+          "mean": 3.7945936719760303,
+          "std": 0.4869322476796786,
+          "min": 2.5855183984069123,
+          "max": 4.402126633946367
+        }
+      },
+      "Zr": {
+        "centers": 64,
+        "total_cn_histogram": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          57,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "o_cn_histogram": [
+          25,
+          20,
+          11,
+          6,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_total_cn": 5.984375,
+        "mean_o_cn": 1.0625
+      },
+      "coordination_penalty_components": {
+        "C_P": 0.0,
+        "C_Si": 0.0,
+        "C_Zr_total": 0.0,
+        "C_Zr_O": 0.0
+      },
+      "hard_sphere": {
+        "violation_count": 0,
+        "minimum_margin_A": 0.01680586655750993,
+        "pair_minima_A": {
+          "Cl-Cl": 2.905786681788884,
+          "Cl-Li": 2.1302809767864836,
+          "Cl-O": 2.80678457548322,
+          "Cl-P": 1.973378828532601,
+          "Cl-Si": 1.9049248114221935,
+          "Cl-Zr": 2.30523292517473,
+          "Li-Li": 2.5756497209374123,
+          "Li-O": 1.7597275367234297,
+          "Li-P": 2.7562720660005486,
+          "Li-Si": 3.3208444151281142,
+          "Li-Zr": 3.0954591200032935,
+          "O-O": 2.38860126497264,
+          "O-P": 1.4618242469584397,
+          "O-Si": 1.5982985843441746,
+          "O-Zr": 1.9156280623666078,
+          "P-P": 2.828796515385998,
+          "P-Si": 2.865524809798856,
+          "P-Zr": 2.849394487427397,
+          "Si-Si": 3.253191351442009,
+          "Si-Zr": 3.5005757337450816,
+          "Zr-Zr": 3.8038705123474847
+        }
+      }
+    },
+    "bounded_dynamic": {
+      "P": {
+        "centers": 32,
+        "fourfold_count": 32,
+        "fourfold_fraction": 1.0,
+        "total_cn_histogram": {
+          "4": 32
+        },
+        "ligand_patterns": {
+          "O3Cl1": 1,
+          "O4": 31
+        },
+        "bond_lengths_A": {
+          "P-O": {
+            "count": 127,
+            "mean": 1.5535348246436007,
+            "std": 0.039325266404711734,
+            "min": 1.4499076805215907,
+            "max": 1.6844324787229934
+          },
+          "P-Cl": {
+            "count": 1,
+            "mean": 1.9773249795619847,
+            "std": 0.0,
+            "min": 1.9773249795619847,
+            "max": 1.9773249795619847
+          }
+        },
+        "angles_deg": {
+          "count": 192,
+          "mean": 109.37174524287279,
+          "std": 4.040856511038038,
+          "min": 101.40882521030979,
+          "max": 120.47712861024614
+        },
+        "angle_rms_from_ideal_deg": {
+          "count": 32,
+          "mean": 3.936894932958743,
+          "std": 0.9161195245052974,
+          "min": 2.128359548448616,
+          "max": 6.378443327377064
+        },
+        "fixed_center_csm_percent": {
+          "count": 32,
+          "mean": 0.43851570191783357,
+          "std": 0.31315077469177516,
+          "min": 0.12899325016485522,
+          "max": 1.8371783630854546
+        },
+        "volume_A3": {
+          "count": 32,
+          "mean": 1.9240983204135875,
+          "std": 0.06533554471313885,
+          "min": 1.8478155855922038,
+          "max": 2.241456996495797
+        }
+      },
+      "Si": {
+        "centers": 64,
+        "fourfold_count": 64,
+        "fourfold_fraction": 1.0,
+        "total_cn_histogram": {
+          "4": 64
+        },
+        "ligand_patterns": {
+          "Cl4": 30,
+          "O1Cl3": 26,
+          "O2Cl2": 5,
+          "O3Cl1": 3
+        },
+        "bond_lengths_A": {
+          "Si-O": {
+            "count": 45,
+            "mean": 1.6441008665252084,
+            "std": 0.022956626405776094,
+            "min": 1.5976384265351282,
+            "max": 1.686011820724516
+          },
+          "Si-Cl": {
+            "count": 211,
+            "mean": 2.0246542710391386,
+            "std": 0.03822171594148779,
+            "min": 1.9339756937148707,
+            "max": 2.1750722609038315
+          }
+        },
+        "angles_deg": {
+          "count": 384,
+          "mean": 109.41937836082813,
+          "std": 3.707699376074695,
+          "min": 100.2092891772175,
+          "max": 120.52204587830671
+        },
+        "angle_rms_from_ideal_deg": {
+          "count": 64,
+          "mean": 3.5487315051407475,
+          "std": 1.0752799584781023,
+          "min": 0.40654069736179316,
+          "max": 5.759530686212626
+        },
+        "fixed_center_csm_percent": {
+          "count": 64,
+          "mean": 0.6722761510720474,
+          "std": 0.37338260308989557,
+          "min": 0.049394582995449264,
+          "max": 1.373283172923546
+        },
+        "volume_A3": {
+          "count": 64,
+          "mean": 3.829963556033905,
+          "std": 0.5067157535679684,
+          "min": 2.5459375107793933,
+          "max": 4.494958641524136
+        }
+      },
+      "Zr": {
+        "centers": 64,
+        "total_cn_histogram": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          57,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "o_cn_histogram": [
+          25,
+          20,
+          11,
+          6,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "mean_total_cn": 5.984375,
+        "mean_o_cn": 1.0625
+      },
+      "coordination_penalty_components": {
+        "C_P": 0.0,
+        "C_Si": 0.0,
+        "C_Zr_total": 0.0,
+        "C_Zr_O": 0.0
+      },
+      "hard_sphere": {
+        "violation_count": 0,
+        "minimum_margin_A": 0.0207520175868936,
+        "pair_minima_A": {
+          "Cl-Cl": 2.894239573694998,
+          "Cl-Li": 2.146573238236057,
+          "Cl-O": 2.7996353259367157,
+          "Cl-P": 1.9773249795619847,
+          "Cl-Si": 1.9339756937148707,
+          "Cl-Zr": 2.3633530527157984,
+          "Li-Li": 2.5902630771804223,
+          "Li-O": 1.7953660141455827,
+          "Li-P": 2.709136882554888,
+          "Li-Si": 3.297134688771328,
+          "Li-Zr": 3.0607970741514574,
+          "O-O": 2.377054210372508,
+          "O-P": 1.4499076805215907,
+          "O-Si": 1.5976384265351282,
+          "O-Zr": 1.9271788599362343,
+          "P-P": 2.871287639535806,
+          "P-Si": 2.864667311943423,
+          "P-Zr": 2.867683979992046,
+          "Si-Si": 3.2425665299147717,
+          "Si-Zr": 3.5737451686237542,
+          "Zr-Zr": 3.620595610423359
+        }
+      }
+    }
+  }
+}
