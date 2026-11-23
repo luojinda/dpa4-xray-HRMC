@@ -46,11 +46,17 @@ class Phase3State:
 
     @classmethod
     def build(cls, atoms, q, r_fit, g_exp_fit, config, cutoffs, weights,
-              hard_sphere=None, objective=None, mode=ScaleMode.NO_SCALE):
+              hard_sphere=None, objective=None, mode=ScaleMode.NO_SCALE,
+              p_coordination_mode="P-O", p_cl_cutoff_A=None):
         pdf = IncrementalXrayPDF(atoms, q, r_fit, config.rdf_rcut_A,
                                  config.rdf_dr_A, config.biso_A2, config.lorch_mod)
         obj = objective or ScaleObjective.from_initial(pdf.g_r_A2, g_exp_fit)
-        cn = IncrementalCoordination(atoms, cutoffs)
+        cn = IncrementalCoordination(
+            atoms,
+            cutoffs,
+            p_coordination_mode=p_coordination_mode,
+            p_cl_cutoff_A=p_cl_cutoff_A,
+        )
         hs = hard_sphere or HardSphereModel.from_atoms(atoms, config.hard_sphere_scale)
         selected_mode = ScaleMode(mode)
         score = obj.score(selected_mode, pdf.g_r_A2)
@@ -89,6 +95,8 @@ class Phase3State:
     def rebuilt(self, atoms, q, r_fit, g_exp_fit, config, cutoffs):
         return self.build(
             atoms, q, r_fit, g_exp_fit, config, cutoffs, self.weights,
-            hard_sphere=self.hard_sphere, objective=self.objective, mode=self.mode
+            hard_sphere=self.hard_sphere, objective=self.objective, mode=self.mode,
+            p_coordination_mode=self.cn.p_coordination_mode,
+            p_cl_cutoff_A=self.cn.p_cl_cutoff_A,
         )
 

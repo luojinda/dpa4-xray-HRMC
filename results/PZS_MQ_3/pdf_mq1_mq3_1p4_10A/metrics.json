@@ -1,0 +1,33 @@
+{
+  "fit_range_A": [
+    1.4,
+    10.0
+  ],
+  "experimental_gr": "PDF/PDF_ZXS_1_100keV_350mm_10s_eiger16m_slice_0_.gr",
+  "q_range_Ainv": [
+    0.9,
+    16.0
+  ],
+  "q_step_Ainv": 0.05,
+  "biso_A2": 0.3,
+  "lorch_modification": false,
+  "structures": {
+    "PZS MQ1": {
+      "path": "PDF/PZS_quench_222.cif",
+      "Rw_no_scale": 0.7160291194117653,
+      "scale_independent_optimum": 0.6338648874375366,
+      "Rw_independent_optimum_scale": 0.5183634488547851
+    },
+    "PZS MQ3": {
+      "path": "inputs/PZS_MQ_3/PZS_equilibrated.cif",
+      "Rw_no_scale": 0.5180956345245333,
+      "scale_independent_optimum": 0.8348408655096936,
+      "Rw_independent_optimum_scale": 0.48849199212711847
+    }
+  },
+  "curve_difference": {
+    "RMS_G_A-2": 0.1739056056585358,
+    "relative_L2_to_MQ1": 0.35294101696318914,
+    "pearson_r_no_scale": 0.9524129227900832
+  }
+}

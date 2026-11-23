@@ -11,6 +11,8 @@ p.add_argument('--fit-rmin',type=float,default=None,help='Override PDF fit-range
 p.add_argument('--fit-rmax',type=float,default=None,help='Override PDF fit-range upper bound in A')
 p.add_argument('--scale-mode',choices=['no_scale','fixed_initial','bounded_dynamic'],default='no_scale')
 p.add_argument('--structure',default=None,help='Override input structure path relative to repository root')
+p.add_argument('--p-coordination-mode',choices=['P-O','P-total'],default='P-O')
+p.add_argument('--p-cl-cutoff',type=float,default=None,help='P-Cl cutoff in A; required for P-total')
 a=p.parse_args(); root=Path(__file__).resolve().parents[1]
 c=load_phase2_config(root/'configs/pzs_phase2_common.yaml')
 overrides={}
@@ -43,4 +45,6 @@ print(json.dumps(run_inline(
     checkpoint_interval=a.checkpoint_interval,
     resume=a.resume,
     scale_mode=a.scale_mode,
+    p_coordination_mode=a.p_coordination_mode,
+    p_cl_cutoff_A=a.p_cl_cutoff,
 ),indent=2))

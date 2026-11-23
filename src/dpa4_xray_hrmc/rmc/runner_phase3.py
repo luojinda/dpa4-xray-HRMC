@@ -18,13 +18,23 @@ from .phase3 import Phase3State, inline_delta, metropolis_accept
 from .runner import inclusive_grid
 
 
-def _setup(root: Path, config: Phase2Config, cutoffs, weights, scale_mode="no_scale"):
+def _setup(
+    root: Path,
+    config: Phase2Config,
+    cutoffs,
+    weights,
+    scale_mode="no_scale",
+    p_coordination_mode="P-O",
+    p_cl_cutoff_A=None,
+):
     atoms = load_structure(root / config.structure).atoms
     exp = read_pdfgetx_gr(root / config.experimental_gr)
     mask = (exp.r_A >= config.fit_rmin_A) & (exp.r_A <= config.fit_rmax_A)
     q = inclusive_grid(config.qmin_Ainv, config.qmax_Ainv, config.qstep_Ainv)
     state = Phase3State.build(atoms, q, exp.r_A[mask], exp.g_r_A2[mask],
-                              config, cutoffs, weights, mode=scale_mode)
+                              config, cutoffs, weights, mode=scale_mode,
+                              p_coordination_mode=p_coordination_mode,
+                              p_cl_cutoff_A=p_cl_cutoff_A)
     return state, q, exp, mask
 
 
@@ -176,11 +186,20 @@ def run_alternating(root, config, cutoffs, weights, backend, out, seed=101,
 def run_inline(root, config, cutoffs, weights, backend, out, seed=101,
                target_attempts=1000, temperature_K=300.0,
                checkpoint_interval=10000, resume=False,
-               scale_mode="no_scale"):
+               scale_mode="no_scale", p_coordination_mode="P-O",
+               p_cl_cutoff_A=None):
     if checkpoint_interval <= 0:
         raise ValueError("checkpoint_interval must be positive")
     out.mkdir(parents=True, exist_ok=True)
-    state, q, exp, mask = _setup(root, config, cutoffs, weights, scale_mode)
+    state, q, exp, mask = _setup(
+        root,
+        config,
+        cutoffs,
+        weights,
+        scale_mode,
+        p_coordination_mode=p_coordination_mode,
+        p_cl_cutoff_A=p_cl_cutoff_A,
+    )
     rngs = tuple(np.random.default_rng(x) for x in np.random.SeedSequence(seed).spawn(3))
     ra, rd, rx = rngs
     counters = dict(attempted=0, accepted=0, hard_sphere_rejected=0,
@@ -198,6 +217,8 @@ def run_inline(root, config, cutoffs, weights, backend, out, seed=101,
         "scale_mode": state.mode.value,
         "scale_initial": state.objective.s0,
         "scale_bounds": [state.objective.lower_scale, state.objective.upper_scale],
+        "p_coordination_mode": state.cn.p_coordination_mode,
+        "p_cl_cutoff_A": state.cn.p_cl_cutoff_A,
         "model_sha256": backend.manifest()["model_sha256"],
         "atom_count": len(state.atoms),
     }

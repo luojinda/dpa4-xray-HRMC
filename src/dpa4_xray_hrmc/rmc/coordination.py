@@ -124,7 +124,14 @@ def _distribution_epsilon(histogram: np.ndarray) -> np.ndarray:
 class IncrementalCoordination:
     """Transactional incremental coordination state for one fixed-cell structure."""
 
-    def __init__(self, atoms: Atoms, cutoffs: CoordinationCutoffs, histogram_bins: int = 17) -> None:
+    def __init__(
+        self,
+        atoms: Atoms,
+        cutoffs: CoordinationCutoffs,
+        histogram_bins: int = 17,
+        p_coordination_mode: str = "P-O",
+        p_cl_cutoff_A: float | None = None,
+    ) -> None:
         if not np.all(atoms.pbc):
             raise ValueError("Coordination engine requires three-dimensional PBC")
         if histogram_bins < 2:
@@ -132,6 +139,16 @@ class IncrementalCoordination:
         self.atoms = atoms.copy()
         self.cutoffs = cutoffs
         self.histogram_bins = int(histogram_bins)
+        if p_coordination_mode not in {"P-O", "P-total"}:
+            raise ValueError("p_coordination_mode must be 'P-O' or 'P-total'")
+        if p_coordination_mode == "P-total" and (
+            p_cl_cutoff_A is None or p_cl_cutoff_A <= 0.0
+        ):
+            raise ValueError("P-total coordination requires a positive P-Cl cutoff")
+        self.p_coordination_mode = p_coordination_mode
+        self.p_cl_cutoff_A = (
+            None if p_cl_cutoff_A is None else float(p_cl_cutoff_A)
+        )
         self.cell_A = np.asarray(self.atoms.cell, dtype=float)
         self.symbols = np.asarray(self.atoms.get_chemical_symbols())
         self.indices = {
@@ -189,6 +206,8 @@ class IncrementalCoordination:
 
     def _direct_snapshot(self, atoms: Atoms) -> CoordinationSnapshot:
         p_o = self._pair_counts(atoms, "P", "O", self.cutoffs.p_o_A)
+        if self.p_coordination_mode == "P-total":
+            p_o = p_o + self._pair_counts(atoms, "P", "Cl", self.p_cl_cutoff_A)
         si_o = self._pair_counts(atoms, "Si", "O", self.cutoffs.si_o_A)
         si_cl = self._pair_counts(atoms, "Si", "Cl", self.cutoffs.si_cl_A)
         zr_o = self._pair_counts(atoms, "Zr", "O", self.cutoffs.zr_o_A)
@@ -256,6 +275,10 @@ class IncrementalCoordination:
         p_o = self._updated_pair_counts(
             self.p_o, atom_index, wrapped, "P", "O", self.cutoffs.p_o_A
         )
+        if self.p_coordination_mode == "P-total":
+            p_o = self._updated_pair_counts(
+                p_o, atom_index, wrapped, "P", "Cl", self.p_cl_cutoff_A
+            )
         si_o = self._updated_pair_counts(
             self.si_o, atom_index, wrapped, "Si", "O", self.cutoffs.si_o_A
         )
@@ -347,6 +370,8 @@ class IncrementalCoordination:
     def serializable_definition(self) -> dict[str, Any]:
         return {
             "cutoffs_A": self.cutoffs.as_mapping(),
+            "p_coordination_mode": self.p_coordination_mode,
+            "p_cl_cutoff_A": self.p_cl_cutoff_A,
             "histogram_bins": self.histogram_bins,
             "target_zr_hist_total": self.target_zr_hist_total.tolist(),
             "target_zr_hist_o": self.target_zr_hist_o.tolist(),
