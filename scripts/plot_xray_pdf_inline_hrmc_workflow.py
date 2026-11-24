@@ -259,10 +259,10 @@ def main():
     # Node 4
     eq = (
         r"$\Delta\Omega=$" + "\n" +
-        r"$\Delta\chi^2_{\rm PDF}+\sum_m\lambda_m\Delta C_m$" + "\n" +
+        r"$\frac{\Delta\chi^2_{\rm PDF}}{2\sigma_{\rm PDF}^2}+\sum_m\lambda_m\Delta C_m$" + "\n" +
         r"$+\;\Delta E_{\rm ML}/(k_{\rm B}T_{\rm eff})$"
     )
-    ax.text(xs[3] + 0.012, node_y + 0.077, eq, color=INK, fontsize=6.6, linespacing=1.38, va="center")
+    ax.text(xs[3] + 0.012, node_y + 0.077, eq, color=INK, fontsize=6.2, linespacing=1.30, va="center")
     ax.text(xs[3] + 0.012, node_y + 0.014, "PDF · chemistry · stability", color=MUTED, fontsize=5.8)
 
     # Node 5
