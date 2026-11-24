@@ -25,10 +25,11 @@ fi
   --attempts 100000 \
   --temperature 100 \
   --seed 101 \
+  --tag "$TAG" \
   --move-max 0.1 \
   --fit-rmin 1.4 \
   --fit-rmax 10.0 \
-  --structure results/PZS_phase3/relaxations/PZS_MQ_3_lora_fixed_cell/relaxed_structure.extxyz \
+  --structure results/PZS_phase3/relaxations/PZS_MQ_3_lora_fixed_cell/relaxed_structure.cif \
   --checkpoint-interval 10000 \
   --p-coordination-mode P-total \
   --p-cl-cutoff 2.3 \
