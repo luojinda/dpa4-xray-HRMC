@@ -41,6 +41,7 @@ RUNS = {
     175: BASE / "validation_100k_seed101_T175_d0p1_r1p4_10p0A_lora_bounded_dynamic_p_total",
 }
 COLORS = {50: "#3B6FB6", 100: "#2A9D8F", 175: "#E76F51"}
+RELAXED_COLOR = "#6B7280"
 P_CL_CUTOFF_A = 2.30
 
 
@@ -230,15 +231,16 @@ def rw(score) -> float:
 
 
 hard_sphere = HardSphereModel.from_atoms(relaxed_atoms, config.hard_sphere_scale)
-local = {}
-for temperature, structure in atoms.items():
+
+
+def local_environment(structure: Atoms) -> dict:
     coordination = IncrementalCoordination(
         structure,
         cutoffs,
         p_coordination_mode="P-total",
         p_cl_cutoff_A=P_CL_CUTOFF_A,
     ).current_snapshot()
-    local[temperature] = {
+    return {
         "P": ligand_environment(
             structure,
             "P",
@@ -261,6 +263,12 @@ for temperature, structure in atoms.items():
         "zr_hist_o": coordination.zr_hist_o.tolist(),
         "hard_sphere": hard_sphere_diagnostics(structure, hard_sphere),
     }
+
+
+local = {"relaxed_mq3": local_environment(relaxed_atoms)}
+local.update(
+    {temperature: local_environment(structure) for temperature, structure in atoms.items()}
+)
 
 rows = []
 for temperature in RUNS:
@@ -303,6 +311,35 @@ with (OUT / "final_metrics.csv").open("w", newline="") as handle:
     writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
     writer.writeheader()
     writer.writerows(rows)
+
+
+def local_metric_row(label: str, item: dict) -> dict:
+    return {
+        "structure": label,
+        "P_fourfold_fraction": item["P"]["fourfold_fraction"],
+        "Si_fourfold_fraction": item["Si"]["fourfold_fraction"],
+        "P_angle_RMS_deg": item["P"]["angle_rms_from_ideal_deg"]["mean"],
+        "Si_angle_RMS_deg": item["Si"]["angle_rms_from_ideal_deg"]["mean"],
+        "P_CSM_percent": item["P"]["fixed_center_csm_percent"]["mean"],
+        "Si_CSM_percent": item["Si"]["fixed_center_csm_percent"]["mean"],
+        "P_volume_A3": item["P"]["volume_A3"]["mean"],
+        "Si_volume_A3": item["Si"]["volume_A3"]["mean"],
+        "Zr_total_CN_mean": histogram_mean(item["Zr"]["total_cn_histogram"]),
+        "hard_sphere_violations": item["hard_sphere"]["violation_count"],
+        "minimum_hard_sphere_margin_A": item["hard_sphere"]["minimum_margin_A"],
+    }
+
+
+local_rows = [local_metric_row("Relaxed MQ3", local["relaxed_mq3"])]
+local_rows.extend(
+    local_metric_row(f"{temperature} K", local[temperature])
+    for temperature in RUNS
+)
+with (OUT / "local_structure_metrics.csv").open("w", newline="") as handle:
+    writer = csv.DictWriter(handle, fieldnames=list(local_rows[0]))
+    writer.writeheader()
+    writer.writerows(local_rows)
+
 
 (OUT / "detailed_metrics.json").write_text(
     json.dumps(
@@ -397,7 +434,8 @@ figure.savefig(OUT / "trajectories_teff_50_100_175.png", dpi=300)
 figure.savefig(OUT / "trajectories_teff_50_100_175.pdf")
 plt.close(figure)
 
-temperatures = list(RUNS)
+structure_labels = [row["structure"] for row in local_rows]
+structure_colors = [RELAXED_COLOR] + [COLORS[temperature] for temperature in RUNS]
 figure, axes = plt.subplots(2, 3, figsize=(9.0, 5.5))
 quantities = [
     ("P_angle_RMS_deg", "P angle RMS (deg)"),
@@ -409,12 +447,12 @@ quantities = [
 ]
 for axis, (key, ylabel) in zip(axes.ravel(), quantities, strict=True):
     axis.bar(
-        [str(temperature) for temperature in temperatures],
-        [next(row[key] for row in rows if row["Teff_K"] == temperature) for temperature in temperatures],
-        color=[COLORS[temperature] for temperature in temperatures],
+        structure_labels,
+        [row[key] for row in local_rows],
+        color=structure_colors,
     )
-    axis.set_xlabel(r"$T_{eff}$ (K)")
     axis.set_ylabel(ylabel)
+    axis.tick_params(axis="x", rotation=20, labelsize=8)
     axis.grid(axis="y", alpha=0.2)
 figure.tight_layout()
 figure.savefig(OUT / "local_structure_teff_50_100_175.png", dpi=300)
